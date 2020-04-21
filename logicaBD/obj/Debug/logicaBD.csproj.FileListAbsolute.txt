@@ -35,3 +35,16 @@ D:\proyectodavid\proyectodavid\logicaBD\bin\Debug\UsuarioLogeadoController.pdb
 D:\proyectodavid\proyectodavid\logicaBD\bin\Debug\Dapper.xml
 D:\proyectodavid\proyectodavid\logicaBD\obj\Debug\logicaBD.csproj.CopyComplete
 D:\proyectodavid\proyectodavid\logicaBD\bin\Debug\logicaBD.dll.config
+C:\Users\jason\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\logicaBD.dll.config
+C:\Users\jason\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\logicaBD.dll
+C:\Users\jason\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\logicaBD.pdb
+C:\Users\jason\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\Dapper.dll
+C:\Users\jason\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\Entidades.dll
+C:\Users\jason\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\UsuarioLogeadoController.dll
+C:\Users\jason\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\Entidades.pdb
+C:\Users\jason\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\UsuarioLogeadoController.pdb
+C:\Users\jason\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\Dapper.xml
+C:\Users\jason\Documents\GitHub\proyectodavid\logicaBD\obj\Debug\logicaBD.csprojAssemblyReference.cache
+C:\Users\jason\Documents\GitHub\proyectodavid\logicaBD\obj\Debug\logicaBD.csproj.CopyComplete
+C:\Users\jason\Documents\GitHub\proyectodavid\logicaBD\obj\Debug\logicaBD.dll
+C:\Users\jason\Documents\GitHub\proyectodavid\logicaBD\obj\Debug\logicaBD.pdb

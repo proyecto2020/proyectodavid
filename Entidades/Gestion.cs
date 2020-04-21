@@ -14,5 +14,7 @@ namespace Entidades
         public string grados { get; set; }
         public string materia { get; set; }
         public string salones { get; set; }
+        public string idGradosMateria { get; set; }
+        public string horas { get; set; }
     }
 }

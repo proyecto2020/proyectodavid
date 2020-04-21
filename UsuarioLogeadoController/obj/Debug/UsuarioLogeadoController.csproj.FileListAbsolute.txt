@@ -2,3 +2,8 @@ D:\proyectodavid\proyectodavid\UsuarioLogeadoController\bin\Debug\UsuarioLogeado
 D:\proyectodavid\proyectodavid\UsuarioLogeadoController\bin\Debug\UsuarioLogeadoController.pdb
 D:\proyectodavid\proyectodavid\UsuarioLogeadoController\obj\Debug\UsuarioLogeadoController.dll
 D:\proyectodavid\proyectodavid\UsuarioLogeadoController\obj\Debug\UsuarioLogeadoController.pdb
+C:\Users\jason\Documents\GitHub\proyectodavid\UsuarioLogeadoController\bin\Debug\UsuarioLogeadoController.dll
+C:\Users\jason\Documents\GitHub\proyectodavid\UsuarioLogeadoController\bin\Debug\UsuarioLogeadoController.pdb
+C:\Users\jason\Documents\GitHub\proyectodavid\UsuarioLogeadoController\obj\Debug\UsuarioLogeadoController.csprojAssemblyReference.cache
+C:\Users\jason\Documents\GitHub\proyectodavid\UsuarioLogeadoController\obj\Debug\UsuarioLogeadoController.dll
+C:\Users\jason\Documents\GitHub\proyectodavid\UsuarioLogeadoController\obj\Debug\UsuarioLogeadoController.pdb
