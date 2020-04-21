@@ -21,6 +21,20 @@ namespace JardinMisPrimerasLetras
         {
             InitializeComponent();
             this.controlador = new UsuarioControler.loginControler();
+
+            List<Grupo> response = this.controlador.ObtenerGrupos();
+            response.Insert(0, new Grupo() { id_grupo = 0, grupo = "Seleccione" });
+            comboBox1.DataSource = response;
+            comboBox1.DisplayMember = "grupo";
+            comboBox1.ValueMember = "id_grupo";
+
+
+            List<Usuario> responseGeation = this.controlador.ObtenerDocentes();
+            comboBox3.DataSource = responseGeation;
+            comboBox3.DisplayMember = "primerNombre";
+            comboBox3.ValueMember = "identificacacion";
+
+
         }
 
         private void comboBoxGrupos_SelectedIndexChanged(object sender, EventArgs e)
@@ -50,23 +64,11 @@ namespace JardinMisPrimerasLetras
 
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
-            string grupo = textGrupos.Text;
-            string area = textArea.Text;
-            //string docente = MDocente.Text;
-            string grado = textGrados.Text;
-            string materia = textMateria.Text;
-            //string salones = Salones.Text;
 
-            Gestion insertarGestion = new Gestion();
-            insertarGestion.grupo = grupo;
-            insertarGestion.area = area;
-            //insertarGestion.docente = docente;
-            insertarGestion.grados = grado;
-            insertarGestion.materia = materia;
-            //insertarGestion.salones = salones;
-
-            Respuesta<object> ingreso = this.controlador.insertarGestion(insertarGestion);
-
+            if (textBox1.Text != "A" || textBox1.Text != "B")
+            {
+                MessageBox.Show("La Division del Grupo debe ser A o B!");
+            }
             MessageBox.Show("Datos guardados correctamente");
 
         }
@@ -83,8 +85,6 @@ namespace JardinMisPrimerasLetras
 
         private void Gestion_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetGestion.Gestion' Puede moverla o quitarla según sea necesario.
-            this.gestionTableAdapter.Fill(this.letrasDataSetGestion.Gestion);
 
         }
 
@@ -92,7 +92,7 @@ namespace JardinMisPrimerasLetras
         {
             try
             {
-                //this.usuarioTableAdapter.FillBy(this.letrasDataSetDocente.Usuario);
+               
             }
             catch (System.Exception ex)
             {
@@ -105,7 +105,6 @@ namespace JardinMisPrimerasLetras
         {
             try
             {
-                //this.usuarioTableAdapter.Docente(this.letrasDataSetDocente.Usuario);
             }
             catch (System.Exception ex)
             {
@@ -118,7 +117,6 @@ namespace JardinMisPrimerasLetras
         {
             try
             {
-                //this.usuarioTableAdapter.Docente(this.letrasDataSetDocente.Usuario);
             }
             catch (System.Exception ex)
             {
@@ -141,6 +139,26 @@ namespace JardinMisPrimerasLetras
         {
             this.Hide();
             this.pagos.Show();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

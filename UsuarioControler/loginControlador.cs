@@ -29,6 +29,18 @@ namespace UsuarioControler
             List<Perfiles> retornar = this.cliente.ObtenerPerfiles();
             return retornar;
         }
+        public List<Grupo> ObtenerGrupos()
+        {
+            List<Grupo> retornar = this.cliente.ObtenerGrupos();
+            return retornar;
+        }
+        public List<Usuario> ObtenerDocentes()
+        {
+            List<Usuario> retornar = this.cliente.ObtenerDocentes();
+            return retornar;
+        }
+
+
 
 
         public Respuesta<object> insertarUsuario(Usuario usuario)
