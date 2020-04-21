@@ -1,0 +1,4 @@
+D:\proyectodavid\proyectodavid\UsuarioLogeadoController\bin\Debug\UsuarioLogeadoController.dll
+D:\proyectodavid\proyectodavid\UsuarioLogeadoController\bin\Debug\UsuarioLogeadoController.pdb
+D:\proyectodavid\proyectodavid\UsuarioLogeadoController\obj\Debug\UsuarioLogeadoController.dll
+D:\proyectodavid\proyectodavid\UsuarioLogeadoController\obj\Debug\UsuarioLogeadoController.pdb

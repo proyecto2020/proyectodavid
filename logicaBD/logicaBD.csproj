@@ -53,12 +53,13 @@
       <Project>{cef79b86-c45a-4bed-9da6-456a5ae825bf}</Project>
       <Name>Entidades</Name>
     </ProjectReference>
-    <ProjectReference Include="..\JardinMisPrimerasLetras.Utilidades\JardinMisPrimerasLetras.Utilidades.csproj">
-      <Project>{240f7275-a8c7-4bec-a67a-568021e27c42}</Project>
-      <Name>JardinMisPrimerasLetras.Utilidades</Name>
+    <ProjectReference Include="..\UsuarioLogeadoController\UsuarioLogeadoController.csproj">
+      <Project>{88dc62e4-fe88-43e8-a845-ca76b06d5eb0}</Project>
+      <Name>UsuarioLogeadoController</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

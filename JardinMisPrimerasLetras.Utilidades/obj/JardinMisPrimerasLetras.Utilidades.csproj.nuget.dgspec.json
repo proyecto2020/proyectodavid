@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Jason\\JardinMisPrimerasLetras\\JardinMisPrimerasLetras.Utilidades\\JardinMisPrimerasLetras.Utilidades.csproj": {}
+    "D:\\proyectodavid\\proyectodavid\\JardinMisPrimerasLetras.Utilidades\\JardinMisPrimerasLetras.Utilidades.csproj": {}
   },
   "projects": {
-    "E:\\Jason\\JardinMisPrimerasLetras\\JardinMisPrimerasLetras.Utilidades\\JardinMisPrimerasLetras.Utilidades.csproj": {
+    "D:\\proyectodavid\\proyectodavid\\JardinMisPrimerasLetras.Utilidades\\JardinMisPrimerasLetras.Utilidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Jason\\JardinMisPrimerasLetras\\JardinMisPrimerasLetras.Utilidades\\JardinMisPrimerasLetras.Utilidades.csproj",
+        "projectUniqueName": "D:\\proyectodavid\\proyectodavid\\JardinMisPrimerasLetras.Utilidades\\JardinMisPrimerasLetras.Utilidades.csproj",
         "projectName": "JardinMisPrimerasLetras.Utilidades",
-        "projectPath": "E:\\Jason\\JardinMisPrimerasLetras\\JardinMisPrimerasLetras.Utilidades\\JardinMisPrimerasLetras.Utilidades.csproj",
-        "packagesPath": "C:\\Users\\jason\\.nuget\\packages\\",
-        "outputPath": "E:\\Jason\\JardinMisPrimerasLetras\\JardinMisPrimerasLetras.Utilidades\\obj\\",
+        "projectPath": "D:\\proyectodavid\\proyectodavid\\JardinMisPrimerasLetras.Utilidades\\JardinMisPrimerasLetras.Utilidades.csproj",
+        "packagesPath": "C:\\Users\\flasso\\.nuget\\packages\\",
+        "outputPath": "D:\\proyectodavid\\proyectodavid\\JardinMisPrimerasLetras.Utilidades\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\jason\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\flasso\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

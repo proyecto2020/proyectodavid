@@ -6,3 +6,11 @@ E:\Jason\JardinMisPrimerasLetras\Entidades\bin\Debug\Entidades.dll
 E:\Jason\JardinMisPrimerasLetras\Entidades\bin\Debug\Entidades.pdb
 E:\Jason\JardinMisPrimerasLetras\Entidades\obj\Debug\Entidades.dll
 E:\Jason\JardinMisPrimerasLetras\Entidades\obj\Debug\Entidades.pdb
+D:\proyectodavid\proyectodavid\Entidades\bin\Debug\Entidades.dll
+D:\proyectodavid\proyectodavid\Entidades\bin\Debug\Entidades.pdb
+D:\proyectodavid\proyectodavid\Entidades\bin\Debug\UsuarioLogeadoController.dll
+D:\proyectodavid\proyectodavid\Entidades\bin\Debug\UsuarioLogeadoController.pdb
+D:\proyectodavid\proyectodavid\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+D:\proyectodavid\proyectodavid\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+D:\proyectodavid\proyectodavid\Entidades\obj\Debug\Entidades.dll
+D:\proyectodavid\proyectodavid\Entidades\obj\Debug\Entidades.pdb

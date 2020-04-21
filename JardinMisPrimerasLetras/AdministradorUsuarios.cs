@@ -1,5 +1,7 @@
 ﻿using System;
+
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -19,60 +21,57 @@ namespace JardinMisPrimerasLetras
         {
             InitializeComponent();
             this.controlador = new UsuarioControler.loginControler();
-                       
+            List<Perfiles> response = this.controlador.ObtenerPerfiles();
+            response.Insert(0, new Perfiles() { idPerfil = 0, descripcion = "Seleccione" });
+            TipoPerfil.DataSource = response;
+            TipoPerfil.DisplayMember = "descripcion";
+            TipoPerfil.ValueMember = "idPerfil";
 
-            //private void comboTipoPerfil_SelectedIndexChanged(object sender, EventArgs e)
-            //{
-            //    List<Perfiles> perfiles = this.controlador.ConsultarPerfiles();
-            //    perfiles.Insert(0, new Perfiles() { idPerfil = 0, descripcion = "Seleccione" });
-            //    comboTipoPerfil.DataSource = perfiles;
-            //    comboTipoPerfil.DisplayMember = "descripcion";
-            //    comboTipoPerfil.ValueMember = "idPerfil";
-            //}
+            List<Usuario> lista = new List<Usuario>();
+            lista = this.controlador.ConsultarUsuarios();
+            if (lista.Count > 0)
+            {
+                dataGridView1.AutoGenerateColumns = false;
+                dataGridView1.DataSource = lista;
+                this.dataGridView1.Refresh();
+
+            }
         }
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
             string primerNombre = textBox1.Text;
             string segundoNombre = textBox2.Text;
             string identificacacion = textBoxCedula.Text;
-            string usuario = textBoxUsuario.Text;
             string primerApellido = textBox3.Text;
             string segundoApellido = textBoxSegundoApellido.Text;
             string correo = textBoxCorreo.Text;
-            string contrasena = textBoxContraseña.Text;
-            string perfilUsuario = TipoPerfil.Text;
-            if (perfilUsuario.Equals("Secretaria"))
-            {
-                perfilUsuario = "1";
-            }
-            else if (perfilUsuario.Equals("Docente"))
-            {
-                perfilUsuario = "2";
-            }
-            else if (perfilUsuario.Equals("Administrador"))
-            {
-                perfilUsuario = "3";
-            }
-            //string nombreApellido = primerNombre + primerApellido;
+            int Perfil = int.Parse(TipoPerfil.SelectedValue.ToString());
+
             string nombreApellido = String.Concat(primerNombre +" " + primerApellido);
-
-
             Usuario insertarUsuario = new Usuario();
             insertarUsuario.primerNombre = primerNombre;
             insertarUsuario.segundoNombre = segundoNombre;
             insertarUsuario.primerApellido = primerApellido;
             insertarUsuario.segundoApellido = segundoApellido;
-            insertarUsuario.identificacacion = Convert.ToInt32(identificacacion);
-            insertarUsuario.usuario = usuario;
+            insertarUsuario.identificacacion = identificacacion;
             insertarUsuario.correo = correo;
-            insertarUsuario.contrasena = contrasena;
-            //insertarUsuario.perfilUsuario = perfilUsuario;
-            insertarUsuario.perfilUsuario = Convert.ToInt32(perfilUsuario);
+            insertarUsuario.perfilUsuario  = Perfil;
             insertarUsuario.nombreApellido = nombreApellido;
+            insertarUsuario.usuarioCreacion = "dPrieto";
+
 
             Respuesta<object> ingreso = this.controlador.insertarUsuario(insertarUsuario);
-
             MessageBox.Show("Datos guardados correctamente");
+
+                List<Usuario> lista = new List<Usuario>();
+                lista = this.controlador.ConsultarUsuarios();
+                if (lista.Count > 0)
+                {
+                    dataGridView1.AutoGenerateColumns = false;
+                    dataGridView1.DataSource = lista;
+                    this.dataGridView1.Refresh();
+
+                }
             
         }
         private void buttonEditar_Click(object sender, EventArgs e)
@@ -130,21 +129,28 @@ namespace JardinMisPrimerasLetras
 
         }
 
-        private void AdministradorUsuarios_Load(object sender, EventArgs e)
-        {
-            // TODO: esta línea de código carga datos en la tabla 'perfilesDataSet.Perfiles' Puede moverla o quitarla según sea necesario.
-            this.perfilesTableAdapter.Fill(this.perfilesDataSet.Perfiles);
-            // TODO: esta línea de código carga datos en la tabla 'jardinDataSet1.Usuario' Puede moverla o quitarla según sea necesario.
-            this.usuarioTableAdapter.Fill(this.jardinDataSet1.Usuario);
-            // TODO: esta línea de código carga datos en la tabla 'jardinDataSet.Perfiles' Puede moverla o quitarla según sea necesario.
-           // this.perfilesTableAdapter.Fill(this.jardinDataSet.Perfiles);
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
             this.gestion.Show();
+        }
+
+        private void TipoPerfil_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            List<Usuario> lista = new List<Usuario>();
+            lista = this.controlador.ConsultarUsuarios();
+            if (lista.Count > 0)
+            {
+                dataGridView1.AutoGenerateColumns = false;
+                dataGridView1.DataSource = lista;
+                this.dataGridView1.Refresh();
+
+            }
         }
     }
 }

@@ -22,3 +22,16 @@ E:\Jason\JardinMisPrimerasLetras\logicaBD\obj\Debug\logicaBD.csprojAssemblyRefer
 E:\Jason\JardinMisPrimerasLetras\logicaBD\obj\Debug\logicaBD.csproj.CopyComplete
 E:\Jason\JardinMisPrimerasLetras\logicaBD\obj\Debug\logicaBD.dll
 E:\Jason\JardinMisPrimerasLetras\logicaBD\obj\Debug\logicaBD.pdb
+D:\proyectodavid\proyectodavid\logicaBD\obj\Debug\logicaBD.csprojAssemblyReference.cache
+D:\proyectodavid\proyectodavid\logicaBD\obj\Debug\logicaBD.dll
+D:\proyectodavid\proyectodavid\logicaBD\obj\Debug\logicaBD.pdb
+D:\proyectodavid\proyectodavid\logicaBD\bin\Debug\logicaBD.dll
+D:\proyectodavid\proyectodavid\logicaBD\bin\Debug\logicaBD.pdb
+D:\proyectodavid\proyectodavid\logicaBD\bin\Debug\Dapper.dll
+D:\proyectodavid\proyectodavid\logicaBD\bin\Debug\Entidades.dll
+D:\proyectodavid\proyectodavid\logicaBD\bin\Debug\UsuarioLogeadoController.dll
+D:\proyectodavid\proyectodavid\logicaBD\bin\Debug\Entidades.pdb
+D:\proyectodavid\proyectodavid\logicaBD\bin\Debug\UsuarioLogeadoController.pdb
+D:\proyectodavid\proyectodavid\logicaBD\bin\Debug\Dapper.xml
+D:\proyectodavid\proyectodavid\logicaBD\obj\Debug\logicaBD.csproj.CopyComplete
+D:\proyectodavid\proyectodavid\logicaBD\bin\Debug\logicaBD.dll.config

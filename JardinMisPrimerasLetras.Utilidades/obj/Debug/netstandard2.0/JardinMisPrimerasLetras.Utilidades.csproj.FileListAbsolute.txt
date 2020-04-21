@@ -17,3 +17,13 @@ E:\Jason\JardinMisPrimerasLetras\JardinMisPrimerasLetras.Utilidades\obj\Debug\ne
 E:\Jason\JardinMisPrimerasLetras\JardinMisPrimerasLetras.Utilidades\obj\Debug\netstandard2.0\JardinMisPrimerasLetras.Utilidades.AssemblyInfo.cs
 E:\Jason\JardinMisPrimerasLetras\JardinMisPrimerasLetras.Utilidades\obj\Debug\netstandard2.0\JardinMisPrimerasLetras.Utilidades.dll
 E:\Jason\JardinMisPrimerasLetras\JardinMisPrimerasLetras.Utilidades\obj\Debug\netstandard2.0\JardinMisPrimerasLetras.Utilidades.pdb
+D:\proyectodavid\proyectodavid\JardinMisPrimerasLetras.Utilidades\bin\Debug\netstandard2.0\JardinMisPrimerasLetras.Utilidades.deps.json
+D:\proyectodavid\proyectodavid\JardinMisPrimerasLetras.Utilidades\bin\Debug\netstandard2.0\JardinMisPrimerasLetras.Utilidades.dll
+D:\proyectodavid\proyectodavid\JardinMisPrimerasLetras.Utilidades\bin\Debug\netstandard2.0\JardinMisPrimerasLetras.Utilidades.pdb
+D:\proyectodavid\proyectodavid\JardinMisPrimerasLetras.Utilidades\obj\Debug\netstandard2.0\JardinMisPrimerasLetras.Utilidades.csprojAssemblyReference.cache
+D:\proyectodavid\proyectodavid\JardinMisPrimerasLetras.Utilidades\obj\Debug\netstandard2.0\JardinMisPrimerasLetras.Utilidades.Recursos.StoredProcedures.resources
+D:\proyectodavid\proyectodavid\JardinMisPrimerasLetras.Utilidades\obj\Debug\netstandard2.0\JardinMisPrimerasLetras.Utilidades.csproj.GenerateResource.cache
+D:\proyectodavid\proyectodavid\JardinMisPrimerasLetras.Utilidades\obj\Debug\netstandard2.0\JardinMisPrimerasLetras.Utilidades.AssemblyInfoInputs.cache
+D:\proyectodavid\proyectodavid\JardinMisPrimerasLetras.Utilidades\obj\Debug\netstandard2.0\JardinMisPrimerasLetras.Utilidades.AssemblyInfo.cs
+D:\proyectodavid\proyectodavid\JardinMisPrimerasLetras.Utilidades\obj\Debug\netstandard2.0\JardinMisPrimerasLetras.Utilidades.dll
+D:\proyectodavid\proyectodavid\JardinMisPrimerasLetras.Utilidades\obj\Debug\netstandard2.0\JardinMisPrimerasLetras.Utilidades.pdb

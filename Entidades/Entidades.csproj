@@ -50,5 +50,11 @@
     <Compile Include="RespuestaLogin.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UsuarioLogeadoController\UsuarioLogeadoController.csproj">
+      <Project>{88dc62e4-fe88-43e8-a845-ca76b06d5eb0}</Project>
+      <Name>UsuarioLogeadoController</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

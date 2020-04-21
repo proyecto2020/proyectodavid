@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Dapper;
 using Entidades;
-using JardinMisPrimerasLetras.Utilidades.Recursos;
+
 
 namespace logicaBD
 {
@@ -33,119 +33,114 @@ namespace logicaBD
         {
 
              DynamicParameters  parameters = new DynamicParameters();
-            Collection<RespuestaLogin> objectoR = new Collection<RespuestaLogin>();
+             Collection<RespuestaLogin> objectoR = new Collection<RespuestaLogin>();
 
-                string queryString = $"EXEC " + "PR_ConsultarCredendenciales " +
-                usuario + "," + contraseña + " ";
+             string queryString = $"EXEC " + "PR_ConsultarCredendenciales " +
+                contraseña + "," + usuario + " ";
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(queryString, conexion);
                 conexion.Open();
-                parameters.Add("@usuario", usuario);
                 parameters.Add("@contrasena", contraseña);
+                parameters.Add("@usuario", usuario);
                 using (var multipleResponse = conexion.QueryMultiple(queryString, parameters))
                 {
                     objectoR = new ObservableCollection<RespuestaLogin>(multipleResponse.Read<RespuestaLogin>().ToList());
+                }
+                if (objectoR.Count > 0)
+                {
+
+                    UsuarioLogeadoController.User.Perfil = objectoR[0].descripcionPerfil;
+                    UsuarioLogeadoController.User.NombreUsuario = objectoR[0].nombre;
+                    UsuarioLogeadoController.User.ApellidoUsuario = objectoR[0].primerNombre;
+                
                 }
 
             }
             return objectoR;
           
         }
+        public List<Perfiles> ObtenerPerfiles()
+        {
+            
+            string queryString ="select * from perfiles";
+            DataTable tblRol = new DataTable();
+            tblRol = this.mtdSelect(queryString);
 
-      
+            for (int i = 0; i < tblRol.Rows.Count; i++)
+            {
+                Perfiles objPerfil = new Perfiles();
+                objPerfil.idPerfil = int.Parse(tblRol.Rows[i][0].ToString());
+                objPerfil.descripcion = tblRol.Rows[i][1].ToString();
+                Perfiles.Add(objPerfil);
+            }
+            return Perfiles;
+        }
+
+
+
         public Respuesta<object> insertarUsuario( Usuario usuario)
         {
-            List<Usuario> usuarios = new List<Usuario>();
-            DynamicParameters parameters = new DynamicParameters();
-            string resultados = null;
-
-
-            //string StoredProcedure = "PR_InsertarUsuario";
-
-            using (SqlConnection conexion = new SqlConnection(connectionString))
-            {
-                conexion.Open();//DAO Docente solo conexiones y esto para bajo
-                SqlCommand cmd = new SqlCommand("PR_InsertarUsuario", conexion);
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.AddWithValue("@pi_Identificacion", usuario.identificacacion);
-                cmd.Parameters.AddWithValue("@pi_PrimerNombre", usuario.primerNombre);
-                cmd.Parameters.AddWithValue("@pi_SegundoNombre", usuario.segundoNombre);
-                cmd.Parameters.AddWithValue("@pi_PrimerApellido", usuario.primerApellido);
-                cmd.Parameters.AddWithValue("@pi_SegundoApellido", usuario.segundoApellido);
-                cmd.Parameters.AddWithValue("@pi_Correo", usuario.correo);
-                cmd.Parameters.AddWithValue("@pi_UsuarioCreacion", usuario.usuario);
-                cmd.Parameters.AddWithValue("@pi_Contraseña", usuario.contrasena);
-                cmd.Parameters.AddWithValue("@pi_Perfil", usuario.perfilUsuario);
-                cmd.Parameters.AddWithValue("@pi_NombreApellido", usuario.nombreApellido);
-                cmd.ExecuteNonQuery();
-
-                //respuesta.ResultData = new ObservableCollection<object>(new List<object> { rowAffected });
-            }
             
-            return respuesta;
-            
-
-        }
-        
-
-        public Respuesta<object> actualizarUsuario(Usuario usuario)
-        {
-            List<Usuario> usuarios = new List<Usuario>();
-            DynamicParameters parameters = new DynamicParameters();
-            string resultados = null;
-
-
-            //string StoredProcedure = "PR_ActualizarUsuario";
-
+            DynamicParameters Parameters = new DynamicParameters();
+            string storedProcedure = $"EXEC " + "PR_InsertarUsuario ";
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
-                conexion.Open();//DAO Docente solo conexiones y esto para bajo
-                SqlCommand cmd = new SqlCommand("PR_ActualizarUsuario", conexion);
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.AddWithValue("@pi_Identificacion", usuario.identificacacion);
-                cmd.Parameters.AddWithValue("@pi_PrimerNombre", usuario.primerNombre);
-                cmd.Parameters.AddWithValue("@pi_SegundoNombre", usuario.segundoNombre);
-                cmd.Parameters.AddWithValue("@pi_PrimerApellido", usuario.primerApellido);
-                cmd.Parameters.AddWithValue("@pi_SegundoApellido", usuario.segundoApellido);
-                cmd.Parameters.AddWithValue("@pi_Correo", usuario.correo);
-                cmd.Parameters.AddWithValue("@pi_UsuarioCreacion", usuario.usuario);
-                cmd.Parameters.AddWithValue("@pi_Contraseña", usuario.contrasena);
-                cmd.Parameters.AddWithValue("@pi_Perfil", usuario.perfilUsuario);
-                cmd.ExecuteNonQuery();
-            }
-            return respuesta;
-
-        }
-
-        public Respuesta<object> eliminarUsuario(Usuario usuario)
-        {
-            List<Usuario> usuarios = new List<Usuario>();
-            DynamicParameters parameters = new DynamicParameters();
-            string resultados = null;
-
-
-            string StoredProcedure = "PR_EliminarUsuario";
-
-            using (SqlConnection conexion = new SqlConnection(connectionString))
-            {
+                try
+                {
                 conexion.Open();
-                parameters.Add("@pi_Identificacion", usuario.identificacacion);
-                parameters.Add("@pi_PrimerNombre", usuario.primerNombre);
-                parameters.Add("@pi_SegundoNombre", usuario.segundoNombre);
-                parameters.Add("@pi_PrimerApellido", usuario.primerApellido);
-                parameters.Add("@pi_SegundoApellido", usuario.segundoApellido);
-                parameters.Add("@pi_Correo", usuario.correo, DbType.String);
-                parameters.Add("@pi_UsuarioCreacion", usuario.usuario);
-                parameters.Add("@pi_Contraseña", usuario.contrasena);
-                parameters.Add("@pi_Perfil", usuario.perfilUsuario);
-                int rowAffected = conexion.Execute(StoredProcedure, parameters);
-                respuesta.ResultData = new ObservableCollection<object>(new List<object> { rowAffected });
-            }
-            return respuesta;
+                    SqlCommand cmd = new SqlCommand("PR_InsertarUsuario", conexion);
+                    cmd.CommandType = CommandType.StoredProcedure;
+               cmd.Parameters.AddWithValue("@pi_Identificacion", usuario.identificacacion);
+               cmd.Parameters.AddWithValue("@pi_PrimerNombre", usuario.primerNombre);
+               cmd.Parameters.AddWithValue("@pi_SegundoNombre", usuario.segundoNombre);
+               cmd.Parameters.AddWithValue("@pi_PrimerApellido", usuario.primerApellido);
+               cmd.Parameters.AddWithValue("@pi_SegundoApellido", usuario.segundoApellido);
+               cmd.Parameters.AddWithValue("@pi_Correo", usuario.correo);
+               cmd.Parameters.AddWithValue("@pi_UsuarioCreacion", usuario.usuarioCreacion);
+               cmd.Parameters.AddWithValue("@pi_Perfil", usuario.perfilUsuario);
+               cmd.Parameters.AddWithValue("@contraseña", usuario.contrasena);
+               cmd.ExecuteNonQuery();
+                }
+                catch (Exception e)
+                {
 
+                    throw;
+                }
+            }
+             conexion.Close();
+            return respuesta;      
+        }
+
+        public List<Usuario> ConsultarUsuarios()
+        {
+            List<Usuario> lista = new List<Usuario>();
+            string consulta = $"EXEC " + "PR_ConsultarUsuario ";
+            SqlCommand command = new SqlCommand(consulta, conexion);
+            conexion.Open();
+            SqlDataReader reader = command.ExecuteReader();
+            try
+            {
+                while (reader.Read())
+                {
+                    Usuario usuario = new Usuario();
+                    usuario.perfilUsuario = Convert.ToInt32(reader["perfilUsuario"].ToString());
+                    usuario.primerNombre = reader["primerNombre"].ToString();
+                    usuario.primerApellido = reader["primerApellido"].ToString();
+                    usuario.segundoApellido = reader["segundoApellido"].ToString();
+                    usuario.correo = reader["correo"].ToString();
+
+                    lista.Add(usuario);
+                }
+            }
+            finally
+            {
+                reader.Close();
+            }
+
+            conexion.Close();
+
+            return lista;
         }
 
         public string insertarGestion(string Docente, string Grupo, string Grado, string Area, string Materia)

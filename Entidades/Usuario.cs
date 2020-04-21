@@ -8,7 +8,7 @@ namespace Entidades
 {
     public class Usuario
     {
-        public int identificacacion { get; set; }
+        public string identificacacion { get; set; }
         public string primerNombre { get; set; }
         public string segundoNombre { get; set; }
         public string primerApellido { get; set; }
@@ -23,7 +23,7 @@ namespace Entidades
         //public int cedula { get; set; }
         public string usuario { get; set; }
         public string nombreApellido { get; set; }
-
+        public string Perfil { get; set; }
 
 
 

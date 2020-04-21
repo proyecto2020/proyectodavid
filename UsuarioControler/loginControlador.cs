@@ -2,6 +2,7 @@
 using logicaBD;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,12 +17,17 @@ namespace UsuarioControler
         {
             this.cliente = new InfoBD();
         }
-        public Respuesta<object> validarCredenciales(string usuario, string contrasena)
+        public Collection<RespuestaLogin> validarCredenciales(string usuario, string contrasena)
         {
-           
-                var retornar = this.cliente.ObtenerCredeciales(usuario, contrasena);
+
+            Collection<RespuestaLogin> retornar = this.cliente.ObtenerCredeciales(usuario, contrasena);
                 return retornar;
                
+        }
+        public List<Perfiles> ObtenerPerfiles()
+        {
+            List<Perfiles> retornar = this.cliente.ObtenerPerfiles();
+            return retornar;
         }
 
 
@@ -30,16 +36,9 @@ namespace UsuarioControler
             var resultado = this.cliente.insertarUsuario(usuario);
             return resultado;
         }
-
-        public Respuesta<object> actualizarUsuario(Usuario usuario)
+        public List<Usuario> ConsultarUsuarios()
         {
-            var resultado = this.cliente.actualizarUsuario(usuario);
-            return resultado;
-        }
-
-        public Respuesta<object> eliminarUsuario(Usuario usuario)
-        {
-            var resultado = this.cliente.eliminarUsuario(usuario);
+            var resultado = this.cliente.ConsultarUsuarios();
             return resultado;
         }
 
