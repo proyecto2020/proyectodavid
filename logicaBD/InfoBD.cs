@@ -29,27 +29,27 @@ namespace logicaBD
             respuesta = new Respuesta<object>();
         }
        
-        public Respuesta<object> ObtenerCredeciales(string usuario, string contraseña)
+        public Collection<RespuestaLogin> ObtenerCredeciales(string usuario, string contraseña)
         {
 
              DynamicParameters  parameters = new DynamicParameters();
-             Collection<object> resultados = null;
+            Collection<RespuestaLogin> objectoR = new Collection<RespuestaLogin>();
 
+                string queryString = $"EXEC " + "PR_ConsultarCredendenciales " +
+                usuario + "," + contraseña + " ";
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
-                string queryString = $"EXEC " + "PR_ValidarLogin "  +
-                usuario + "," + contraseña + " ";
-
+                SqlCommand command = new SqlCommand(queryString, conexion);
                 conexion.Open();
-                parameters.Add("@usuario",usuario);
-                parameters.Add("@contraseña",contraseña);
+                parameters.Add("@usuario", usuario);
+                parameters.Add("@contrasena", contraseña);
                 using (var multipleResponse = conexion.QueryMultiple(queryString, parameters))
                 {
-                    resultados = new ObservableCollection<object>(multipleResponse.Read<object>().ToList());
-                    respuesta.ResultData = resultados;
+                    objectoR = new ObservableCollection<RespuestaLogin>(multipleResponse.Read<RespuestaLogin>().ToList());
                 }
+
             }
-            return respuesta;
+            return objectoR;
           
         }
 

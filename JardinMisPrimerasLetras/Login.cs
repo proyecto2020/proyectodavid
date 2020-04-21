@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Windows.Forms;
 using Entidades;
 namespace JardinMisPrimerasLetras
@@ -28,14 +29,14 @@ namespace JardinMisPrimerasLetras
             AdministradorUsuarios admin = new AdministradorUsuarios();
             string usuario = textUsuario.Text;
             string contrasena = textContrasena.Text;
-            Respuesta<object> ingreso = this.controlador.validarCredenciales(usuario, contrasena);
+            Collection<RespuestaLogin> ingreso = this.controlador.validarCredenciales(usuario, contrasena);
             if (Usuario.perfilUsuario.Equals("Administrador"))
             {
                 admin.Show();
                 this.Hide();
             }
 
-            if (ingreso.ResultData.Count > 0)
+            if (ingreso.Count > 0)
             {
 
                 AdministradorUsuarios usuarios = new AdministradorUsuarios();
