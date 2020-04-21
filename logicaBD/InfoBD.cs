@@ -214,6 +214,7 @@ namespace logicaBD
                 cmd.Parameters.AddWithValue("@idMateria", gestion.materia);
                 cmd.Parameters.AddWithValue("@hora", gestion.horas);
                 cmd.Parameters.AddWithValue("@idDocente", gestion.docente);
+                cmd.Parameters.AddWithValue("@idDocente", gestion.docente);
                 cmd.ExecuteNonQuery();
 
                 //respuesta.ResultData = new ObservableCollection<object>(new List<object> { rowAffected });
