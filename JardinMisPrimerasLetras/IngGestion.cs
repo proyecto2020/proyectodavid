@@ -83,9 +83,7 @@ namespace JardinMisPrimerasLetras
 
         private void Gestion_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetGestion.Gestion' Puede moverla o quitarla según sea necesario.
-            this.gestionTableAdapter.Fill(this.letrasDataSetGestion.Gestion);
-
+            
         }
 
         private void fillByToolStripButton_Click(object sender, EventArgs e)
@@ -141,6 +139,12 @@ namespace JardinMisPrimerasLetras
         {
             this.Hide();
             this.pagos.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+            //this.administradorUsuarios.Show();
         }
     }
 }

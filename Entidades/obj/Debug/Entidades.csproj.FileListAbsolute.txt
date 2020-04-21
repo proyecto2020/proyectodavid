@@ -14,3 +14,11 @@ D:\proyectodavid\proyectodavid\Entidades\obj\Debug\Entidades.csprojAssemblyRefer
 D:\proyectodavid\proyectodavid\Entidades\obj\Debug\Entidades.csproj.CopyComplete
 D:\proyectodavid\proyectodavid\Entidades\obj\Debug\Entidades.dll
 D:\proyectodavid\proyectodavid\Entidades\obj\Debug\Entidades.pdb
+C:\Users\jason\Documents\GitHub\proyectodavid\Entidades\bin\Debug\Entidades.dll
+C:\Users\jason\Documents\GitHub\proyectodavid\Entidades\bin\Debug\Entidades.pdb
+C:\Users\jason\Documents\GitHub\proyectodavid\Entidades\bin\Debug\UsuarioLogeadoController.dll
+C:\Users\jason\Documents\GitHub\proyectodavid\Entidades\bin\Debug\UsuarioLogeadoController.pdb
+C:\Users\jason\Documents\GitHub\proyectodavid\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\jason\Documents\GitHub\proyectodavid\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+C:\Users\jason\Documents\GitHub\proyectodavid\Entidades\obj\Debug\Entidades.dll
+C:\Users\jason\Documents\GitHub\proyectodavid\Entidades\obj\Debug\Entidades.pdb

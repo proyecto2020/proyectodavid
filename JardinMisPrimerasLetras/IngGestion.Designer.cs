@@ -35,22 +35,20 @@
             this.label4 = new System.Windows.Forms.Label();
             this.buttonGuardar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textGrados = new System.Windows.Forms.TextBox();
-            this.textGrupos = new System.Windows.Forms.TextBox();
-            this.textArea = new System.Windows.Forms.TextBox();
-            this.textMateria = new System.Windows.Forms.TextBox();
-            this.letrasDataSetGestion = new JardinMisPrimerasLetras.LetrasDataSetGestion();
-            this.gestionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gestionTableAdapter = new JardinMisPrimerasLetras.LetrasDataSetGestionTableAdapters.GestionTableAdapter();
             this.gradosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gruposDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.areaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gestionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.letrasDataSetGestion = new JardinMisPrimerasLetras.LetrasDataSetGestion();
+            this.textGrados = new System.Windows.Forms.TextBox();
+            this.textGrupos = new System.Windows.Forms.TextBox();
+            this.textArea = new System.Windows.Forms.TextBox();
+            this.textMateria = new System.Windows.Forms.TextBox();
+            this.gestionTableAdapter = new JardinMisPrimerasLetras.LetrasDataSetGestionTableAdapters.GestionTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetGestion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetGestion)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -116,24 +114,39 @@
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // button1
+            // gradosDataGridViewTextBoxColumn
             // 
-            this.button1.Location = new System.Drawing.Point(464, 351);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 61);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "PAGOS";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.gradosDataGridViewTextBoxColumn.DataPropertyName = "Grados";
+            this.gradosDataGridViewTextBoxColumn.HeaderText = "Grados";
+            this.gradosDataGridViewTextBoxColumn.Name = "gradosDataGridViewTextBoxColumn";
             // 
-            // button2
+            // gruposDataGridViewTextBoxColumn
             // 
-            this.button2.Location = new System.Drawing.Point(12, 351);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 61);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "ADM USUARIOS";
-            this.button2.UseVisualStyleBackColor = true;
+            this.gruposDataGridViewTextBoxColumn.DataPropertyName = "Grupos";
+            this.gruposDataGridViewTextBoxColumn.HeaderText = "Grupos";
+            this.gruposDataGridViewTextBoxColumn.Name = "gruposDataGridViewTextBoxColumn";
+            // 
+            // areaDataGridViewTextBoxColumn
+            // 
+            this.areaDataGridViewTextBoxColumn.DataPropertyName = "Area";
+            this.areaDataGridViewTextBoxColumn.HeaderText = "Area";
+            this.areaDataGridViewTextBoxColumn.Name = "areaDataGridViewTextBoxColumn";
+            // 
+            // materiaDataGridViewTextBoxColumn
+            // 
+            this.materiaDataGridViewTextBoxColumn.DataPropertyName = "Materia";
+            this.materiaDataGridViewTextBoxColumn.HeaderText = "Materia";
+            this.materiaDataGridViewTextBoxColumn.Name = "materiaDataGridViewTextBoxColumn";
+            // 
+            // gestionBindingSource
+            // 
+            this.gestionBindingSource.DataMember = "Gestion";
+            this.gestionBindingSource.DataSource = this.letrasDataSetGestion;
+            // 
+            // letrasDataSetGestion
+            // 
+            this.letrasDataSetGestion.DataSetName = "LetrasDataSetGestion";
+            this.letrasDataSetGestion.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textGrados
             // 
@@ -163,43 +176,9 @@
             this.textMateria.Size = new System.Drawing.Size(100, 20);
             this.textMateria.TabIndex = 20;
             // 
-            // letrasDataSetGestion
-            // 
-            this.letrasDataSetGestion.DataSetName = "LetrasDataSetGestion";
-            this.letrasDataSetGestion.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gestionBindingSource
-            // 
-            this.gestionBindingSource.DataMember = "Gestion";
-            this.gestionBindingSource.DataSource = this.letrasDataSetGestion;
-            // 
             // gestionTableAdapter
             // 
             this.gestionTableAdapter.ClearBeforeFill = true;
-            // 
-            // gradosDataGridViewTextBoxColumn
-            // 
-            this.gradosDataGridViewTextBoxColumn.DataPropertyName = "Grados";
-            this.gradosDataGridViewTextBoxColumn.HeaderText = "Grados";
-            this.gradosDataGridViewTextBoxColumn.Name = "gradosDataGridViewTextBoxColumn";
-            // 
-            // gruposDataGridViewTextBoxColumn
-            // 
-            this.gruposDataGridViewTextBoxColumn.DataPropertyName = "Grupos";
-            this.gruposDataGridViewTextBoxColumn.HeaderText = "Grupos";
-            this.gruposDataGridViewTextBoxColumn.Name = "gruposDataGridViewTextBoxColumn";
-            // 
-            // areaDataGridViewTextBoxColumn
-            // 
-            this.areaDataGridViewTextBoxColumn.DataPropertyName = "Area";
-            this.areaDataGridViewTextBoxColumn.HeaderText = "Area";
-            this.areaDataGridViewTextBoxColumn.Name = "areaDataGridViewTextBoxColumn";
-            // 
-            // materiaDataGridViewTextBoxColumn
-            // 
-            this.materiaDataGridViewTextBoxColumn.DataPropertyName = "Materia";
-            this.materiaDataGridViewTextBoxColumn.HeaderText = "Materia";
-            this.materiaDataGridViewTextBoxColumn.Name = "materiaDataGridViewTextBoxColumn";
             // 
             // IngGestion
             // 
@@ -211,8 +190,6 @@
             this.Controls.Add(this.textArea);
             this.Controls.Add(this.textGrupos);
             this.Controls.Add(this.textGrados);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonGuardar);
             this.Controls.Add(this.label4);
@@ -223,8 +200,8 @@
             this.Text = "Gestion";
             this.Load += new System.EventHandler(this.Gestion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetGestion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetGestion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,8 +215,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button buttonGuardar;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textGrados;
         private System.Windows.Forms.TextBox textGrupos;
         private System.Windows.Forms.TextBox textArea;
