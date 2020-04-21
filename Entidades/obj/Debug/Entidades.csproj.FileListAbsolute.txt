@@ -1,0 +1,9 @@
+C:\Users\felipe\source\repos\JardinMisPrimerasLetras\Entidades\bin\Debug\Entidades.dll
+C:\Users\felipe\source\repos\JardinMisPrimerasLetras\Entidades\bin\Debug\Entidades.pdb
+C:\Users\felipe\source\repos\JardinMisPrimerasLetras\Entidades\obj\Debug\Entidades.dll
+C:\Users\felipe\source\repos\JardinMisPrimerasLetras\Entidades\obj\Debug\Entidades.pdb
+E:\Jason\JardinMisPrimerasLetras\Entidades\bin\Debug\Entidades.dll
+E:\Jason\JardinMisPrimerasLetras\Entidades\bin\Debug\Entidades.pdb
+E:\Jason\JardinMisPrimerasLetras\Entidades\obj\Debug\Entidades.dll
+E:\Jason\JardinMisPrimerasLetras\Entidades\obj\Debug\Entidades.pdb
+E:\Jason\JardinMisPrimerasLetras\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache

@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/MisPrimerasLetras/MisPrimerasLetras/obj/Debug
+/MisPrimerasLetras/.vs/MisPrimerasLetras/v16
+/MisPrimerasLetras/MisPirmerasLetras/bin/Debug
+/MisPrimerasLetras/MisPirmerasLetras/obj/Debug

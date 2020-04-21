@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2CDC8391-01D6-4577-9447-40695E8E9784}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>JardinMisPrimerasLetras</RootNamespace>
+    <AssemblyName>JardinMisPrimerasLetras</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdministradorUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministradorUsuarios.Designer.cs">
+      <DependentUpon>AdministradorUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngGestion.Designer.cs">
+      <DependentUpon>IngGestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="jardinDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>jardinDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LetrasDataSetArea.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LetrasDataSetArea.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LetrasDataSetDocente.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LetrasDataSetDocente.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LetrasDataSetGestion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LetrasDataSetGestion.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LetrasDataSetGrado.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LetrasDataSetGrado.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LetrasDataSetGrados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LetrasDataSetGrados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LetrasDataSetGrupo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LetrasDataSetGrupo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LetrasDataSetGrupos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LetrasDataSetGrupos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LetrasDataSetMateria.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LetrasDataSetMateria.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LetrasDataSetSalones.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LetrasDataSetSalones.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Matriculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Matriculas.Designer.cs">
+      <DependentUpon>Matriculas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagos.Designer.cs">
+      <DependentUpon>Pagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PerfilesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PerfilesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdministradorUsuarios.resx">
+      <DependentUpon>AdministradorUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngGestion.resx">
+      <DependentUpon>IngGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pagos.resx">
+      <DependentUpon>Pagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="jardinDataSet.xsc">
+      <DependentUpon>jardinDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="jardinDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>jardinDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="jardinDataSet.xss">
+      <DependentUpon>jardinDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetArea.xsc">
+      <DependentUpon>LetrasDataSetArea.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetArea.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LetrasDataSetArea.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LetrasDataSetArea.xss">
+      <DependentUpon>LetrasDataSetArea.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetDocente.xsc">
+      <DependentUpon>LetrasDataSetDocente.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetDocente.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LetrasDataSetDocente.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LetrasDataSetDocente.xss">
+      <DependentUpon>LetrasDataSetDocente.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetGestion.xsc">
+      <DependentUpon>LetrasDataSetGestion.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetGestion.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LetrasDataSetGestion.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LetrasDataSetGestion.xss">
+      <DependentUpon>LetrasDataSetGestion.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetGrado.xsc">
+      <DependentUpon>LetrasDataSetGrado.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetGrado.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LetrasDataSetGrado.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LetrasDataSetGrado.xss">
+      <DependentUpon>LetrasDataSetGrado.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetGrados.xsc">
+      <DependentUpon>LetrasDataSetGrados.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetGrados.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LetrasDataSetGrados.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LetrasDataSetGrados.xss">
+      <DependentUpon>LetrasDataSetGrados.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetGrupo.xsc">
+      <DependentUpon>LetrasDataSetGrupo.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetGrupo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LetrasDataSetGrupo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LetrasDataSetGrupo.xss">
+      <DependentUpon>LetrasDataSetGrupo.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetGrupos.xsc">
+      <DependentUpon>LetrasDataSetGrupos.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetGrupos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LetrasDataSetGrupos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LetrasDataSetGrupos.xss">
+      <DependentUpon>LetrasDataSetGrupos.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetMateria.xsc">
+      <DependentUpon>LetrasDataSetMateria.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetMateria.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LetrasDataSetMateria.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LetrasDataSetMateria.xss">
+      <DependentUpon>LetrasDataSetMateria.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetSalones.xsc">
+      <DependentUpon>LetrasDataSetSalones.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetSalones.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LetrasDataSetSalones.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LetrasDataSetSalones.xss">
+      <DependentUpon>LetrasDataSetSalones.xsd</DependentUpon>
+    </None>
+    <None Include="PerfilesDataSet.xsc">
+      <DependentUpon>PerfilesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PerfilesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PerfilesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PerfilesDataSet.xss">
+      <DependentUpon>PerfilesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jardin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-administración.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{cef79b86-c45a-4bed-9da6-456a5ae825bf}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UsuarioControler\UsuarioControler.csproj">
+      <Project>{59964bb7-aa9e-4cfe-a6f7-d7baf1dc1112}</Project>
+      <Name>UsuarioControler</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

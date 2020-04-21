@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LetrasDataSetMateria" targetNamespace="http://tempuri.org/LetrasDataSetMateria.xsd" xmlns:mstns="http://tempuri.org/LetrasDataSetMateria.xsd" xmlns="http://tempuri.org/LetrasDataSetMateria.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="conexionDB" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="conexionDB (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.JardinMisPrimerasLetras.Properties.Settings.GlobalReference.Default.conexionDB" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MateriaTableAdapter" GeneratorDataComponentClassName="MateriaTableAdapter" Name="Materia" UserDataComponentName="MateriaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="conexionDB (Settings)" DbObjectName="Letras.dbo.Materia" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Nombre_Materia FROM dbo.Materia</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Nombre_Materia" DataSetColumn="Nombre_Materia" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LetrasDataSetMateria" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="LetrasDataSetMateria" msprop:Generator_UserDSName="LetrasDataSetMateria">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Materia" msprop:Generator_TableClassName="MateriaDataTable" msprop:Generator_TableVarName="tableMateria" msprop:Generator_TablePropName="Materia" msprop:Generator_RowDeletingName="MateriaRowDeleting" msprop:Generator_RowChangingName="MateriaRowChanging" msprop:Generator_RowEvHandlerName="MateriaRowChangeEventHandler" msprop:Generator_RowDeletedName="MateriaRowDeleted" msprop:Generator_UserTableName="Materia" msprop:Generator_RowChangedName="MateriaRowChanged" msprop:Generator_RowEvArgName="MateriaRowChangeEvent" msprop:Generator_RowClassName="MateriaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nombre_Materia" msprop:Generator_ColumnVarNameInTable="columnNombre_Materia" msprop:Generator_ColumnPropNameInRow="Nombre_Materia" msprop:Generator_ColumnPropNameInTable="Nombre_MateriaColumn" msprop:Generator_UserColumnName="Nombre_Materia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
