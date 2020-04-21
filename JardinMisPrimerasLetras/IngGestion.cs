@@ -50,20 +50,20 @@ namespace JardinMisPrimerasLetras
 
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
-            string grupo = Grupos.Text;
-            string area = comboBoxArea.Text;
-            string docente = MDocente.Text;
-            string grado = comboBoxGrados.Text;
-            string materia = comboBoxMateria.Text;
-            string salones = Salones.Text;
+            string grupo = textGrupos.Text;
+            string area = textArea.Text;
+            //string docente = MDocente.Text;
+            string grado = textGrados.Text;
+            string materia = textMateria.Text;
+            //string salones = Salones.Text;
 
             Gestion insertarGestion = new Gestion();
             insertarGestion.grupo = grupo;
             insertarGestion.area = area;
-            insertarGestion.docente = docente;
+            //insertarGestion.docente = docente;
             insertarGestion.grados = grado;
             insertarGestion.materia = materia;
-            insertarGestion.salones = salones;
+            //insertarGestion.salones = salones;
 
             Respuesta<object> ingreso = this.controlador.insertarGestion(insertarGestion);
 
@@ -85,20 +85,6 @@ namespace JardinMisPrimerasLetras
         {
             // TODO: esta línea de código carga datos en la tabla 'letrasDataSetGestion.Gestion' Puede moverla o quitarla según sea necesario.
             this.gestionTableAdapter.Fill(this.letrasDataSetGestion.Gestion);
-            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetDocente.Usuario' Puede moverla o quitarla según sea necesario.
-            this.usuarioTableAdapter.Fill(this.letrasDataSetDocente.Usuario);
-            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetMateria.Materia' Puede moverla o quitarla según sea necesario.
-            this.materiaTableAdapter.Fill(this.letrasDataSetMateria.Materia);
-            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetArea.Area' Puede moverla o quitarla según sea necesario.
-            this.areaTableAdapter.Fill(this.letrasDataSetArea.Area);
-            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetGrupos.Grupos' Puede moverla o quitarla según sea necesario.
-            this.gruposTableAdapter.Fill(this.letrasDataSetGrupos.Grupos);
-            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetSalones.Salones' Puede moverla o quitarla según sea necesario.
-            this.salonesTableAdapter.Fill(this.letrasDataSetSalones.Salones);
-            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetGrados.Grados' Puede moverla o quitarla según sea necesario.
-            this.gradosTableAdapter.Fill(this.letrasDataSetGrados.Grados);
-            // TODO: esta línea de código carga datos en la tabla 'letrasDataSet.Grupos' Puede moverla o quitarla según sea necesario.
-            // this.gruposTableAdapter.Fill(this.letrasDataSet.Grupos);
 
         }
 
@@ -148,14 +134,6 @@ namespace JardinMisPrimerasLetras
 
         private void docenteToolStripButton_Click_2(object sender, EventArgs e)
         {
-            try
-            {
-                this.usuarioTableAdapter.Docente(this.letrasDataSetDocente.Usuario);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
 
         }
 

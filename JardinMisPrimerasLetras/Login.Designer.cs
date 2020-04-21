@@ -32,7 +32,7 @@
             this.labelUsuario = new System.Windows.Forms.Label();
             this.labelContraseña = new System.Windows.Forms.Label();
             this.textUsuario = new System.Windows.Forms.TextBox();
-            this.textContraseña = new System.Windows.Forms.TextBox();
+            this.textContrasena = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // buttonSesion
@@ -73,13 +73,13 @@
             this.textUsuario.TabIndex = 3;
             this.textUsuario.TextChanged += new System.EventHandler(this.textUsuario_TextChanged);
             // 
-            // textContraseña
+            // textContrasena
             // 
-            this.textContraseña.Location = new System.Drawing.Point(233, 192);
-            this.textContraseña.Name = "textContraseña";
-            this.textContraseña.Size = new System.Drawing.Size(186, 20);
-            this.textContraseña.TabIndex = 4;
-            this.textContraseña.TextChanged += new System.EventHandler(this.textContraseña_TextChanged);
+            this.textContrasena.Location = new System.Drawing.Point(233, 192);
+            this.textContrasena.Name = "textContrasena";
+            this.textContrasena.Size = new System.Drawing.Size(186, 20);
+            this.textContrasena.TabIndex = 4;
+            this.textContrasena.TextChanged += new System.EventHandler(this.textContraseña_TextChanged);
             // 
             // Login
             // 
@@ -89,7 +89,7 @@
             this.BackgroundImage = global::JardinMisPrimerasLetras.Properties.Resources.jardin;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(732, 450);
-            this.Controls.Add(this.textContraseña);
+            this.Controls.Add(this.textContrasena);
             this.Controls.Add(this.textUsuario);
             this.Controls.Add(this.labelContraseña);
             this.Controls.Add(this.labelUsuario);
@@ -108,7 +108,7 @@
         private System.Windows.Forms.Label labelUsuario;
         private System.Windows.Forms.Label labelContraseña;
         private System.Windows.Forms.TextBox textUsuario;
-        private System.Windows.Forms.TextBox textContraseña;
+        private System.Windows.Forms.TextBox textContrasena;
     }
 }
 

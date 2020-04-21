@@ -146,15 +146,5 @@ namespace JardinMisPrimerasLetras
             this.Hide();
             this.gestion.Show();
         }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

@@ -63,50 +63,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>jardinDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="LetrasDataSetArea.Designer.cs">
+    <Compile Include="LetrasDataSetGestion1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LetrasDataSetArea.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="LetrasDataSetDocente.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LetrasDataSetDocente.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="LetrasDataSetGestion.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LetrasDataSetGestion.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="LetrasDataSetGrado.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LetrasDataSetGrado.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="LetrasDataSetGrados.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LetrasDataSetGrados.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="LetrasDataSetGrupo.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LetrasDataSetGrupo.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="LetrasDataSetGrupos.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LetrasDataSetGrupos.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="LetrasDataSetMateria.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LetrasDataSetMateria.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="LetrasDataSetSalones.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LetrasDataSetSalones.xsd</DependentUpon>
+      <DependentUpon>LetrasDataSetGestion1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -142,6 +102,9 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Matriculas.resx">
+      <DependentUpon>Matriculas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pagos.resx">
       <DependentUpon>Pagos.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,104 +132,16 @@
     <None Include="jardinDataSet.xss">
       <DependentUpon>jardinDataSet.xsd</DependentUpon>
     </None>
-    <None Include="LetrasDataSetArea.xsc">
-      <DependentUpon>LetrasDataSetArea.xsd</DependentUpon>
+    <None Include="LetrasDataSetGestion1.xsc">
+      <DependentUpon>LetrasDataSetGestion1.xsd</DependentUpon>
     </None>
-    <None Include="LetrasDataSetArea.xsd">
+    <None Include="LetrasDataSetGestion1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LetrasDataSetArea.Designer.cs</LastGenOutput>
+      <LastGenOutput>LetrasDataSetGestion1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="LetrasDataSetArea.xss">
-      <DependentUpon>LetrasDataSetArea.xsd</DependentUpon>
-    </None>
-    <None Include="LetrasDataSetDocente.xsc">
-      <DependentUpon>LetrasDataSetDocente.xsd</DependentUpon>
-    </None>
-    <None Include="LetrasDataSetDocente.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LetrasDataSetDocente.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LetrasDataSetDocente.xss">
-      <DependentUpon>LetrasDataSetDocente.xsd</DependentUpon>
-    </None>
-    <None Include="LetrasDataSetGestion.xsc">
-      <DependentUpon>LetrasDataSetGestion.xsd</DependentUpon>
-    </None>
-    <None Include="LetrasDataSetGestion.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LetrasDataSetGestion.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LetrasDataSetGestion.xss">
-      <DependentUpon>LetrasDataSetGestion.xsd</DependentUpon>
-    </None>
-    <None Include="LetrasDataSetGrado.xsc">
-      <DependentUpon>LetrasDataSetGrado.xsd</DependentUpon>
-    </None>
-    <None Include="LetrasDataSetGrado.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LetrasDataSetGrado.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LetrasDataSetGrado.xss">
-      <DependentUpon>LetrasDataSetGrado.xsd</DependentUpon>
-    </None>
-    <None Include="LetrasDataSetGrados.xsc">
-      <DependentUpon>LetrasDataSetGrados.xsd</DependentUpon>
-    </None>
-    <None Include="LetrasDataSetGrados.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LetrasDataSetGrados.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LetrasDataSetGrados.xss">
-      <DependentUpon>LetrasDataSetGrados.xsd</DependentUpon>
-    </None>
-    <None Include="LetrasDataSetGrupo.xsc">
-      <DependentUpon>LetrasDataSetGrupo.xsd</DependentUpon>
-    </None>
-    <None Include="LetrasDataSetGrupo.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LetrasDataSetGrupo.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LetrasDataSetGrupo.xss">
-      <DependentUpon>LetrasDataSetGrupo.xsd</DependentUpon>
-    </None>
-    <None Include="LetrasDataSetGrupos.xsc">
-      <DependentUpon>LetrasDataSetGrupos.xsd</DependentUpon>
-    </None>
-    <None Include="LetrasDataSetGrupos.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LetrasDataSetGrupos.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LetrasDataSetGrupos.xss">
-      <DependentUpon>LetrasDataSetGrupos.xsd</DependentUpon>
-    </None>
-    <None Include="LetrasDataSetMateria.xsc">
-      <DependentUpon>LetrasDataSetMateria.xsd</DependentUpon>
-    </None>
-    <None Include="LetrasDataSetMateria.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LetrasDataSetMateria.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LetrasDataSetMateria.xss">
-      <DependentUpon>LetrasDataSetMateria.xsd</DependentUpon>
-    </None>
-    <None Include="LetrasDataSetSalones.xsc">
-      <DependentUpon>LetrasDataSetSalones.xsd</DependentUpon>
-    </None>
-    <None Include="LetrasDataSetSalones.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LetrasDataSetSalones.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="LetrasDataSetSalones.xss">
-      <DependentUpon>LetrasDataSetSalones.xsd</DependentUpon>
+    <None Include="LetrasDataSetGestion1.xss">
+      <DependentUpon>LetrasDataSetGestion1.xsd</DependentUpon>
     </None>
     <None Include="PerfilesDataSet.xsc">
       <DependentUpon>PerfilesDataSet.xsd</DependentUpon>

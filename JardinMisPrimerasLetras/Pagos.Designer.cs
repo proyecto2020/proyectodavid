@@ -58,19 +58,19 @@
             this.Observaciones = new System.Windows.Forms.ListBox();
             this.Abono = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.letrasDataSetGrupo = new JardinMisPrimerasLetras.LetrasDataSetGrupo();
+            
             this.gruposBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gruposTableAdapter = new JardinMisPrimerasLetras.LetrasDataSetGrupoTableAdapters.GruposTableAdapter();
-            this.letrasDataSetGrado = new JardinMisPrimerasLetras.LetrasDataSetGrado();
+            
+            
             this.gradosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gradosTableAdapter = new JardinMisPrimerasLetras.LetrasDataSetGradoTableAdapters.GradosTableAdapter();
+            
             this.label16 = new System.Windows.Forms.Label();
             this.Direccion = new System.Windows.Forms.TextBox();
             this.text = new System.Windows.Forms.Label();
             this.Nacimiento = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetGrupo)).BeginInit();
+            
             ((System.ComponentModel.ISupportInitialize)(this.gruposBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetGrado)).BeginInit();
+            
             ((System.ComponentModel.ISupportInitialize)(this.gradosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -324,31 +324,28 @@
             // 
             // letrasDataSetGrupo
             // 
-            this.letrasDataSetGrupo.DataSetName = "LetrasDataSetGrupo";
-            this.letrasDataSetGrupo.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            
             // 
             // gruposBindingSource
             // 
             this.gruposBindingSource.DataMember = "Grupos";
-            this.gruposBindingSource.DataSource = this.letrasDataSetGrupo;
+            
             // 
             // gruposTableAdapter
             // 
-            this.gruposTableAdapter.ClearBeforeFill = true;
+            
             // 
             // letrasDataSetGrado
             // 
-            this.letrasDataSetGrado.DataSetName = "LetrasDataSetGrado";
-            this.letrasDataSetGrado.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            
             // 
             // gradosBindingSource
             // 
             this.gradosBindingSource.DataMember = "Grados";
-            this.gradosBindingSource.DataSource = this.letrasDataSetGrado;
+            
             // 
             // gradosTableAdapter
             // 
-            this.gradosTableAdapter.ClearBeforeFill = true;
             // 
             // label16
             // 
@@ -424,9 +421,9 @@
             this.Name = "Pagos";
             this.Text = "Pagos";
             this.Load += new System.EventHandler(this.Pagos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetGrupo)).EndInit();
+            
             ((System.ComponentModel.ISupportInitialize)(this.gruposBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetGrado)).EndInit();
+            
             ((System.ComponentModel.ISupportInitialize)(this.gradosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -464,12 +461,12 @@
         private System.Windows.Forms.ListBox Observaciones;
         private System.Windows.Forms.ComboBox Abono;
         private System.Windows.Forms.Label label14;
-        private LetrasDataSetGrupo letrasDataSetGrupo;
+        //private LetrasDataSetGrupo letrasDataSetGrupo;
         private System.Windows.Forms.BindingSource gruposBindingSource;
-        private LetrasDataSetGrupoTableAdapters.GruposTableAdapter gruposTableAdapter;
-        private LetrasDataSetGrado letrasDataSetGrado;
+        //private LetrasDataSetGrupoTableAdapters.GruposTableAdapter gruposTableAdapter;
+        //private LetrasDataSetGrado letrasDataSetGrado;
         private System.Windows.Forms.BindingSource gradosBindingSource;
-        private LetrasDataSetGradoTableAdapters.GradosTableAdapter gradosTableAdapter;
+        //private LetrasDataSetGradoTableAdapters.GradosTableAdapter gradosTableAdapter;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox Direccion;
         private System.Windows.Forms.Label text;

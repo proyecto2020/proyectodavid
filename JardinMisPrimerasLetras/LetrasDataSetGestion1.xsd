@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LetrasDataSetGestion" targetNamespace="http://tempuri.org/LetrasDataSetGestion1.xsd" xmlns:mstns="http://tempuri.org/LetrasDataSetGestion1.xsd" xmlns="http://tempuri.org/LetrasDataSetGestion1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="conexionDB" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="conexionDB (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.JardinMisPrimerasLetras.Properties.Settings.GlobalReference.Default.conexionDB" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GestionTableAdapter" GeneratorDataComponentClassName="GestionTableAdapter" Name="Gestion" UserDataComponentName="GestionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="conexionDB (Settings)" DbObjectName="Letras.dbo.Gestion" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Grupos, Area, Grados, Materia FROM dbo.Gestion</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Grupos" DataSetColumn="Grupos" />
+              <Mapping SourceColumn="Area" DataSetColumn="Area" />
+              <Mapping SourceColumn="Grados" DataSetColumn="Grados" />
+              <Mapping SourceColumn="Materia" DataSetColumn="Materia" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LetrasDataSetGestion" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="LetrasDataSetGestion" msprop:Generator_UserDSName="LetrasDataSetGestion">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Gestion" msprop:Generator_TableClassName="GestionDataTable" msprop:Generator_TableVarName="tableGestion" msprop:Generator_TablePropName="Gestion" msprop:Generator_RowDeletingName="GestionRowDeleting" msprop:Generator_RowChangingName="GestionRowChanging" msprop:Generator_RowEvHandlerName="GestionRowChangeEventHandler" msprop:Generator_RowDeletedName="GestionRowDeleted" msprop:Generator_UserTableName="Gestion" msprop:Generator_RowChangedName="GestionRowChanged" msprop:Generator_RowEvArgName="GestionRowChangeEvent" msprop:Generator_RowClassName="GestionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Grupos" msprop:Generator_ColumnVarNameInTable="columnGrupos" msprop:Generator_ColumnPropNameInRow="Grupos" msprop:Generator_ColumnPropNameInTable="GruposColumn" msprop:Generator_UserColumnName="Grupos">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Area" msprop:Generator_ColumnVarNameInTable="columnArea" msprop:Generator_ColumnPropNameInRow="Area" msprop:Generator_ColumnPropNameInTable="AreaColumn" msprop:Generator_UserColumnName="Area">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Grados" msprop:Generator_ColumnVarNameInTable="columnGrados" msprop:Generator_ColumnPropNameInRow="Grados" msprop:Generator_ColumnPropNameInTable="GradosColumn" msprop:Generator_UserColumnName="Grados">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Materia" msprop:Generator_ColumnVarNameInTable="columnMateria" msprop:Generator_ColumnPropNameInRow="Materia" msprop:Generator_ColumnPropNameInTable="MateriaColumn" msprop:Generator_UserColumnName="Materia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

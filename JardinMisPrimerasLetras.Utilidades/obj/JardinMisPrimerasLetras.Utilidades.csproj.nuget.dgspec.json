@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\felipe\\Desktop\\trabajos de u\\jardinInfantil\\proyectodavid\\proyectodavid\\JardinMisPrimerasLetras.Utilidades\\JardinMisPrimerasLetras.Utilidades.csproj": {}
+    "E:\\Jason\\JardinMisPrimerasLetras\\JardinMisPrimerasLetras.Utilidades\\JardinMisPrimerasLetras.Utilidades.csproj": {}
   },
   "projects": {
-    "C:\\Users\\felipe\\Desktop\\trabajos de u\\jardinInfantil\\proyectodavid\\proyectodavid\\JardinMisPrimerasLetras.Utilidades\\JardinMisPrimerasLetras.Utilidades.csproj": {
+    "E:\\Jason\\JardinMisPrimerasLetras\\JardinMisPrimerasLetras.Utilidades\\JardinMisPrimerasLetras.Utilidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\felipe\\Desktop\\trabajos de u\\jardinInfantil\\proyectodavid\\proyectodavid\\JardinMisPrimerasLetras.Utilidades\\JardinMisPrimerasLetras.Utilidades.csproj",
+        "projectUniqueName": "E:\\Jason\\JardinMisPrimerasLetras\\JardinMisPrimerasLetras.Utilidades\\JardinMisPrimerasLetras.Utilidades.csproj",
         "projectName": "JardinMisPrimerasLetras.Utilidades",
-        "projectPath": "C:\\Users\\felipe\\Desktop\\trabajos de u\\jardinInfantil\\proyectodavid\\proyectodavid\\JardinMisPrimerasLetras.Utilidades\\JardinMisPrimerasLetras.Utilidades.csproj",
-        "packagesPath": "C:\\Users\\felipe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\felipe\\Desktop\\trabajos de u\\jardinInfantil\\proyectodavid\\proyectodavid\\JardinMisPrimerasLetras.Utilidades\\obj\\",
+        "projectPath": "E:\\Jason\\JardinMisPrimerasLetras\\JardinMisPrimerasLetras.Utilidades\\JardinMisPrimerasLetras.Utilidades.csproj",
+        "packagesPath": "C:\\Users\\jason\\.nuget\\packages\\",
+        "outputPath": "E:\\Jason\\JardinMisPrimerasLetras\\JardinMisPrimerasLetras.Utilidades\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "D:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\felipe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jason\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -59,7 +59,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

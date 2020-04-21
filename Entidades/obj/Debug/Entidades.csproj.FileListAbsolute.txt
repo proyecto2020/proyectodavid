@@ -6,4 +6,3 @@ E:\Jason\JardinMisPrimerasLetras\Entidades\bin\Debug\Entidades.dll
 E:\Jason\JardinMisPrimerasLetras\Entidades\bin\Debug\Entidades.pdb
 E:\Jason\JardinMisPrimerasLetras\Entidades\obj\Debug\Entidades.dll
 E:\Jason\JardinMisPrimerasLetras\Entidades\obj\Debug\Entidades.pdb
-E:\Jason\JardinMisPrimerasLetras\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache

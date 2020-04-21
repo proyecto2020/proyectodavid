@@ -217,9 +217,34 @@ namespace logicaBD
                 cmd.Parameters.AddWithValue("@pi_Grados", gestion.grados);
                 cmd.Parameters.AddWithValue("@pi_Grupos", gestion.grupo);
                 cmd.Parameters.AddWithValue("@pi_Materia", gestion.materia);
-                cmd.Parameters.AddWithValue("@pi_Salones", gestion.salones);
-                cmd.Parameters.AddWithValue("@pi_Docente", gestion.docente);
+                //cmd.Parameters.AddWithValue("@pi_Salones", gestion.salones);
+                //cmd.Parameters.AddWithValue("@pi_Docente", gestion.docente);
                 cmd.Parameters.AddWithValue("@pi_Area", gestion.area);
+                cmd.ExecuteNonQuery();
+
+                //respuesta.ResultData = new ObservableCollection<object>(new List<object> { rowAffected });
+            }
+            return respuesta;
+        }
+
+        public Respuesta<Object> insertarAlumno(Alumnos alumno)
+        {
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                conexion.Open();//DAO Docente solo conexiones y esto para bajo
+                SqlCommand cmd = new SqlCommand("InsertarAlumno", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@pi_Grados", alumno.nombre);
+                cmd.Parameters.AddWithValue("@pi_Grupos", alumno.apellidos);
+                cmd.Parameters.AddWithValue("@pi_Materia", alumno.fechaNacimiento);
+                cmd.Parameters.AddWithValue("@pi_Materia", alumno.acudiente);
+                cmd.Parameters.AddWithValue("@pi_Materia", alumno.correo);
+                cmd.Parameters.AddWithValue("@pi_Materia", alumno.direccion);
+                cmd.Parameters.AddWithValue("@pi_Materia", alumno.identificacion);
+                cmd.Parameters.AddWithValue("@pi_Materia", alumno.ocupacion);
+                cmd.Parameters.AddWithValue("@pi_Materia", alumno.observacion);
+                cmd.Parameters.AddWithValue("@pi_Materia", alumno.telefono);
                 cmd.ExecuteNonQuery();
 
                 //respuesta.ResultData = new ObservableCollection<object>(new List<object> { rowAffected });

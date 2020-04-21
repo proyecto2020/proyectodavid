@@ -24,9 +24,17 @@ namespace JardinMisPrimerasLetras
         }
         private void buttonSesion_Click(object sender, EventArgs e)
         {
+            Usuario Usuario = new Usuario();
+            AdministradorUsuarios admin = new AdministradorUsuarios();
             string usuario = textUsuario.Text;
-            string contrasena = textContraseña.Text;
+            string contrasena = textContrasena.Text;
             Respuesta<object> ingreso = this.controlador.validarCredenciales(usuario, contrasena);
+            if (Usuario.perfilUsuario.Equals("Administrador"))
+            {
+                admin.Show();
+                this.Hide();
+            }
+
             if (ingreso.ResultData.Count > 0)
             {
 

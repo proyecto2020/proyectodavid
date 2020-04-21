@@ -55,6 +55,12 @@ namespace UsuarioControler
             return resultado;
         }
 
+        public Respuesta<object> insertarAlumno(Alumnos alumno)
+        {
+            var resultado = this.cliente.insertarAlumno(alumno);
+            return resultado;
+        }
+
         public Respuesta<object> insertarPagos(Pagos pago)
         {
             var resultado = this.cliente.insertarPagos(pago);

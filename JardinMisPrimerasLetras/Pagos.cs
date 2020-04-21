@@ -19,11 +19,7 @@ namespace JardinMisPrimerasLetras
 
         private void Pagos_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetGrado.Grados' Puede moverla o quitarla según sea necesario.
-            this.gradosTableAdapter.Fill(this.letrasDataSetGrado.Grados);
-            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetGrupo.Grupos' Puede moverla o quitarla según sea necesario.
-            this.gruposTableAdapter.Fill(this.letrasDataSetGrupo.Grupos);
-
+           
         }
 
         private void label1_Click(object sender, EventArgs e)
