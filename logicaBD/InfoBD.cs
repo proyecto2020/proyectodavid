@@ -206,15 +206,13 @@ namespace logicaBD
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
                 conexion.Open();//DAO Docente solo conexiones y esto para bajo
-                SqlCommand cmd = new SqlCommand("PR_InsertarActualizarGradosMateria", conexion);
+                SqlCommand cmd = new SqlCommand("PR_InsertarGestion", conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@idGradosMateria", gestion.idGradosMateria);
-                cmd.Parameters.AddWithValue("@idGrados", gestion.grados);
-                cmd.Parameters.AddWithValue("@idMateria", gestion.materia);
-                cmd.Parameters.AddWithValue("@hora", gestion.horas);
-                cmd.Parameters.AddWithValue("@idDocente", gestion.docente);
-                cmd.Parameters.AddWithValue("@idDocente", gestion.docente);
+                cmd.Parameters.AddWithValue("@pi_Grados", gestion.grados);
+                cmd.Parameters.AddWithValue("@pi_Grupos", gestion.grupo);
+                cmd.Parameters.AddWithValue("@pi_Area", gestion.area);
+                cmd.Parameters.AddWithValue("@pi_Materia", gestion.materia);
                 cmd.ExecuteNonQuery();
 
                 //respuesta.ResultData = new ObservableCollection<object>(new List<object> { rowAffected });

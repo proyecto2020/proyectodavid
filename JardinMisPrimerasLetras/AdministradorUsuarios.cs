@@ -152,5 +152,10 @@ namespace JardinMisPrimerasLetras
 
             }
         }
+
+        private void AdministradorUsuarios_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

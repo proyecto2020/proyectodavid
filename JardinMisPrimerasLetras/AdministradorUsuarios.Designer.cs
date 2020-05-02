@@ -44,6 +44,11 @@
             this.buttonGuardar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.primerNombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primerApellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.segundoApellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Perfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.jardinDataSet1 = new JardinMisPrimerasLetras.jardinDataSet();
             this.labelCorreo = new System.Windows.Forms.Label();
@@ -54,11 +59,6 @@
             this.usuarioTableAdapter = new JardinMisPrimerasLetras.jardinDataSetTableAdapters.UsuarioTableAdapter();
             this.perfilesTableAdapter = new JardinMisPrimerasLetras.PerfilesDataSetTableAdapters.PerfilesTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
-            this.primerNombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.primerApellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.segundoApellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Perfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.perfilesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
@@ -208,6 +208,36 @@
             this.dataGridView1.TabIndex = 22;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // primerNombreDataGridViewTextBoxColumn
+            // 
+            this.primerNombreDataGridViewTextBoxColumn.DataPropertyName = "primerNombre";
+            this.primerNombreDataGridViewTextBoxColumn.HeaderText = "primerNombre";
+            this.primerNombreDataGridViewTextBoxColumn.Name = "primerNombreDataGridViewTextBoxColumn";
+            // 
+            // primerApellidoDataGridViewTextBoxColumn
+            // 
+            this.primerApellidoDataGridViewTextBoxColumn.DataPropertyName = "primerApellido";
+            this.primerApellidoDataGridViewTextBoxColumn.HeaderText = "primerApellido";
+            this.primerApellidoDataGridViewTextBoxColumn.Name = "primerApellidoDataGridViewTextBoxColumn";
+            // 
+            // segundoApellidoDataGridViewTextBoxColumn
+            // 
+            this.segundoApellidoDataGridViewTextBoxColumn.DataPropertyName = "segundoApellido";
+            this.segundoApellidoDataGridViewTextBoxColumn.HeaderText = "segundoApellido";
+            this.segundoApellidoDataGridViewTextBoxColumn.Name = "segundoApellidoDataGridViewTextBoxColumn";
+            // 
+            // correoDataGridViewTextBoxColumn
+            // 
+            this.correoDataGridViewTextBoxColumn.DataPropertyName = "correo";
+            this.correoDataGridViewTextBoxColumn.HeaderText = "correo";
+            this.correoDataGridViewTextBoxColumn.Name = "correoDataGridViewTextBoxColumn";
+            // 
+            // Perfil
+            // 
+            this.Perfil.DataPropertyName = "identificacacion";
+            this.Perfil.HeaderText = "Perfil";
+            this.Perfil.Name = "Perfil";
+            // 
             // usuarioBindingSource
             // 
             this.usuarioBindingSource.DataMember = "Usuario";
@@ -275,36 +305,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // primerNombreDataGridViewTextBoxColumn
-            // 
-            this.primerNombreDataGridViewTextBoxColumn.DataPropertyName = "primerNombre";
-            this.primerNombreDataGridViewTextBoxColumn.HeaderText = "primerNombre";
-            this.primerNombreDataGridViewTextBoxColumn.Name = "primerNombreDataGridViewTextBoxColumn";
-            // 
-            // primerApellidoDataGridViewTextBoxColumn
-            // 
-            this.primerApellidoDataGridViewTextBoxColumn.DataPropertyName = "primerApellido";
-            this.primerApellidoDataGridViewTextBoxColumn.HeaderText = "primerApellido";
-            this.primerApellidoDataGridViewTextBoxColumn.Name = "primerApellidoDataGridViewTextBoxColumn";
-            // 
-            // segundoApellidoDataGridViewTextBoxColumn
-            // 
-            this.segundoApellidoDataGridViewTextBoxColumn.DataPropertyName = "segundoApellido";
-            this.segundoApellidoDataGridViewTextBoxColumn.HeaderText = "segundoApellido";
-            this.segundoApellidoDataGridViewTextBoxColumn.Name = "segundoApellidoDataGridViewTextBoxColumn";
-            // 
-            // correoDataGridViewTextBoxColumn
-            // 
-            this.correoDataGridViewTextBoxColumn.DataPropertyName = "correo";
-            this.correoDataGridViewTextBoxColumn.HeaderText = "correo";
-            this.correoDataGridViewTextBoxColumn.Name = "correoDataGridViewTextBoxColumn";
-            // 
-            // Perfil
-            // 
-            this.Perfil.DataPropertyName = "identificacacion";
-            this.Perfil.HeaderText = "Perfil";
-            this.Perfil.Name = "Perfil";
-            // 
             // AdministradorUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,6 +331,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "AdministradorUsuarios";
             this.Text = "AdministradorUsuarios";
+            this.Load += new System.EventHandler(this.AdministradorUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.perfilesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();

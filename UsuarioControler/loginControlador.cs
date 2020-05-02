@@ -17,28 +17,41 @@ namespace UsuarioControler
         {
             this.cliente = new InfoBD();
         }
-        public Collection<RespuestaLogin> validarCredenciales(string usuario, string contrasena)
+        public Collection<RespuestaLogin> validarCredenciales(string usuario, string contrasena, int perfil)
         {
 
             Collection<RespuestaLogin> retornar = this.cliente.ObtenerCredeciales(usuario, contrasena);
                 return retornar;
                
         }
+
+        public List<Gestion> ObtenerGestion()
+        {
+
+            throw new NotImplementedException();
+        }
+
         public List<Perfiles> ObtenerPerfiles()
         {
             List<Perfiles> retornar = this.cliente.ObtenerPerfiles();
             return retornar;
         }
-        public List<Grupo> ObtenerGrupos()
-        {
-            List<Grupo> retornar = this.cliente.ObtenerGrupos();
-            return retornar;
-        }
+
         public List<Usuario> ObtenerDocentes()
         {
-            List<Usuario> retornar = this.cliente.ObtenerDocentes();
-            return retornar;
+            throw new NotImplementedException();
         }
+
+        //public List<Grupo> ObtenerGrupos()
+        //{
+        //    List<Grupo> retornar = this.cliente.ObtenerGrupos();
+        //    return retornar;
+        //}
+        //public List<Usuario> ObtenerDocentes()
+        //{
+        //    List<Usuario> retornar = this.cliente.ObtenerDocentes();
+        //    return retornar;
+        //}
 
 
 

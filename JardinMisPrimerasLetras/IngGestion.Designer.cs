@@ -34,7 +34,6 @@ namespace JardinMisPrimerasLetras
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.buttonGuardar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gradosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,24 +41,31 @@ namespace JardinMisPrimerasLetras
             this.areaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gestionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.letrasDataSetGestion = new JardinMisPrimerasLetras.LetrasDataSetGestion();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textGrados = new System.Windows.Forms.TextBox();
-            this.gestionTableAdapter = new JardinMisPrimerasLetras.LetrasDataSetGestionTableAdapters.GestionTableAdapter();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            
+            this.Grados = new System.Windows.Forms.ComboBox();
+            this.Grupos = new System.Windows.Forms.ComboBox();
+            this.area = new System.Windows.Forms.Label();
+            this.Materia = new System.Windows.Forms.Label();
+            this.comboArea = new System.Windows.Forms.ComboBox();
+            this.comboMateria = new System.Windows.Forms.ComboBox();
+            
+            this.gradosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            
+            
+            this.grupoEscolarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetGestion)).BeginInit();
+            
+            ((System.ComponentModel.ISupportInitialize)(this.gradosBindingSource)).BeginInit();
+            
+            ((System.ComponentModel.ISupportInitialize)(this.grupoEscolarBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(208, 42);
+            this.label1.Location = new System.Drawing.Point(330, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 0;
@@ -74,18 +80,9 @@ namespace JardinMisPrimerasLetras
             this.label3.TabIndex = 2;
             this.label3.Text = "Grados";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(358, 42);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Division Grupo";
-            // 
             // buttonGuardar
             // 
-            this.buttonGuardar.Location = new System.Drawing.Point(407, 123);
+            this.buttonGuardar.Location = new System.Drawing.Point(256, 198);
             this.buttonGuardar.Name = "buttonGuardar";
             this.buttonGuardar.Size = new System.Drawing.Size(75, 23);
             this.buttonGuardar.TabIndex = 4;
@@ -104,7 +101,7 @@ namespace JardinMisPrimerasLetras
             this.areaDataGridViewTextBoxColumn,
             this.materiaDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.gestionBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(73, 205);
+            this.dataGridView1.Location = new System.Drawing.Point(73, 244);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(437, 113);
             this.dataGridView1.TabIndex = 6;
@@ -137,68 +134,94 @@ namespace JardinMisPrimerasLetras
             // gestionBindingSource
             // 
             this.gestionBindingSource.DataMember = "Gestion";
-            this.gestionBindingSource.DataSource = this.letrasDataSetGestion;
+            
             // 
             // letrasDataSetGestion
             // 
-            this.letrasDataSetGestion.DataSetName = "LetrasDataSetGestion";
-            this.letrasDataSetGestion.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // button1
-            // 
-            this.gestionBindingSource.DataMember = "Gestion";
-            this.gestionBindingSource.DataSource = this.letrasDataSetGestion;
-            // 
-            // letrasDataSetGestion
-            // 
-            this.letrasDataSetGestion.DataSetName = "LetrasDataSetGestion";
-            this.letrasDataSetGestion.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // textGrados
-            // 
-            this.textGrados.Location = new System.Drawing.Point(86, 65);
-            this.textGrados.Name = "textGrados";
-            this.textGrados.Size = new System.Drawing.Size(100, 20);
-            this.textGrados.TabIndex = 17;
+            
             // 
             // gestionTableAdapter
             // 
-            this.gestionTableAdapter.ClearBeforeFill = true;
+            
             // 
-            // comboBox1
+            // Grados
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(211, 63);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 21;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.Grados.DataSource = this.gradosBindingSource;
+            this.Grados.DisplayMember = "descripcion";
+            this.Grados.FormattingEnabled = true;
+            this.Grados.Location = new System.Drawing.Point(112, 72);
+            this.Grados.Name = "Grados";
+            this.Grados.Size = new System.Drawing.Size(121, 21);
+            this.Grados.TabIndex = 21;
+            this.Grados.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // comboBox3
+            // Grupos
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(86, 123);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 23;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.Grupos.DataSource = this.grupoEscolarBindingSource;
+            this.Grupos.DisplayMember = "descripcion";
+            this.Grupos.FormattingEnabled = true;
+            this.Grupos.Location = new System.Drawing.Point(333, 72);
+            this.Grupos.Name = "Grupos";
+            this.Grupos.Size = new System.Drawing.Size(121, 21);
+            this.Grupos.TabIndex = 22;
             // 
-            // label2
+            // area
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(109, 107);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Docentes";
+            this.area.AutoSize = true;
+            this.area.Location = new System.Drawing.Point(109, 118);
+            this.area.Name = "area";
+            this.area.Size = new System.Drawing.Size(29, 13);
+            this.area.TabIndex = 23;
+            this.area.Text = "Area";
             // 
-            // textBox1
+            // Materia
             // 
-            this.textBox1.Location = new System.Drawing.Point(361, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 25;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.Materia.AutoSize = true;
+            this.Materia.Location = new System.Drawing.Point(330, 118);
+            this.Materia.Name = "Materia";
+            this.Materia.Size = new System.Drawing.Size(42, 13);
+            this.Materia.TabIndex = 24;
+            this.Materia.Text = "Materia";
+            // 
+            // comboArea
+            // 
+            this.comboArea.FormattingEnabled = true;
+            this.comboArea.Location = new System.Drawing.Point(112, 147);
+            this.comboArea.Name = "comboArea";
+            this.comboArea.Size = new System.Drawing.Size(121, 21);
+            this.comboArea.TabIndex = 25;
+            // 
+            // comboMateria
+            // 
+            this.comboMateria.FormattingEnabled = true;
+            this.comboMateria.Location = new System.Drawing.Point(333, 147);
+            this.comboMateria.Name = "comboMateria";
+            this.comboMateria.Size = new System.Drawing.Size(121, 21);
+            this.comboMateria.TabIndex = 26;
+            // 
+            // letrasDataSetGrados
+            
+            // 
+            // gradosBindingSource
+            // 
+            this.gradosBindingSource.DataMember = "Grados";
+            
+            // 
+            // gradosTableAdapter
+            // 
+            
+            // 
+            // letrasDataSetGrupo
+            // 
+            // 
+            // grupoEscolarBindingSource
+            // 
+            this.grupoEscolarBindingSource.DataMember = "GrupoEscolar";
+            
+            // 
+            // grupoEscolarTableAdapter
+            // 
+            
             // 
             // IngGestion
             // 
@@ -206,14 +229,14 @@ namespace JardinMisPrimerasLetras
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aqua;
             this.ClientSize = new System.Drawing.Size(576, 450);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textGrados);
+            this.Controls.Add(this.comboMateria);
+            this.Controls.Add(this.comboArea);
+            this.Controls.Add(this.Materia);
+            this.Controls.Add(this.area);
+            this.Controls.Add(this.Grupos);
+            this.Controls.Add(this.Grados);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonGuardar);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "IngGestion";
@@ -221,7 +244,10 @@ namespace JardinMisPrimerasLetras
             this.Load += new System.EventHandler(this.Gestion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetGestion)).EndInit();
+            
+            ((System.ComponentModel.ISupportInitialize)(this.gradosBindingSource)).EndInit();
+            
+            ((System.ComponentModel.ISupportInitialize)(this.grupoEscolarBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,20 +257,26 @@ namespace JardinMisPrimerasLetras
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button buttonGuardar;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textGrados;
-        private LetrasDataSetGestion letrasDataSetGestion;
+        //private LetrasDataSetGestion letrasDataSetGestion;
         private System.Windows.Forms.BindingSource gestionBindingSource;
-        private LetrasDataSetGestionTableAdapters.GestionTableAdapter gestionTableAdapter;
+        //private LetrasDataSetGestionTableAdapters.GestionTableAdapter gestionTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn gradosDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn gruposDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn areaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn materiaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox Grados;
+        private System.Windows.Forms.ComboBox Grupos;
+        private System.Windows.Forms.Label area;
+        private System.Windows.Forms.Label Materia;
+        private System.Windows.Forms.ComboBox comboArea;
+        private System.Windows.Forms.ComboBox comboMateria;
+        //private LetrasDataSetGrados letrasDataSetGrados;
+        private System.Windows.Forms.BindingSource gradosBindingSource;
+        //private LetrasDataSetGradosTableAdapters.GradosTableAdapter gradosTableAdapter;
+        //private LetrasDataSetGrupo letrasDataSetGrupo;
+        private System.Windows.Forms.BindingSource grupoEscolarBindingSource;
+        //private LetrasDataSetGrupoTableAdapters.GrupoEscolarTableAdapter grupoEscolarTableAdapter;
     }
 }

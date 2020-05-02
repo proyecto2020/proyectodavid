@@ -22,17 +22,17 @@ namespace JardinMisPrimerasLetras
             InitializeComponent();
             this.controlador = new UsuarioControler.loginControler();
 
-            List<Grupo> response = this.controlador.ObtenerGrupos();
-            response.Insert(0, new Grupo() { id_grupo = 0, grupo = "Seleccione" });
-            comboBox1.DataSource = response;
-            comboBox1.DisplayMember = "grupo";
-            comboBox1.ValueMember = "id_grupo";
+            //List<Grupo> response = this.controlador.ObtenerGestion;
+            //response.Insert(0, new Gestion() { area = "", grados = "Seleccione" });
+            //Grados.DataSource = response;
+            //Grados.DisplayMember = "grupo";
+            //Grados.ValueMember = "id_grupo";
 
 
-            List<Usuario> responseGeation = this.controlador.ObtenerDocentes();
-            comboBox3.DataSource = responseGeation;
-            comboBox3.DisplayMember = "primerNombre";
-            comboBox3.ValueMember = "identificacacion";
+            //List<Usuario> responseGeation = this.controlador.ObtenerDocentes();
+            //comboBox3.DataSource = responseGeation;
+            //comboBox3.DisplayMember = "primerNombre";
+            //comboBox3.ValueMember = "identificacacion";
 
 
         }
@@ -64,12 +64,26 @@ namespace JardinMisPrimerasLetras
 
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
+            string grados = Grados.Text;
+            string grupos = Grupos.Text;
+            string areas = comboArea.Text;
+            string materias = comboMateria.Text;
 
-            if (textBox1.Text != "A" || textBox1.Text != "B")
-            {
-                MessageBox.Show("La Division del Grupo debe ser A o B!");
-            }
+            Gestion insertarGestion = new Gestion();
+            insertarGestion.grados = grados;
+            insertarGestion.grupo = grupos;
+            insertarGestion.area = areas;
+            insertarGestion.materia = materias;
+            
+
+            Respuesta<object> ingreso = this.controlador.insertarGestion(insertarGestion);
             MessageBox.Show("Datos guardados correctamente");
+
+            //if (textBox1.Text != "A" || textBox1.Text != "B")
+            //{
+            //    MessageBox.Show("La Division del Grupo debe ser A o B!");
+            //}
+            //MessageBox.Show("Datos guardados correctamente");
 
         }
 
