@@ -8,6 +8,5 @@ namespace Entidades
 {
     class Areas
     {
-        string auxilio;
     }
 }
