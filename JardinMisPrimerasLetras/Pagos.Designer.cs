@@ -63,7 +63,6 @@
             this.Direccion = new System.Windows.Forms.TextBox();
             this.text = new System.Windows.Forms.Label();
             this.Nacimiento = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gruposBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gradosBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -347,23 +346,12 @@
             this.Nacimiento.Size = new System.Drawing.Size(200, 20);
             this.Nacimiento.TabIndex = 37;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(500, 386);
-            this.button1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(24, 10);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Pagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(816, 418);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Nacimiento);
             this.Controls.Add(this.text);
             this.Controls.Add(this.Direccion);
@@ -446,6 +434,5 @@
         private System.Windows.Forms.TextBox Direccion;
         private System.Windows.Forms.Label text;
         private System.Windows.Forms.DateTimePicker Nacimiento;
-        private System.Windows.Forms.Button button1;
     }
 }
