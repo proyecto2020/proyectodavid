@@ -46,6 +46,7 @@
     <Compile Include="Gestion.cs" />
     <Compile Include="Grados.cs" />
     <Compile Include="Grupo.cs" />
+    <Compile Include="Materias.cs" />
     <Compile Include="Pagos.cs" />
     <Compile Include="Perfiles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
