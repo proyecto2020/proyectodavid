@@ -30,7 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.Grupo = new System.Windows.Forms.ComboBox();
+            this.gruposBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Grado = new System.Windows.Forms.ComboBox();
+            this.gradosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Acudiente = new System.Windows.Forms.TextBox();
             this.Nombres = new System.Windows.Forms.TextBox();
             this.Apellidos = new System.Windows.Forms.TextBox();
@@ -53,24 +55,15 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.Guardar = new System.Windows.Forms.Button();
             this.Fecha = new System.Windows.Forms.DateTimePicker();
             this.Observaciones = new System.Windows.Forms.ListBox();
             this.Abono = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            
-            this.gruposBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            
-            
-            this.gradosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            
             this.label16 = new System.Windows.Forms.Label();
             this.Direccion = new System.Windows.Forms.TextBox();
             this.text = new System.Windows.Forms.Label();
             this.Nacimiento = new System.Windows.Forms.DateTimePicker();
-            
             ((System.ComponentModel.ISupportInitialize)(this.gruposBindingSource)).BeginInit();
-            
             ((System.ComponentModel.ISupportInitialize)(this.gradosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,6 +77,10 @@
             this.Grupo.Size = new System.Drawing.Size(121, 21);
             this.Grupo.TabIndex = 0;
             // 
+            // gruposBindingSource
+            // 
+            this.gruposBindingSource.DataMember = "Grupos";
+            // 
             // Grado
             // 
             this.Grado.DataSource = this.gradosBindingSource;
@@ -93,6 +90,10 @@
             this.Grado.Name = "Grado";
             this.Grado.Size = new System.Drawing.Size(121, 21);
             this.Grado.TabIndex = 1;
+            // 
+            // gradosBindingSource
+            // 
+            this.gradosBindingSource.DataMember = "Grados";
             // 
             // Acudiente
             // 
@@ -278,15 +279,6 @@
             this.label13.TabIndex = 25;
             this.label13.Text = "Total a Pagar";
             // 
-            // Guardar
-            // 
-            this.Guardar.Location = new System.Drawing.Point(410, 415);
-            this.Guardar.Name = "Guardar";
-            this.Guardar.Size = new System.Drawing.Size(75, 23);
-            this.Guardar.TabIndex = 26;
-            this.Guardar.Text = "Guardar";
-            this.Guardar.UseVisualStyleBackColor = true;
-            // 
             // Fecha
             // 
             this.Fecha.Location = new System.Drawing.Point(506, 250);
@@ -321,31 +313,6 @@
             this.label14.Size = new System.Drawing.Size(78, 13);
             this.label14.TabIndex = 31;
             this.label14.Text = "Observaciones";
-            // 
-            // letrasDataSetGrupo
-            // 
-            
-            // 
-            // gruposBindingSource
-            // 
-            this.gruposBindingSource.DataMember = "Grupos";
-            
-            // 
-            // gruposTableAdapter
-            // 
-            
-            // 
-            // letrasDataSetGrado
-            // 
-            
-            // 
-            // gradosBindingSource
-            // 
-            this.gradosBindingSource.DataMember = "Grados";
-            
-            // 
-            // gradosTableAdapter
-            // 
             // 
             // label16
             // 
@@ -393,7 +360,6 @@
             this.Controls.Add(this.Abono);
             this.Controls.Add(this.Observaciones);
             this.Controls.Add(this.Fecha);
-            this.Controls.Add(this.Guardar);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -421,9 +387,7 @@
             this.Name = "Pagos";
             this.Text = "Pagos";
             this.Load += new System.EventHandler(this.Pagos_Load);
-            
             ((System.ComponentModel.ISupportInitialize)(this.gruposBindingSource)).EndInit();
-            
             ((System.ComponentModel.ISupportInitialize)(this.gradosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -456,7 +420,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button Guardar;
         private System.Windows.Forms.DateTimePicker Fecha;
         private System.Windows.Forms.ListBox Observaciones;
         private System.Windows.Forms.ComboBox Abono;
