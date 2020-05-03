@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="conexionDB1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="conexionDB1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.JardinMisPrimerasLetras.Properties.Settings.GlobalReference.Default.conexionDB1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="conexionDB" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="conexionDB (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.JardinMisPrimerasLetras.Properties.Settings.GlobalReference.Default.conexionDB" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PerfilesTableAdapter" GeneratorDataComponentClassName="PerfilesTableAdapter" Name="Perfiles" UserDataComponentName="PerfilesTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="conexionDB1 (Settings)" DbObjectName="Letras.dbo.Perfiles" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="conexionDB (Settings)" DbObjectName="Letras.dbo.Perfiles" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>SELECT descripcion FROM dbo.Perfiles</CommandText>
@@ -31,7 +31,7 @@
   <xs:element name="PerfilesDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="PerfilesDataSet" msprop:Generator_UserDSName="PerfilesDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Perfiles" msprop:Generator_TableClassName="PerfilesDataTable" msprop:Generator_TableVarName="tablePerfiles" msprop:Generator_RowChangedName="PerfilesRowChanged" msprop:Generator_TablePropName="Perfiles" msprop:Generator_RowDeletingName="PerfilesRowDeleting" msprop:Generator_RowChangingName="PerfilesRowChanging" msprop:Generator_RowEvHandlerName="PerfilesRowChangeEventHandler" msprop:Generator_RowDeletedName="PerfilesRowDeleted" msprop:Generator_RowClassName="PerfilesRow" msprop:Generator_UserTableName="Perfiles" msprop:Generator_RowEvArgName="PerfilesRowChangeEvent">
+        <xs:element name="Perfiles" msprop:Generator_TableClassName="PerfilesDataTable" msprop:Generator_TableVarName="tablePerfiles" msprop:Generator_TablePropName="Perfiles" msprop:Generator_RowDeletingName="PerfilesRowDeleting" msprop:Generator_RowChangingName="PerfilesRowChanging" msprop:Generator_RowEvHandlerName="PerfilesRowChangeEventHandler" msprop:Generator_RowDeletedName="PerfilesRowDeleted" msprop:Generator_UserTableName="Perfiles" msprop:Generator_RowChangedName="PerfilesRowChanged" msprop:Generator_RowEvArgName="PerfilesRowChangeEvent" msprop:Generator_RowClassName="PerfilesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_UserColumnName="descripcion">

@@ -12,7 +12,7 @@ namespace JardinMisPrimerasLetras.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.4.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.3.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -27,9 +27,9 @@ namespace JardinMisPrimerasLetras.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=JAZON;Initial Catalog=Letras;Integrated Security=True")]
-        public string conexionDB1 {
+        public string conexionDB {
             get {
-                return ((string)(this["conexionDB1"]));
+                return ((string)(this["conexionDB"]));
             }
         }
         
@@ -38,9 +38,9 @@ namespace JardinMisPrimerasLetras.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost\\SQLEXPRESS;Initial Catalog=DB_MISPRIMERASLETRAS;Integrated " +
             "Security=True")]
-        public string conexionDB {
+        public string conexionDB12 {
             get {
-                return ((string)(this["conexionDB"]));
+                return ((string)(this["conexionDB12"]));
             }
         }
     }
