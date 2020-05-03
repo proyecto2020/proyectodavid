@@ -50,7 +50,7 @@ namespace JardinMisPrimerasLetras
             {
                 comboArea.Items.Clear();
                 comboArea.DataSource = listaAreas;
-                comboArea.DisplayMember = "descripcion";
+                comboArea.DisplayMember = "Area";
                 comboArea.ValueMember = "idArea";
 
             }
@@ -77,8 +77,8 @@ namespace JardinMisPrimerasLetras
                         comboMateria.DataSource = listaMaterias;
 
 
-                        comboMateria.DisplayMember = "descripcion";
-                        comboMateria.ValueMember = "idMateria";
+                        comboMateria.DisplayMember = "Materia";
+                        comboMateria.ValueMember = "IdMaterias";
                     }
                 }
 

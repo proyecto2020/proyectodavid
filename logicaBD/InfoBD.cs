@@ -295,7 +295,7 @@ namespace logicaBD
         {
             List<Areas> listaAreas = new List<Areas>();
 
-            Areas a = new Areas(0, "Seleccionar");
+            Areas a = new Areas(0,"Seleccionar");
             listaAreas.Add(a);
 
             //Metodo que carga en una lista el resultado de todos los registros de la tabla
@@ -325,7 +325,7 @@ namespace logicaBD
         {
             List<Materias> listaMaterias = new List<Materias>();
 
-            Materias a = new Materias(0, 0, "Seleccionar");
+            Materias a = new Materias(1, 1, "Seleccionar");
             listaMaterias.Add(a);
 
             using (SqlConnection conexion = new SqlConnection(connectionString))
