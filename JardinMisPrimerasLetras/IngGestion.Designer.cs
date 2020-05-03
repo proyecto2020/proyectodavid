@@ -120,6 +120,7 @@ namespace JardinMisPrimerasLetras
             this.Grupos.Name = "Grupos";
             this.Grupos.Size = new System.Drawing.Size(121, 21);
             this.Grupos.TabIndex = 22;
+            this.Grupos.SelectedIndexChanged += new System.EventHandler(this.Grupos_SelectedIndexChanged);
             // 
             // grupoEscolarBindingSource
             // 
@@ -150,6 +151,7 @@ namespace JardinMisPrimerasLetras
             this.comboArea.Name = "comboArea";
             this.comboArea.Size = new System.Drawing.Size(121, 21);
             this.comboArea.TabIndex = 25;
+            this.comboArea.SelectedIndexChanged += new System.EventHandler(this.comboArea_SelectedIndexChanged);
             // 
             // comboMateria
             // 
@@ -158,6 +160,7 @@ namespace JardinMisPrimerasLetras
             this.comboMateria.Name = "comboMateria";
             this.comboMateria.Size = new System.Drawing.Size(121, 21);
             this.comboMateria.TabIndex = 26;
+            this.comboMateria.SelectedIndexChanged += new System.EventHandler(this.comboMateria_SelectedIndexChanged);
             // 
             // button1
             // 

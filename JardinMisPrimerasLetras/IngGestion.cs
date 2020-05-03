@@ -16,10 +16,14 @@ namespace JardinMisPrimerasLetras
     {
         private loginControler controlador;
         Pagos pagos = new Pagos();
+        List<Areas> listaAreas = null;
+        List<Materias> listaMaterias = null;
+        loginControler controladorAreasMateria = new loginControler();
 
         public IngGestion()
         {
             InitializeComponent();
+            CargarAreas();
             this.controlador = new UsuarioControler.loginControler();
 
             //List<Grupo> response = this.controlador.ObtenerGestion;
@@ -36,30 +40,53 @@ namespace JardinMisPrimerasLetras
 
 
         }
-
-        private void comboBoxGrupos_SelectedIndexChanged(object sender, EventArgs e)
+        private void CargarAreas()
         {
+            if (listaAreas == null)
+            {
+                listaAreas = controladorAreasMateria.ListarAreas();
+            }
+            if (listaAreas.Count != 0)
+            {
+                comboArea.Items.Clear();
+                comboArea.DataSource = listaAreas;
+                comboArea.DisplayMember = "descripcion";
+                comboArea.ValueMember = "idArea";
 
+            }
+            else
+            {
+                comboArea.DataSource = null;
+                comboMateria.DataSource = null;
+            }
         }
 
-        private void comboBoxGrados_SelectedIndexChanged(object sender, EventArgs e)
+        private void CargarMaterias()
         {
+            try
+            {
 
-        }
+                if (comboArea.SelectedIndex > 0)
+                {
+                    int num = int.Parse(comboArea.SelectedValue.ToString());
 
-        private void comboBoxArea_SelectedIndexChanged(object sender, EventArgs e)
-        {
+                    listaMaterias = controladorAreasMateria.TraerMateriasporArea(num);
 
-        }
+                    if (listaMaterias.Count != 0)
+                    {
+                        comboMateria.DataSource = listaMaterias;
 
-        private void comboBoxMateria_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
+                        comboMateria.DisplayMember = "descripcion";
+                        comboMateria.ValueMember = "idMateria";
+                    }
+                }
 
-        private void comboBoxDocente_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            }
+            catch (InvalidCastException ex)
+            {
+                MessageBox.Show("se jodio esto");
+            }
         }
 
         private void buttonGuardar_Click(object sender, EventArgs e)
@@ -87,10 +114,6 @@ namespace JardinMisPrimerasLetras
 
         }
 
-        private void buttonEditar_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -144,10 +167,7 @@ namespace JardinMisPrimerasLetras
 
         }
 
-        private void docenteToolStripButton_Click_2(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -160,19 +180,19 @@ namespace JardinMisPrimerasLetras
 
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboArea_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarMaterias();
+        }
+
+        private void Grupos_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void comboMateria_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
-        }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            
         }
     }
 }

@@ -91,5 +91,19 @@ namespace UsuarioControler
             return resultado;
         }
 
+        public List<Areas> ListarAreas()
+        {
+            var resultado = this.cliente.ListarAreas();
+            return resultado;
+        }
+
+        public List<Materias> TraerMateriasporArea(int Id)
+        {
+            var resultado = this.cliente.TraerMateriasporArea(Id);
+            return resultado;
+        }
+
+        
+
     }
 }

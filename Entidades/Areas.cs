@@ -6,9 +6,31 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    class Areas
+    public  class Areas
     {
-        string auxilio;
-        string campo;
+
+        int _idArea;
+        string _Area;
+
+        public int idArea
+        {
+            get { return _idArea; }
+            set { _idArea = value; }
+        }
+
+        public string Area
+        {
+            get { return _Area; }
+            set { _Area = value; }
+        }
+
+        public Areas(int idArea, string Area)
+        {
+            _idArea = idArea;
+            _Area = Area;
+        }
+        public Areas() : this(0, "")
+        {
+        }
     }
 }

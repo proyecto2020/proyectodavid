@@ -22,3 +22,11 @@ C:\Users\jason\Documents\GitHub\proyectodavid\Entidades\obj\Debug\Entidades.cspr
 C:\Users\jason\Documents\GitHub\proyectodavid\Entidades\obj\Debug\Entidades.csproj.CopyComplete
 C:\Users\jason\Documents\GitHub\proyectodavid\Entidades\obj\Debug\Entidades.dll
 C:\Users\jason\Documents\GitHub\proyectodavid\Entidades\obj\Debug\Entidades.pdb
+C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\Entidades\bin\Debug\Entidades.dll
+C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\Entidades\bin\Debug\Entidades.pdb
+C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\Entidades\bin\Debug\UsuarioLogeadoController.dll
+C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\Entidades\bin\Debug\UsuarioLogeadoController.pdb
+C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\Entidades\obj\Debug\Entidades.dll
+C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\Entidades\obj\Debug\Entidades.pdb

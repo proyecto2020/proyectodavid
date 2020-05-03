@@ -10,9 +10,7 @@ namespace UsuarioControler
 {
     public class BaseController
     {
-        //public BaseController()
-        //{
-        //}
+        
 
         public Respuesta<T> RespuestaOK<T>(IList<T> data, int rowAffects = 0) where T : class
         {

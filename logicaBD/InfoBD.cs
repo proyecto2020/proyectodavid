@@ -291,5 +291,68 @@ namespace logicaBD
             return respuesta;
         }
 
+        public List<Areas> ListarAreas()
+        {
+            List<Areas> listaAreas = new List<Areas>();
+
+            Areas a = new Areas(0, "Seleccionar");
+            listaAreas.Add(a);
+
+            //Metodo que carga en una lista el resultado de todos los registros de la tabla
+
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand("TraerDatos", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Dato", 1);
+                cmd.Parameters.AddWithValue("@ID_Area", 0);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr != null && dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        a = new Areas((int)dr["idArea"],
+                            (string)dr["descripcion"]);
+                        listaAreas.Add(a);
+                    }
+                }
+            }
+            return listaAreas;
+        }
+
+        public List<Materias> TraerMateriasporArea(int Id)
+        {
+            List<Materias> listaMaterias = new List<Materias>();
+
+            Materias a = new Materias(0, 0, "Seleccionar");
+            listaMaterias.Add(a);
+
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand("TraerDatos", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Dato", 2);
+                cmd.Parameters.AddWithValue("@ID_Area", Id);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr != null && dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        a = new Materias((int)dr["idMateria"],
+                            (int)dr["idArea"],
+                            (string)dr["descripcion"]);
+                        listaMaterias.Add(a);
+                    }
+                }
+            }
+            return listaMaterias;
+        }
+
+      
+
+       
+
     }
 }
