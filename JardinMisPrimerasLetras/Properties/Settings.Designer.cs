@@ -26,10 +26,11 @@ namespace JardinMisPrimerasLetras.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=JAZON;Initial Catalog=Letras;Integrated Security=True")]
-        public string conexionDB {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost\\SQLEXPRESS;Initial Catalog=DB_MISPRIMERASLETRAS;Integrated " +
+            "Security=True")]
+        public string conexionDB12 {
             get {
-                return ((string)(this["conexionDB"]));
+                return ((string)(this["conexionDB12"]));
             }
         }
         
@@ -38,9 +39,19 @@ namespace JardinMisPrimerasLetras.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost\\SQLEXPRESS;Initial Catalog=DB_MISPRIMERASLETRAS;Integrated " +
             "Security=True")]
-        public string conexionDB12 {
+        public string conexionDB2 {
             get {
-                return ((string)(this["conexionDB12"]));
+                return ((string)(this["conexionDB2"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=JAZON;Initial Catalog=Letras;Integrated Security=True")]
+        public string conexionDB {
+            get {
+                return ((string)(this["conexionDB"]));
             }
         }
     }

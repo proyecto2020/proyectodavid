@@ -63,6 +63,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>jardinDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="LetrasDataSetGestion1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LetrasDataSetGestion1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +131,17 @@
     </None>
     <None Include="jardinDataSet.xss">
       <DependentUpon>jardinDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetGestion1.xsc">
+      <DependentUpon>LetrasDataSetGestion1.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetGestion1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LetrasDataSetGestion1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LetrasDataSetGestion1.xss">
+      <DependentUpon>LetrasDataSetGestion1.xsd</DependentUpon>
     </None>
     <None Include="PerfilesDataSet.xsc">
       <DependentUpon>PerfilesDataSet.xsd</DependentUpon>

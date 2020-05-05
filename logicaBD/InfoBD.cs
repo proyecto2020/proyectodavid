@@ -206,13 +206,13 @@ namespace logicaBD
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
                 conexion.Open();//DAO Docente solo conexiones y esto para bajo
-                SqlCommand cmd = new SqlCommand("PR_InsertarGestion", conexion);
+                SqlCommand cmd = new SqlCommand("InsertarGestion", conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@pi_Grados", gestion.grados);
-                cmd.Parameters.AddWithValue("@pi_Grupos", gestion.grupo);
-                cmd.Parameters.AddWithValue("@pi_Area", gestion.area);
-                cmd.Parameters.AddWithValue("@pi_Materia", gestion.materia);
+                cmd.Parameters.AddWithValue("@pi_Grados", Convert.ToString(gestion.grados));
+                cmd.Parameters.AddWithValue("@pi_Grupos", Convert.ToString(gestion.grupo));
+                cmd.Parameters.AddWithValue("@pi_Area", Convert.ToString(gestion.area));
+                cmd.Parameters.AddWithValue("@pi_Materia", Convert.ToString(gestion.materia));
                 cmd.ExecuteNonQuery();
 
                 //respuesta.ResultData = new ObservableCollection<object>(new List<object> { rowAffected });
@@ -291,6 +291,65 @@ namespace logicaBD
             return respuesta;
         }
 
+        public List<Grados> ListarGrados()
+        {
+            List<Grados> listaGrados = new List<Grados>();
+
+            Grados a = new Grados(0, "Seleccionar");
+            listaGrados.Add(a);
+
+            //Metodo que carga en una lista el resultado de todos los registros de la tabla
+
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand("TraerGradoGrupo", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Dato", 1);
+                cmd.Parameters.AddWithValue("@ID_Grado", 0);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr != null && dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        a = new Grados((int)dr["idGrado"],
+                            (string)dr["descripcion"]);
+                        listaGrados.Add(a);
+                    }
+                }
+            }
+            return listaGrados;
+        }
+
+        public List<Grupos> TraerGruposporGrados(int Id)
+        {
+            List<Grupos> traerGruposporGrados = new List<Grupos>();
+
+            Grupos a = new Grupos(0, 0, "Seleccionar");
+            traerGruposporGrados.Add(a);
+
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand("TraerGradoGrupo", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Dato", 2);
+                cmd.Parameters.AddWithValue("@ID_Grado", Id);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr != null && dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        a = new Grupos((int)dr["idGrado"],
+                            (int)dr["idGrado"],
+                            (string)dr["descripcion"]);
+                        traerGruposporGrados.Add(a);
+                    }
+                }
+            }
+            return traerGruposporGrados;
+        }
+
         public List<Areas> ListarAreas()
         {
             List<Areas> listaAreas = new List<Areas>();
@@ -303,7 +362,7 @@ namespace logicaBD
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
                 conexion.Open();
-                SqlCommand cmd = new SqlCommand("TraerDatos", conexion);
+                SqlCommand cmd = new SqlCommand("TraerAreaMateria", conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Dato", 1);
                 cmd.Parameters.AddWithValue("@ID_Area", 0);
@@ -331,7 +390,7 @@ namespace logicaBD
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
                 conexion.Open();
-                SqlCommand cmd = new SqlCommand("TraerDatos", conexion);
+                SqlCommand cmd = new SqlCommand("TraerAreaMateria", conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Dato", 2);
                 cmd.Parameters.AddWithValue("@ID_Area", Id);

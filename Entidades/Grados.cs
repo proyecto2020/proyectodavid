@@ -6,9 +6,30 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    class Grados
+    public class Grados
     {
         int _idGrado;
         string _Grado;
+
+        public int idGrado
+        {
+            get { return _idGrado; }
+            set { _idGrado = value; }
+        }
+
+        public string Grado
+        {
+            get { return _Grado; }
+            set { _Grado = value; }
+        }
+
+        public Grados(int idGrado, string Grado)
+        {
+            _idGrado = idGrado;
+            _Grado = Grado;
+        }
+        public Grados() : this(0, "")
+        {
+        }
     }
 }

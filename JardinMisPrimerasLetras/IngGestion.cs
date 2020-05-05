@@ -16,30 +16,42 @@ namespace JardinMisPrimerasLetras
     {
         private loginControler controlador;
         Pagos pagos = new Pagos();
+        List<Grados> listarGrados = null;
+        List<Grupos> listarGrupos = null;
         List<Areas> listaAreas = null;
         List<Materias> listaMaterias = null;
         loginControler controladorAreasMateria = new loginControler();
+        loginControler controladorGradosGrupos = new loginControler();
 
         public IngGestion()
         {
             InitializeComponent();
             CargarAreas();
+            CargarGrados();
             this.controlador = new UsuarioControler.loginControler();
-
-            //List<Grupo> response = this.controlador.ObtenerGestion;
-            //response.Insert(0, new Gestion() { area = "", grados = "Seleccione" });
-            //Grados.DataSource = response;
-            //Grados.DisplayMember = "grupo";
-            //Grados.ValueMember = "id_grupo";
-
-
-            //List<Usuario> responseGeation = this.controlador.ObtenerDocentes();
-            //comboBox3.DataSource = responseGeation;
-            //comboBox3.DisplayMember = "primerNombre";
-            //comboBox3.ValueMember = "identificacacion";
-
-
         }
+
+        private void CargarGrados()
+        {
+            if (listarGrados == null)
+            {
+                listarGrados = controladorGradosGrupos.ListarGrados();
+            }
+            if (listarGrados.Count != 0)
+            {
+                comboBoxGrado.Items.Clear();
+                comboBoxGrado.DataSource = listarGrados;
+                comboBoxGrado.DisplayMember = "Grado";
+                comboBoxGrado.ValueMember = "idGrado";
+
+            }
+            else
+            {
+                comboBoxGrado.DataSource = null;
+                Grupos.DataSource = null;
+            }
+        }
+
         private void CargarAreas()
         {
             if (listaAreas == null)
@@ -58,6 +70,34 @@ namespace JardinMisPrimerasLetras
             {
                 comboArea.DataSource = null;
                 comboMateria.DataSource = null;
+            }
+        }
+
+        private void CargarGrupo()
+        {
+            try
+            {
+
+                if (comboBoxGrado.SelectedIndex > 0)
+                {
+                    int num = int.Parse(comboBoxGrado.SelectedValue.ToString());
+
+                    listarGrupos = controladorGradosGrupos.TraerGruposporGrados(num);
+
+                    if (listarGrupos.Count != 0)
+                    {
+                        Grupos.DataSource = listarGrupos;
+
+
+                        Grupos.DisplayMember = "Grupo";
+                        Grupos.ValueMember = "idGrupo";
+                    }
+                }
+
+            }
+            catch (InvalidCastException ex)
+            {
+                MessageBox.Show("se jodio esto");
             }
         }
 
@@ -91,7 +131,7 @@ namespace JardinMisPrimerasLetras
 
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
-            string grados = Grados.Text;
+            string grados = comboBoxGrado.Text;
             string grupos = Grupos.Text;
             string areas = comboArea.Text;
             string materias = comboMateria.Text;
@@ -102,18 +142,10 @@ namespace JardinMisPrimerasLetras
             insertarGestion.area = areas;
             insertarGestion.materia = materias;
             
-
             Respuesta<object> ingreso = this.controlador.insertarGestion(insertarGestion);
             MessageBox.Show("Datos guardados correctamente");
 
-            //if (textBox1.Text != "A" || textBox1.Text != "B")
-            //{
-            //    MessageBox.Show("La Division del Grupo debe ser A o B!");
-            //}
-            //MessageBox.Show("Datos guardados correctamente");
-
         }
-
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -122,6 +154,10 @@ namespace JardinMisPrimerasLetras
 
         private void Gestion_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetGestion.Gestion' Puede moverla o quitarla según sea necesario.
+            this.gestionTableAdapter.Fill(this.letrasDataSetGestion.Gestion);
+            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetListGestion.Gestion' Puede moverla o quitarla según sea necesario.
+            //this.gestionTableAdapter.Fill(this.letrasDataSetListGestion.Gestion);
 
         }
 
@@ -167,23 +203,17 @@ namespace JardinMisPrimerasLetras
 
         }
 
-       
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
             this.pagos.Show();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void comboArea_SelectedIndexChanged(object sender, EventArgs e)
         {
             CargarMaterias();
         }
+
 
         private void Grupos_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -193,6 +223,11 @@ namespace JardinMisPrimerasLetras
         private void comboMateria_SelectedIndexChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void comboBoxGrado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarGrupo();
         }
     }
 }

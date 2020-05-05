@@ -42,20 +42,6 @@ namespace UsuarioControler
             throw new NotImplementedException();
         }
 
-        //public List<Grupo> ObtenerGrupos()
-        //{
-        //    List<Grupo> retornar = this.cliente.ObtenerGrupos();
-        //    return retornar;
-        //}
-        //public List<Usuario> ObtenerDocentes()
-        //{
-        //    List<Usuario> retornar = this.cliente.ObtenerDocentes();
-        //    return retornar;
-        //}
-
-
-
-
         public Respuesta<object> insertarUsuario(Usuario usuario)
         {
             var resultado = this.cliente.insertarUsuario(usuario);
@@ -88,6 +74,18 @@ namespace UsuarioControler
         public Respuesta<object> insertarPagos(Pagos pago)
         {
             var resultado = this.cliente.insertarPagos(pago);
+            return resultado;
+        }
+
+        public List<Grados> ListarGrados()
+        {
+            var resultado = this.cliente.ListarGrados();
+            return resultado;
+        }
+
+        public List<Grupos> TraerGruposporGrados(int Id)
+        {
+            var resultado = this.cliente.TraerGruposporGrados(Id);
             return resultado;
         }
 

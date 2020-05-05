@@ -20,17 +20,17 @@ namespace JardinMisPrimerasLetras {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("PerfilesDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("LetrasDataSetGestion")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class PerfilesDataSet : global::System.Data.DataSet {
+    public partial class LetrasDataSetGestion : global::System.Data.DataSet {
         
-        private PerfilesDataTable tablePerfiles;
+        private GestionDataTable tableGestion;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public PerfilesDataSet() {
+        public LetrasDataSetGestion() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace JardinMisPrimerasLetras {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected PerfilesDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected LetrasDataSetGestion(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace JardinMisPrimerasLetras {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Perfiles"] != null)) {
-                    base.Tables.Add(new PerfilesDataTable(ds.Tables["Perfiles"]));
+                if ((ds.Tables["Gestion"] != null)) {
+                    base.Tables.Add(new GestionDataTable(ds.Tables["Gestion"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace JardinMisPrimerasLetras {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public PerfilesDataTable Perfiles {
+        public GestionDataTable Gestion {
             get {
-                return this.tablePerfiles;
+                return this.tableGestion;
             }
         }
         
@@ -127,7 +127,7 @@ namespace JardinMisPrimerasLetras {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            PerfilesDataSet cln = ((PerfilesDataSet)(base.Clone()));
+            LetrasDataSetGestion cln = ((LetrasDataSetGestion)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace JardinMisPrimerasLetras {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Perfiles"] != null)) {
-                    base.Tables.Add(new PerfilesDataTable(ds.Tables["Perfiles"]));
+                if ((ds.Tables["Gestion"] != null)) {
+                    base.Tables.Add(new GestionDataTable(ds.Tables["Gestion"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace JardinMisPrimerasLetras {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablePerfiles = ((PerfilesDataTable)(base.Tables["Perfiles"]));
+            this.tableGestion = ((GestionDataTable)(base.Tables["Gestion"]));
             if ((initTable == true)) {
-                if ((this.tablePerfiles != null)) {
-                    this.tablePerfiles.InitVars();
+                if ((this.tableGestion != null)) {
+                    this.tableGestion.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace JardinMisPrimerasLetras {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "PerfilesDataSet";
+            this.DataSetName = "LetrasDataSetGestion";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/PerfilesDataSet.xsd";
+            this.Namespace = "http://tempuri.org/LetrasDataSetGestion1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablePerfiles = new PerfilesDataTable();
-            base.Tables.Add(this.tablePerfiles);
+            this.tableGestion = new GestionDataTable();
+            base.Tables.Add(this.tableGestion);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializePerfiles() {
+        private bool ShouldSerializeGestion() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace JardinMisPrimerasLetras {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            PerfilesDataSet ds = new PerfilesDataSet();
+            LetrasDataSetGestion ds = new LetrasDataSetGestion();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,21 +270,29 @@ namespace JardinMisPrimerasLetras {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void PerfilesRowChangeEventHandler(object sender, PerfilesRowChangeEvent e);
+        public delegate void GestionRowChangeEventHandler(object sender, GestionRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class PerfilesDataTable : global::System.Data.TypedTableBase<PerfilesRow> {
+        public partial class GestionDataTable : global::System.Data.TypedTableBase<GestionRow> {
             
-            private global::System.Data.DataColumn columndescripcion;
+            private global::System.Data.DataColumn columnidGestion;
+            
+            private global::System.Data.DataColumn columnGrados;
+            
+            private global::System.Data.DataColumn columnGrupoEscolar;
+            
+            private global::System.Data.DataColumn columnArea;
+            
+            private global::System.Data.DataColumn columnMateria;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PerfilesDataTable() {
-                this.TableName = "Perfiles";
+            public GestionDataTable() {
+                this.TableName = "Gestion";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -292,7 +300,7 @@ namespace JardinMisPrimerasLetras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal PerfilesDataTable(global::System.Data.DataTable table) {
+            internal GestionDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -309,16 +317,48 @@ namespace JardinMisPrimerasLetras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected PerfilesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected GestionDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn descripcionColumn {
+            public global::System.Data.DataColumn idGestionColumn {
                 get {
-                    return this.columndescripcion;
+                    return this.columnidGestion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn GradosColumn {
+                get {
+                    return this.columnGrados;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn GrupoEscolarColumn {
+                get {
+                    return this.columnGrupoEscolar;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn AreaColumn {
+                get {
+                    return this.columnArea;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MateriaColumn {
+                get {
+                    return this.columnMateria;
                 }
             }
             
@@ -333,45 +373,56 @@ namespace JardinMisPrimerasLetras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PerfilesRow this[int index] {
+            public GestionRow this[int index] {
                 get {
-                    return ((PerfilesRow)(this.Rows[index]));
+                    return ((GestionRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event PerfilesRowChangeEventHandler PerfilesRowChanging;
+            public event GestionRowChangeEventHandler GestionRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event PerfilesRowChangeEventHandler PerfilesRowChanged;
+            public event GestionRowChangeEventHandler GestionRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event PerfilesRowChangeEventHandler PerfilesRowDeleting;
+            public event GestionRowChangeEventHandler GestionRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event PerfilesRowChangeEventHandler PerfilesRowDeleted;
+            public event GestionRowChangeEventHandler GestionRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddPerfilesRow(PerfilesRow row) {
+            public void AddGestionRow(GestionRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PerfilesRow AddPerfilesRow(string descripcion) {
-                PerfilesRow rowPerfilesRow = ((PerfilesRow)(this.NewRow()));
+            public GestionRow AddGestionRow(string Grados, string GrupoEscolar, string Area, string Materia) {
+                GestionRow rowGestionRow = ((GestionRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        descripcion};
-                rowPerfilesRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowPerfilesRow);
-                return rowPerfilesRow;
+                        null,
+                        Grados,
+                        GrupoEscolar,
+                        Area,
+                        Materia};
+                rowGestionRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowGestionRow);
+                return rowGestionRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GestionRow FindByidGestion(int idGestion) {
+                return ((GestionRow)(this.Rows.Find(new object[] {
+                            idGestion})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                PerfilesDataTable cln = ((PerfilesDataTable)(base.Clone()));
+                GestionDataTable cln = ((GestionDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -379,48 +430,74 @@ namespace JardinMisPrimerasLetras {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new PerfilesDataTable();
+                return new GestionDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columndescripcion = base.Columns["descripcion"];
+                this.columnidGestion = base.Columns["idGestion"];
+                this.columnGrados = base.Columns["Grados"];
+                this.columnGrupoEscolar = base.Columns["GrupoEscolar"];
+                this.columnArea = base.Columns["Area"];
+                this.columnMateria = base.Columns["Materia"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columndescripcion = new global::System.Data.DataColumn("descripcion", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndescripcion);
-                this.columndescripcion.AllowDBNull = false;
-                this.columndescripcion.MaxLength = 100;
+                this.columnidGestion = new global::System.Data.DataColumn("idGestion", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidGestion);
+                this.columnGrados = new global::System.Data.DataColumn("Grados", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGrados);
+                this.columnGrupoEscolar = new global::System.Data.DataColumn("GrupoEscolar", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnGrupoEscolar);
+                this.columnArea = new global::System.Data.DataColumn("Area", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnArea);
+                this.columnMateria = new global::System.Data.DataColumn("Materia", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMateria);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnidGestion}, true));
+                this.columnidGestion.AutoIncrement = true;
+                this.columnidGestion.AutoIncrementSeed = -1;
+                this.columnidGestion.AutoIncrementStep = -1;
+                this.columnidGestion.AllowDBNull = false;
+                this.columnidGestion.ReadOnly = true;
+                this.columnidGestion.Unique = true;
+                this.columnGrados.AllowDBNull = false;
+                this.columnGrados.MaxLength = 50;
+                this.columnGrupoEscolar.AllowDBNull = false;
+                this.columnGrupoEscolar.MaxLength = 50;
+                this.columnArea.AllowDBNull = false;
+                this.columnArea.MaxLength = 50;
+                this.columnMateria.AllowDBNull = false;
+                this.columnMateria.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PerfilesRow NewPerfilesRow() {
-                return ((PerfilesRow)(this.NewRow()));
+            public GestionRow NewGestionRow() {
+                return ((GestionRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new PerfilesRow(builder);
+                return new GestionRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(PerfilesRow);
+                return typeof(GestionRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.PerfilesRowChanged != null)) {
-                    this.PerfilesRowChanged(this, new PerfilesRowChangeEvent(((PerfilesRow)(e.Row)), e.Action));
+                if ((this.GestionRowChanged != null)) {
+                    this.GestionRowChanged(this, new GestionRowChangeEvent(((GestionRow)(e.Row)), e.Action));
                 }
             }
             
@@ -428,8 +505,8 @@ namespace JardinMisPrimerasLetras {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.PerfilesRowChanging != null)) {
-                    this.PerfilesRowChanging(this, new PerfilesRowChangeEvent(((PerfilesRow)(e.Row)), e.Action));
+                if ((this.GestionRowChanging != null)) {
+                    this.GestionRowChanging(this, new GestionRowChangeEvent(((GestionRow)(e.Row)), e.Action));
                 }
             }
             
@@ -437,8 +514,8 @@ namespace JardinMisPrimerasLetras {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.PerfilesRowDeleted != null)) {
-                    this.PerfilesRowDeleted(this, new PerfilesRowChangeEvent(((PerfilesRow)(e.Row)), e.Action));
+                if ((this.GestionRowDeleted != null)) {
+                    this.GestionRowDeleted(this, new GestionRowChangeEvent(((GestionRow)(e.Row)), e.Action));
                 }
             }
             
@@ -446,14 +523,14 @@ namespace JardinMisPrimerasLetras {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.PerfilesRowDeleting != null)) {
-                    this.PerfilesRowDeleting(this, new PerfilesRowChangeEvent(((PerfilesRow)(e.Row)), e.Action));
+                if ((this.GestionRowDeleting != null)) {
+                    this.GestionRowDeleting(this, new GestionRowChangeEvent(((GestionRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemovePerfilesRow(PerfilesRow row) {
+            public void RemoveGestionRow(GestionRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -462,7 +539,7 @@ namespace JardinMisPrimerasLetras {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                PerfilesDataSet ds = new PerfilesDataSet();
+                LetrasDataSetGestion ds = new LetrasDataSetGestion();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -480,7 +557,7 @@ namespace JardinMisPrimerasLetras {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "PerfilesDataTable";
+                attribute2.FixedValue = "GestionDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -524,25 +601,69 @@ namespace JardinMisPrimerasLetras {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class PerfilesRow : global::System.Data.DataRow {
+        public partial class GestionRow : global::System.Data.DataRow {
             
-            private PerfilesDataTable tablePerfiles;
+            private GestionDataTable tableGestion;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal PerfilesRow(global::System.Data.DataRowBuilder rb) : 
+            internal GestionRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablePerfiles = ((PerfilesDataTable)(this.Table));
+                this.tableGestion = ((GestionDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string descripcion {
+            public int idGestion {
                 get {
-                    return ((string)(this[this.tablePerfiles.descripcionColumn]));
+                    return ((int)(this[this.tableGestion.idGestionColumn]));
                 }
                 set {
-                    this[this.tablePerfiles.descripcionColumn] = value;
+                    this[this.tableGestion.idGestionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Grados {
+                get {
+                    return ((string)(this[this.tableGestion.GradosColumn]));
+                }
+                set {
+                    this[this.tableGestion.GradosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string GrupoEscolar {
+                get {
+                    return ((string)(this[this.tableGestion.GrupoEscolarColumn]));
+                }
+                set {
+                    this[this.tableGestion.GrupoEscolarColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Area {
+                get {
+                    return ((string)(this[this.tableGestion.AreaColumn]));
+                }
+                set {
+                    this[this.tableGestion.AreaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Materia {
+                get {
+                    return ((string)(this[this.tableGestion.MateriaColumn]));
+                }
+                set {
+                    this[this.tableGestion.MateriaColumn] = value;
                 }
             }
         }
@@ -551,22 +672,22 @@ namespace JardinMisPrimerasLetras {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class PerfilesRowChangeEvent : global::System.EventArgs {
+        public class GestionRowChangeEvent : global::System.EventArgs {
             
-            private PerfilesRow eventRow;
+            private GestionRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PerfilesRowChangeEvent(PerfilesRow row, global::System.Data.DataRowAction action) {
+            public GestionRowChangeEvent(GestionRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PerfilesRow Row {
+            public GestionRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -582,7 +703,7 @@ namespace JardinMisPrimerasLetras {
         }
     }
 }
-namespace JardinMisPrimerasLetras.PerfilesDataSetTableAdapters {
+namespace JardinMisPrimerasLetras.LetrasDataSetGestionTableAdapters {
     
     
     /// <summary>
@@ -594,7 +715,7 @@ namespace JardinMisPrimerasLetras.PerfilesDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class PerfilesTableAdapter : global::System.ComponentModel.Component {
+    public partial class GestionTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -608,7 +729,7 @@ namespace JardinMisPrimerasLetras.PerfilesDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public PerfilesTableAdapter() {
+        public GestionTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -705,16 +826,56 @@ namespace JardinMisPrimerasLetras.PerfilesDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Perfiles";
-            tableMapping.ColumnMappings.Add("descripcion", "descripcion");
+            tableMapping.DataSetTable = "Gestion";
+            tableMapping.ColumnMappings.Add("idGestion", "idGestion");
+            tableMapping.ColumnMappings.Add("Grados", "Grados");
+            tableMapping.ColumnMappings.Add("GrupoEscolar", "GrupoEscolar");
+            tableMapping.ColumnMappings.Add("Area", "Area");
+            tableMapping.ColumnMappings.Add("Materia", "Materia");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Gestion] WHERE (([idGestion] = @Original_idGestion) AND ([Grad" +
+                "os] = @Original_Grados) AND ([GrupoEscolar] = @Original_GrupoEscolar) AND ([Area" +
+                "] = @Original_Area) AND ([Materia] = @Original_Materia))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idGestion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idGestion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Grados", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Grados", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GrupoEscolar", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GrupoEscolar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Area", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Area", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Materia", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Materia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Gestion] ([Grados], [GrupoEscolar], [Area], [Materia]) VALUES " +
+                "(@Grados, @GrupoEscolar, @Area, @Materia);\r\nSELECT idGestion, Grados, GrupoEscol" +
+                "ar, Area, Materia FROM Gestion WHERE (idGestion = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Grados", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Grados", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GrupoEscolar", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GrupoEscolar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Area", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Area", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Materia", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Materia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Gestion] SET [Grados] = @Grados, [GrupoEscolar] = @GrupoEscolar, [Area] = @Area, [Materia] = @Materia WHERE (([idGestion] = @Original_idGestion) AND ([Grados] = @Original_Grados) AND ([GrupoEscolar] = @Original_GrupoEscolar) AND ([Area] = @Original_Area) AND ([Materia] = @Original_Materia));
+SELECT idGestion, Grados, GrupoEscolar, Area, Materia FROM Gestion WHERE (idGestion = @idGestion)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Grados", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Grados", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@GrupoEscolar", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GrupoEscolar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Area", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Area", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Materia", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Materia", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idGestion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idGestion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Grados", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Grados", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_GrupoEscolar", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "GrupoEscolar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Area", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Area", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Materia", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Materia", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idGestion", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "idGestion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::JardinMisPrimerasLetras.Properties.Settings.Default.conexionDB2;
+            this._connection.ConnectionString = global::JardinMisPrimerasLetras.Properties.Settings.Default.conexionDB;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -723,7 +884,7 @@ namespace JardinMisPrimerasLetras.PerfilesDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT descripcion FROM dbo.Perfiles";
+            this._commandCollection[0].CommandText = "SELECT idGestion, Grados, GrupoEscolar, Area, Materia FROM dbo.Gestion";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -731,7 +892,7 @@ namespace JardinMisPrimerasLetras.PerfilesDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(PerfilesDataSet.PerfilesDataTable dataTable) {
+        public virtual int Fill(LetrasDataSetGestion.GestionDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -744,11 +905,210 @@ namespace JardinMisPrimerasLetras.PerfilesDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual PerfilesDataSet.PerfilesDataTable GetData() {
+        public virtual LetrasDataSetGestion.GestionDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            PerfilesDataSet.PerfilesDataTable dataTable = new PerfilesDataSet.PerfilesDataTable();
+            LetrasDataSetGestion.GestionDataTable dataTable = new LetrasDataSetGestion.GestionDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(LetrasDataSetGestion.GestionDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(LetrasDataSetGestion dataSet) {
+            return this.Adapter.Update(dataSet, "Gestion");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(int Original_idGestion, string Original_Grados, string Original_GrupoEscolar, string Original_Area, string Original_Materia) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_idGestion));
+            if ((Original_Grados == null)) {
+                throw new global::System.ArgumentNullException("Original_Grados");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Grados));
+            }
+            if ((Original_GrupoEscolar == null)) {
+                throw new global::System.ArgumentNullException("Original_GrupoEscolar");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_GrupoEscolar));
+            }
+            if ((Original_Area == null)) {
+                throw new global::System.ArgumentNullException("Original_Area");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Area));
+            }
+            if ((Original_Materia == null)) {
+                throw new global::System.ArgumentNullException("Original_Materia");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Materia));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string Grados, string GrupoEscolar, string Area, string Materia) {
+            if ((Grados == null)) {
+                throw new global::System.ArgumentNullException("Grados");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Grados));
+            }
+            if ((GrupoEscolar == null)) {
+                throw new global::System.ArgumentNullException("GrupoEscolar");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(GrupoEscolar));
+            }
+            if ((Area == null)) {
+                throw new global::System.ArgumentNullException("Area");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Area));
+            }
+            if ((Materia == null)) {
+                throw new global::System.ArgumentNullException("Materia");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Materia));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Grados, string GrupoEscolar, string Area, string Materia, int Original_idGestion, string Original_Grados, string Original_GrupoEscolar, string Original_Area, string Original_Materia, int idGestion) {
+            if ((Grados == null)) {
+                throw new global::System.ArgumentNullException("Grados");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Grados));
+            }
+            if ((GrupoEscolar == null)) {
+                throw new global::System.ArgumentNullException("GrupoEscolar");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(GrupoEscolar));
+            }
+            if ((Area == null)) {
+                throw new global::System.ArgumentNullException("Area");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Area));
+            }
+            if ((Materia == null)) {
+                throw new global::System.ArgumentNullException("Materia");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Materia));
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_idGestion));
+            if ((Original_Grados == null)) {
+                throw new global::System.ArgumentNullException("Original_Grados");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Grados));
+            }
+            if ((Original_GrupoEscolar == null)) {
+                throw new global::System.ArgumentNullException("Original_GrupoEscolar");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_GrupoEscolar));
+            }
+            if ((Original_Area == null)) {
+                throw new global::System.ArgumentNullException("Original_Area");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_Area));
+            }
+            if ((Original_Materia == null)) {
+                throw new global::System.ArgumentNullException("Original_Materia");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Materia));
+            }
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(idGestion));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Grados, string GrupoEscolar, string Area, string Materia, int Original_idGestion, string Original_Grados, string Original_GrupoEscolar, string Original_Area, string Original_Materia) {
+            return this.Update(Grados, GrupoEscolar, Area, Materia, Original_idGestion, Original_Grados, Original_GrupoEscolar, Original_Area, Original_Materia, Original_idGestion);
         }
     }
     
@@ -764,6 +1124,8 @@ namespace JardinMisPrimerasLetras.PerfilesDataSetTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
+        private GestionTableAdapter _gestionTableAdapter;
+        
         private bool _backupDataSetBeforeUpdate;
         
         private global::System.Data.IDbConnection _connection;
@@ -776,6 +1138,20 @@ namespace JardinMisPrimerasLetras.PerfilesDataSetTableAdapters {
             }
             set {
                 this._updateOrder = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public GestionTableAdapter GestionTableAdapter {
+            get {
+                return this._gestionTableAdapter;
+            }
+            set {
+                this._gestionTableAdapter = value;
             }
         }
         
@@ -798,6 +1174,10 @@ namespace JardinMisPrimerasLetras.PerfilesDataSetTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
+                if (((this._gestionTableAdapter != null) 
+                            && (this._gestionTableAdapter.Connection != null))) {
+                    return this._gestionTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -811,6 +1191,9 @@ namespace JardinMisPrimerasLetras.PerfilesDataSetTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
+                if ((this._gestionTableAdapter != null)) {
+                    count = (count + 1);
+                }
                 return count;
             }
         }
@@ -820,8 +1203,17 @@ namespace JardinMisPrimerasLetras.PerfilesDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(PerfilesDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(LetrasDataSetGestion dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._gestionTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Gestion.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._gestionTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -830,8 +1222,16 @@ namespace JardinMisPrimerasLetras.PerfilesDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(PerfilesDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(LetrasDataSetGestion dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._gestionTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Gestion.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._gestionTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -840,8 +1240,16 @@ namespace JardinMisPrimerasLetras.PerfilesDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(PerfilesDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(LetrasDataSetGestion dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._gestionTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Gestion.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._gestionTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             return result;
         }
         
@@ -874,12 +1282,17 @@ namespace JardinMisPrimerasLetras.PerfilesDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(PerfilesDataSet dataSet) {
+        public virtual int UpdateAll(LetrasDataSetGestion dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
+            }
+            if (((this._gestionTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._gestionTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
+                        "sma cadena de conexión.");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
@@ -913,6 +1326,15 @@ namespace JardinMisPrimerasLetras.PerfilesDataSetTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
+                if ((this._gestionTableAdapter != null)) {
+                    revertConnections.Add(this._gestionTableAdapter, this._gestionTableAdapter.Connection);
+                    this._gestionTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._gestionTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._gestionTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._gestionTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._gestionTableAdapter.Adapter);
+                    }
+                }
                 // 
                 //---- Perform updates -----------
                 //
@@ -970,6 +1392,10 @@ namespace JardinMisPrimerasLetras.PerfilesDataSetTableAdapters {
             finally {
                 if (workConnOpened) {
                     workConnection.Close();
+                }
+                if ((this._gestionTableAdapter != null)) {
+                    this._gestionTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._gestionTableAdapter]));
+                    this._gestionTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
