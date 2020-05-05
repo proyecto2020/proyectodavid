@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace JardinMisPrimerasLetras
 {
-    public partial class Matriculas : Form
+    public partial class AsignacionCargaAcademica : Form
     {
-        public Matriculas()
+        public AsignacionCargaAcademica()
         {
             InitializeComponent();
         }
 
-        private void Matriculas_Load(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
