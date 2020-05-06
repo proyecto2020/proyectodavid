@@ -22,10 +22,23 @@ C:\Users\jason\Documents\GitHub\proyectodavid\Entidades\obj\Debug\Entidades.cspr
 C:\Users\jason\Documents\GitHub\proyectodavid\Entidades\obj\Debug\Entidades.csproj.CopyComplete
 C:\Users\jason\Documents\GitHub\proyectodavid\Entidades\obj\Debug\Entidades.dll
 C:\Users\jason\Documents\GitHub\proyectodavid\Entidades\obj\Debug\Entidades.pdb
+<<<<<<< HEAD
+C:\Users\David\Documents\GitHub\proyectodavid\Entidades\bin\Debug\Entidades.dll
+C:\Users\David\Documents\GitHub\proyectodavid\Entidades\bin\Debug\Entidades.pdb
+C:\Users\David\Documents\GitHub\proyectodavid\Entidades\bin\Debug\UsuarioLogeadoController.dll
+C:\Users\David\Documents\GitHub\proyectodavid\Entidades\bin\Debug\UsuarioLogeadoController.pdb
+C:\Users\David\Documents\GitHub\proyectodavid\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\David\Documents\GitHub\proyectodavid\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\David\Documents\GitHub\proyectodavid\Entidades\obj\Debug\Entidades.csproj.CopyComplete
+C:\Users\David\Documents\GitHub\proyectodavid\Entidades\obj\Debug\Entidades.dll
+C:\Users\David\Documents\GitHub\proyectodavid\Entidades\obj\Debug\Entidades.pdb
+=======
 C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\Entidades\bin\Debug\Entidades.dll
 C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\Entidades\bin\Debug\Entidades.pdb
 C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\Entidades\bin\Debug\UsuarioLogeadoController.dll
 C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\Entidades\bin\Debug\UsuarioLogeadoController.pdb
+C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
 C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\Entidades\obj\Debug\Entidades.csproj.CopyComplete
 C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\Entidades\obj\Debug\Entidades.dll
 C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\Entidades\obj\Debug\Entidades.pdb
+>>>>>>> f3f0a93fd596811e2c3b82f53b6a4174f4e04364

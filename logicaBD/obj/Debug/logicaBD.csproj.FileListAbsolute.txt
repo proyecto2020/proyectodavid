@@ -48,6 +48,22 @@ C:\Users\jason\Documents\GitHub\proyectodavid\logicaBD\obj\Debug\logicaBD.csproj
 C:\Users\jason\Documents\GitHub\proyectodavid\logicaBD\obj\Debug\logicaBD.csproj.CopyComplete
 C:\Users\jason\Documents\GitHub\proyectodavid\logicaBD\obj\Debug\logicaBD.dll
 C:\Users\jason\Documents\GitHub\proyectodavid\logicaBD\obj\Debug\logicaBD.pdb
+<<<<<<< HEAD
+C:\Users\David\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\logicaBD.dll.config
+C:\Users\David\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\logicaBD.dll
+C:\Users\David\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\logicaBD.pdb
+C:\Users\David\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\Dapper.dll
+C:\Users\David\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\Entidades.dll
+C:\Users\David\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\UsuarioLogeadoController.dll
+C:\Users\David\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\Entidades.pdb
+C:\Users\David\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\UsuarioLogeadoController.pdb
+C:\Users\David\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\Dapper.xml
+C:\Users\David\Documents\GitHub\proyectodavid\logicaBD\obj\Debug\logicaBD.csprojAssemblyReference.cache
+C:\Users\David\Documents\GitHub\proyectodavid\logicaBD\obj\Debug\logicaBD.csproj.CoreCompileInputs.cache
+C:\Users\David\Documents\GitHub\proyectodavid\logicaBD\obj\Debug\logicaBD.csproj.CopyComplete
+C:\Users\David\Documents\GitHub\proyectodavid\logicaBD\obj\Debug\logicaBD.dll
+C:\Users\David\Documents\GitHub\proyectodavid\logicaBD\obj\Debug\logicaBD.pdb
+=======
 C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\logicaBD\bin\Debug\logicaBD.dll.config
 C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\logicaBD\bin\Debug\logicaBD.dll
 C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\logicaBD\bin\Debug\logicaBD.pdb
@@ -61,3 +77,4 @@ C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid
 C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\logicaBD\obj\Debug\logicaBD.csproj.CopyComplete
 C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\logicaBD\obj\Debug\logicaBD.dll
 C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\logicaBD\obj\Debug\logicaBD.pdb
+>>>>>>> f3f0a93fd596811e2c3b82f53b6a4174f4e04364
