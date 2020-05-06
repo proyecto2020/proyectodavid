@@ -117,3 +117,30 @@ C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid
 C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.csproj.CopyComplete
 C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.exe
 C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.pdb
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\bin\Debug\App.config
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\bin\Debug\JardinMisPrimerasLetras.exe.config
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\bin\Debug\JardinMisPrimerasLetras.exe
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\bin\Debug\JardinMisPrimerasLetras.pdb
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\bin\Debug\Entidades.dll
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\bin\Debug\UsuarioControler.dll
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\bin\Debug\logicaBD.dll
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\bin\Debug\Dapper.dll
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\bin\Debug\UsuarioLogeadoController.dll
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\bin\Debug\Entidades.pdb
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\bin\Debug\UsuarioControler.pdb
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\bin\Debug\logicaBD.pdb
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\bin\Debug\logicaBD.dll.config
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\bin\Debug\Dapper.xml
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\bin\Debug\UsuarioLogeadoController.pdb
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.csprojAssemblyReference.cache
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.AdministradorUsuarios.resources
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.IngGestion.resources
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.Login.resources
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.Matriculas.resources
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.Pagos.resources
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.Properties.Resources.resources
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.csproj.GenerateResource.cache
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.csproj.CoreCompileInputs.cache
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.csproj.CopyComplete
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.exe
+C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.pdb

@@ -52,6 +52,12 @@
     <Compile Include="AdministradorUsuarios.Designer.cs">
       <DependentUpon>AdministradorUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="asiganacionAcademica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="asiganacionAcademica.Designer.cs">
+      <DependentUpon>asiganacionAcademica.cs</DependentUpon>
+    </Compile>
     <Compile Include="IngGestion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AdministradorUsuarios.resx">
       <DependentUpon>AdministradorUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="asiganacionAcademica.resx">
+      <DependentUpon>asiganacionAcademica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IngGestion.resx">
       <DependentUpon>IngGestion.cs</DependentUpon>
