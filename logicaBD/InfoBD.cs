@@ -102,7 +102,7 @@ namespace logicaBD
                cmd.Parameters.AddWithValue("@contraseña", usuario.contrasena);
                cmd.ExecuteNonQuery();
                 }
-                catch (Exception e)
+                catch (Exception )
                 {
 
                     throw;
