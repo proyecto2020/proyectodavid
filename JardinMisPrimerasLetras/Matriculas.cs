@@ -16,10 +16,5 @@ namespace JardinMisPrimerasLetras
         {
             InitializeComponent();
         }
-
-        private void Matriculas_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

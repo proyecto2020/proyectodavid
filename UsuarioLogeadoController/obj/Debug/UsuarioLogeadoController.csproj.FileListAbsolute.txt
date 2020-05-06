@@ -6,9 +6,3 @@ C:\Users\jason\Documents\GitHub\proyectodavid\UsuarioLogeadoController\bin\Debug
 C:\Users\jason\Documents\GitHub\proyectodavid\UsuarioLogeadoController\bin\Debug\UsuarioLogeadoController.pdb
 C:\Users\jason\Documents\GitHub\proyectodavid\UsuarioLogeadoController\obj\Debug\UsuarioLogeadoController.dll
 C:\Users\jason\Documents\GitHub\proyectodavid\UsuarioLogeadoController\obj\Debug\UsuarioLogeadoController.pdb
-C:\Users\David\Documents\GitHub\proyectodavid\UsuarioLogeadoController\bin\Debug\UsuarioLogeadoController.dll
-C:\Users\David\Documents\GitHub\proyectodavid\UsuarioLogeadoController\bin\Debug\UsuarioLogeadoController.pdb
-C:\Users\David\Documents\GitHub\proyectodavid\UsuarioLogeadoController\obj\Debug\UsuarioLogeadoController.csprojAssemblyReference.cache
-C:\Users\David\Documents\GitHub\proyectodavid\UsuarioLogeadoController\obj\Debug\UsuarioLogeadoController.csproj.CoreCompileInputs.cache
-C:\Users\David\Documents\GitHub\proyectodavid\UsuarioLogeadoController\obj\Debug\UsuarioLogeadoController.dll
-C:\Users\David\Documents\GitHub\proyectodavid\UsuarioLogeadoController\obj\Debug\UsuarioLogeadoController.pdb
