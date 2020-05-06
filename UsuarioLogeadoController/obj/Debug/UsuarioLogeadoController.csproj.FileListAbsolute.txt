@@ -16,3 +16,4 @@ C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid
 C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\UsuarioLogeadoController\bin\Debug\UsuarioLogeadoController.pdb
 C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\UsuarioLogeadoController\obj\Debug\UsuarioLogeadoController.dll
 C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\UsuarioLogeadoController\obj\Debug\UsuarioLogeadoController.pdb
+C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\UsuarioLogeadoController\obj\Debug\UsuarioLogeadoController.csprojAssemblyReference.cache
