@@ -86,6 +86,12 @@
     <Compile Include="Matriculas.Designer.cs">
       <DependentUpon>Matriculas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulo Notas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo Notas.Designer.cs">
+      <DependentUpon>Modulo Notas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pagos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Matriculas.resx">
       <DependentUpon>Matriculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo Notas.resx">
+      <DependentUpon>Modulo Notas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pagos.resx">
       <DependentUpon>Pagos.cs</DependentUpon>

@@ -26,5 +26,9 @@ namespace JardinMisPrimerasLetras
         {
 
         }
+
+        private void Nombres_TextChanged(object sender, EventArgs e)
+        {
+                    }
     }
 }

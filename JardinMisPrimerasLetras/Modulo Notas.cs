@@ -10,14 +10,24 @@ using System.Windows.Forms;
 
 namespace JardinMisPrimerasLetras
 {
-    public partial class Matriculas : Form
+    public partial class Modulo_Notas : Form
     {
-        public Matriculas()
+        public Modulo_Notas()
         {
             InitializeComponent();
         }
 
-        private void Matriculas_Load(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
