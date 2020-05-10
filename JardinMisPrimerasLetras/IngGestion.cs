@@ -97,7 +97,7 @@ namespace JardinMisPrimerasLetras
             }
             catch (InvalidCastException ex)
             {
-                MessageBox.Show("se jodio esto");
+                MessageBox.Show("Error en el sistema");
             }
         }
 
@@ -125,7 +125,7 @@ namespace JardinMisPrimerasLetras
             }
             catch (InvalidCastException ex)
             {
-                MessageBox.Show("se jodio esto");
+                MessageBox.Show("Error en el sistema");
             }
         }
 

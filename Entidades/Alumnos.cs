@@ -8,7 +8,7 @@ namespace Entidades
 {
     public class Alumnos
     {
-        public string nombre { get; set; }
+        public string nombres { get; set; }
         public string apellidos { get; set; }
         public string fechaNacimiento { get; set; }
         public string acudiente { get; set; }
@@ -18,5 +18,6 @@ namespace Entidades
         public string telefono { get; set; }
         public string ocupacion { get; set; }
         public string observacion { get; set; }
+        public string insertarAlumno { get; set; }
     }
 }

@@ -59,6 +59,7 @@
             this.usuarioTableAdapter = new JardinMisPrimerasLetras.jardinDataSetTableAdapters.UsuarioTableAdapter();
             this.perfilesTableAdapter = new JardinMisPrimerasLetras.PerfilesDataSetTableAdapters.PerfilesTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.perfilesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
@@ -69,10 +70,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(393, 248);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.textBox1.Location = new System.Drawing.Point(124, 87);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(523, 44);
+            this.textBox1.Size = new System.Drawing.Size(168, 20);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -80,10 +80,9 @@
             // 
             this.labelTipoPerfil.AutoSize = true;
             this.labelTipoPerfil.BackColor = System.Drawing.Color.Transparent;
-            this.labelTipoPerfil.Location = new System.Drawing.Point(111, 137);
-            this.labelTipoPerfil.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.labelTipoPerfil.Location = new System.Drawing.Point(35, 48);
             this.labelTipoPerfil.Name = "labelTipoPerfil";
-            this.labelTipoPerfil.Size = new System.Drawing.Size(202, 37);
+            this.labelTipoPerfil.Size = new System.Drawing.Size(68, 13);
             this.labelTipoPerfil.TabIndex = 1;
             this.labelTipoPerfil.Text = "Tipo de perfil";
             // 
@@ -95,10 +94,9 @@
             // 
             this.labelPrimerNombre.AutoSize = true;
             this.labelPrimerNombre.BackColor = System.Drawing.Color.Transparent;
-            this.labelPrimerNombre.Location = new System.Drawing.Point(95, 268);
-            this.labelPrimerNombre.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.labelPrimerNombre.Location = new System.Drawing.Point(30, 94);
             this.labelPrimerNombre.Name = "labelPrimerNombre";
-            this.labelPrimerNombre.Size = new System.Drawing.Size(229, 37);
+            this.labelPrimerNombre.Size = new System.Drawing.Size(74, 13);
             this.labelPrimerNombre.TabIndex = 5;
             this.labelPrimerNombre.Text = "Primer nombre";
             // 
@@ -106,19 +104,17 @@
             // 
             this.labelCedula.AutoSize = true;
             this.labelCedula.BackColor = System.Drawing.Color.Transparent;
-            this.labelCedula.Location = new System.Drawing.Point(193, 455);
-            this.labelCedula.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.labelCedula.Location = new System.Drawing.Point(61, 160);
             this.labelCedula.Name = "labelCedula";
-            this.labelCedula.Size = new System.Drawing.Size(118, 37);
+            this.labelCedula.Size = new System.Drawing.Size(40, 13);
             this.labelCedula.TabIndex = 6;
             this.labelCedula.Text = "Cedula";
             // 
             // textBoxCedula
             // 
-            this.textBoxCedula.Location = new System.Drawing.Point(393, 435);
-            this.textBoxCedula.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.textBoxCedula.Location = new System.Drawing.Point(124, 153);
             this.textBoxCedula.Name = "textBoxCedula";
-            this.textBoxCedula.Size = new System.Drawing.Size(523, 44);
+            this.textBoxCedula.Size = new System.Drawing.Size(168, 20);
             this.textBoxCedula.TabIndex = 7;
             this.textBoxCedula.TextChanged += new System.EventHandler(this.textBoxCedula_TextChanged);
             // 
@@ -126,10 +122,9 @@
             // 
             this.labelPrimerApellido.AutoSize = true;
             this.labelPrimerApellido.BackColor = System.Drawing.Color.Transparent;
-            this.labelPrimerApellido.Location = new System.Drawing.Point(1042, 256);
-            this.labelPrimerApellido.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.labelPrimerApellido.Location = new System.Drawing.Point(329, 90);
             this.labelPrimerApellido.Name = "labelPrimerApellido";
-            this.labelPrimerApellido.Size = new System.Drawing.Size(230, 37);
+            this.labelPrimerApellido.Size = new System.Drawing.Size(75, 13);
             this.labelPrimerApellido.TabIndex = 10;
             this.labelPrimerApellido.Text = "Primer apellido";
             // 
@@ -137,28 +132,25 @@
             // 
             this.labelSegundoNombre.AutoSize = true;
             this.labelSegundoNombre.BackColor = System.Drawing.Color.Transparent;
-            this.labelSegundoNombre.Location = new System.Drawing.Point(51, 356);
-            this.labelSegundoNombre.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.labelSegundoNombre.Location = new System.Drawing.Point(16, 125);
             this.labelSegundoNombre.Name = "labelSegundoNombre";
-            this.labelSegundoNombre.Size = new System.Drawing.Size(263, 37);
+            this.labelSegundoNombre.Size = new System.Drawing.Size(88, 13);
             this.labelSegundoNombre.TabIndex = 11;
             this.labelSegundoNombre.Text = "Segundo nombre";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(393, 347);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.textBox2.Location = new System.Drawing.Point(124, 122);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(523, 44);
+            this.textBox2.Size = new System.Drawing.Size(168, 20);
             this.textBox2.TabIndex = 12;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(1371, 248);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.textBox3.Location = new System.Drawing.Point(433, 87);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(523, 44);
+            this.textBox3.Size = new System.Drawing.Size(168, 20);
             this.textBox3.TabIndex = 13;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -166,28 +158,25 @@
             // 
             this.labelSendoApellido.AutoSize = true;
             this.labelSendoApellido.BackColor = System.Drawing.Color.Transparent;
-            this.labelSendoApellido.Location = new System.Drawing.Point(998, 367);
-            this.labelSendoApellido.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.labelSendoApellido.Location = new System.Drawing.Point(315, 129);
             this.labelSendoApellido.Name = "labelSendoApellido";
-            this.labelSendoApellido.Size = new System.Drawing.Size(264, 37);
+            this.labelSendoApellido.Size = new System.Drawing.Size(89, 13);
             this.labelSendoApellido.TabIndex = 14;
             this.labelSendoApellido.Text = "Segundo apellido";
             // 
             // textBoxSegundoApellido
             // 
-            this.textBoxSegundoApellido.Location = new System.Drawing.Point(1371, 356);
-            this.textBoxSegundoApellido.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.textBoxSegundoApellido.Location = new System.Drawing.Point(433, 125);
             this.textBoxSegundoApellido.Name = "textBoxSegundoApellido";
-            this.textBoxSegundoApellido.Size = new System.Drawing.Size(523, 44);
+            this.textBoxSegundoApellido.Size = new System.Drawing.Size(168, 20);
             this.textBoxSegundoApellido.TabIndex = 15;
             this.textBoxSegundoApellido.TextChanged += new System.EventHandler(this.textBoxSegundoApellido_TextChanged);
             // 
             // buttonGuardar
             // 
-            this.buttonGuardar.Location = new System.Drawing.Point(795, 672);
-            this.buttonGuardar.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.buttonGuardar.Location = new System.Drawing.Point(251, 236);
             this.buttonGuardar.Name = "buttonGuardar";
-            this.buttonGuardar.Size = new System.Drawing.Size(238, 65);
+            this.buttonGuardar.Size = new System.Drawing.Size(75, 23);
             this.buttonGuardar.TabIndex = 18;
             this.buttonGuardar.Text = "Guardar";
             this.buttonGuardar.UseVisualStyleBackColor = true;
@@ -195,10 +184,9 @@
             // 
             // buttonEditar
             // 
-            this.buttonEditar.Location = new System.Drawing.Point(1051, 672);
-            this.buttonEditar.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.buttonEditar.Location = new System.Drawing.Point(332, 236);
             this.buttonEditar.Name = "buttonEditar";
-            this.buttonEditar.Size = new System.Drawing.Size(238, 65);
+            this.buttonEditar.Size = new System.Drawing.Size(75, 23);
             this.buttonEditar.TabIndex = 20;
             this.buttonEditar.Text = "Editar";
             this.buttonEditar.UseVisualStyleBackColor = true;
@@ -215,11 +203,10 @@
             this.correoDataGridViewTextBoxColumn,
             this.Perfil});
             this.dataGridView1.DataSource = this.usuarioBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(285, 797);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.dataGridView1.Location = new System.Drawing.Point(90, 280);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 123;
-            this.dataGridView1.Size = new System.Drawing.Size(1403, 188);
+            this.dataGridView1.Size = new System.Drawing.Size(443, 66);
             this.dataGridView1.TabIndex = 22;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -277,19 +264,17 @@
             // 
             this.labelCorreo.AutoSize = true;
             this.labelCorreo.BackColor = System.Drawing.Color.Transparent;
-            this.labelCorreo.Location = new System.Drawing.Point(1086, 455);
-            this.labelCorreo.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.labelCorreo.Location = new System.Drawing.Point(343, 160);
             this.labelCorreo.Name = "labelCorreo";
-            this.labelCorreo.Size = new System.Drawing.Size(115, 37);
+            this.labelCorreo.Size = new System.Drawing.Size(38, 13);
             this.labelCorreo.TabIndex = 23;
             this.labelCorreo.Text = "Correo";
             // 
             // textBoxCorreo
             // 
-            this.textBoxCorreo.Location = new System.Drawing.Point(1371, 447);
-            this.textBoxCorreo.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.textBoxCorreo.Location = new System.Drawing.Point(433, 157);
             this.textBoxCorreo.Name = "textBoxCorreo";
-            this.textBoxCorreo.Size = new System.Drawing.Size(523, 44);
+            this.textBoxCorreo.Size = new System.Drawing.Size(168, 20);
             this.textBoxCorreo.TabIndex = 24;
             this.textBoxCorreo.TextChanged += new System.EventHandler(this.textBoxCorreo_TextChanged);
             // 
@@ -298,10 +283,9 @@
             this.TipoPerfil.DataSource = this.perfilesBindingSource1;
             this.TipoPerfil.DisplayMember = "descripcion";
             this.TipoPerfil.FormattingEnabled = true;
-            this.TipoPerfil.Location = new System.Drawing.Point(393, 128);
-            this.TipoPerfil.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.TipoPerfil.Location = new System.Drawing.Point(124, 45);
             this.TipoPerfil.Name = "TipoPerfil";
-            this.TipoPerfil.Size = new System.Drawing.Size(523, 45);
+            this.TipoPerfil.Size = new System.Drawing.Size(168, 21);
             this.TipoPerfil.TabIndex = 25;
             this.TipoPerfil.SelectedIndexChanged += new System.EventHandler(this.TipoPerfil_SelectedIndexChanged);
             // 
@@ -325,21 +309,31 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1675, 1104);
-            this.button1.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.button1.Location = new System.Drawing.Point(529, 388);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(228, 142);
+            this.button1.Size = new System.Drawing.Size(72, 50);
             this.button1.TabIndex = 29;
             this.button1.Text = "GESTION";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(636, 388);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(104, 50);
+            this.button2.TabIndex = 30;
+            this.button2.Text = "MATRICULAS";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // AdministradorUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(1998, 1281);
+            this.ClientSize = new System.Drawing.Size(772, 468);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TipoPerfil);
             this.Controls.Add(this.textBoxCorreo);
@@ -358,7 +352,6 @@
             this.Controls.Add(this.labelPrimerNombre);
             this.Controls.Add(this.labelTipoPerfil);
             this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Name = "AdministradorUsuarios";
             this.Text = "AdministradorUsuarios";
             this.Load += new System.EventHandler(this.AdministradorUsuarios_Load);
@@ -406,5 +399,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn segundoApellidoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn correoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Perfil;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -65,9 +65,9 @@ namespace UsuarioControler
             return resultado;
         }
 
-        public Respuesta<object> insertarAlumno(Alumnos alumno)
+        public Respuesta<object> insertarAlumno(Alumnos insertarAlumno)
         {
-            var resultado = this.cliente.insertarAlumno(alumno);
+            var resultado = this.cliente.insertarAlumno(insertarAlumno);
             return resultado;
         }
 
@@ -100,8 +100,6 @@ namespace UsuarioControler
             var resultado = this.cliente.TraerMateriasporArea(Id);
             return resultado;
         }
-
-        
 
     }
 }

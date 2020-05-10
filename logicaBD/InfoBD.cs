@@ -225,20 +225,20 @@ namespace logicaBD
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
                 conexion.Open();//DAO Docente solo conexiones y esto para bajo
-                SqlCommand cmd = new SqlCommand("InsertarAlumno", conexion);
+                SqlCommand cmd = new SqlCommand("PR_insertarAlumno", conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.AddWithValue("@pi_Grados", alumno.nombre);
-                cmd.Parameters.AddWithValue("@pi_Grupos", alumno.apellidos);
-                cmd.Parameters.AddWithValue("@pi_Materia", alumno.fechaNacimiento);
-                cmd.Parameters.AddWithValue("@pi_Materia", alumno.acudiente);
-                cmd.Parameters.AddWithValue("@pi_Materia", alumno.correo);
-                cmd.Parameters.AddWithValue("@pi_Materia", alumno.direccion);
-                cmd.Parameters.AddWithValue("@pi_Materia", alumno.identificacion);
-                cmd.Parameters.AddWithValue("@pi_Materia", alumno.ocupacion);
-                cmd.Parameters.AddWithValue("@pi_Materia", alumno.observacion);
-                cmd.Parameters.AddWithValue("@pi_Materia", alumno.telefono);
+                cmd.Parameters.AddWithValue("@pi_Identificacion", alumno.identificacion);
+                cmd.Parameters.AddWithValue("@pi_PrimerNombre", alumno.nombres);
+                cmd.Parameters.AddWithValue("@pi_PrimerApellido", alumno.apellidos);
+                cmd.Parameters.AddWithValue("@pi_CorreoAcudiente", alumno.correo);
+                cmd.Parameters.AddWithValue("@pi_Acudiente", alumno.acudiente);
+                cmd.Parameters.AddWithValue("@pi_Ocupacion", alumno.ocupacion);
+                cmd.Parameters.AddWithValue("@pi_Observaciones", alumno.observacion);
+                cmd.Parameters.AddWithValue("@pi_Telefono", alumno.telefono);
+                cmd.Parameters.AddWithValue("@pi_Direccion", alumno.direccion);
+                cmd.Parameters.AddWithValue("@pi_FechaNacimiento", alumno.fechaNacimiento);
                 cmd.ExecuteNonQuery();
+                
 
                 //respuesta.ResultData = new ObservableCollection<object>(new List<object> { rowAffected });
             }
@@ -264,32 +264,7 @@ namespace logicaBD
             return respuesta;
         }
 
-        public Respuesta<Object> insertarAlumnos(Pagos pago)
-        {
-            using (SqlConnection conexion = new SqlConnection(connectionString))
-            {
-                conexion.Open();//DAO Docente solo conexiones y esto para bajo
-                SqlCommand cmd = new SqlCommand("InsertarAlumno", conexion);
-                cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@pi_Grados", pago.grupo);
-                cmd.Parameters.AddWithValue("@pi_Grupos", pago.grado);
-                cmd.Parameters.AddWithValue("@pi_Materia", pago.nombres);
-                cmd.Parameters.AddWithValue("@pi_Salones", pago.apellidos);
-                cmd.Parameters.AddWithValue("@pi_Docente", pago.fechaNacimiento);
-                cmd.Parameters.AddWithValue("@pi_Area", pago.acudiente);
-                cmd.Parameters.AddWithValue("@pi_Area", pago.direccion);
-                cmd.Parameters.AddWithValue("@pi_Area", pago.cedula);
-                cmd.Parameters.AddWithValue("@pi_Area", pago.correo);
-                cmd.Parameters.AddWithValue("@pi_Area", pago.telefono);
-                cmd.Parameters.AddWithValue("@pi_Area", pago.fechaPago);
-                cmd.Parameters.AddWithValue("@pi_Area", pago.observaciones);
-                cmd.ExecuteNonQuery();
-
-                //respuesta.ResultData = new ObservableCollection<object>(new List<object> { rowAffected });
-            }
-            return respuesta;
-        }
 
         public List<Grados> ListarGrados()
         {

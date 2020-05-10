@@ -144,3 +144,5 @@ C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\
 C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.csproj.CopyComplete
 C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.exe
 C:\Users\David\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.pdb
+C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.asiganacionAcademica.resources
+C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.Modulo_Notas.resources

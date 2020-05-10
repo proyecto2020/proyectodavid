@@ -38,3 +38,4 @@ C:\Users\David\Documents\GitHub\proyectodavid\Entidades\obj\Debug\Entidades.cspr
 C:\Users\David\Documents\GitHub\proyectodavid\Entidades\obj\Debug\Entidades.csproj.CopyComplete
 C:\Users\David\Documents\GitHub\proyectodavid\Entidades\obj\Debug\Entidades.dll
 C:\Users\David\Documents\GitHub\proyectodavid\Entidades\obj\Debug\Entidades.pdb
+C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache

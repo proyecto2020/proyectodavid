@@ -17,6 +17,7 @@ namespace JardinMisPrimerasLetras
     {
         private UsuarioControler.loginControler controlador;
         IngGestion gestion = new IngGestion();
+        Matriculas matricula = new Matriculas();
         public AdministradorUsuarios()
         {
             InitializeComponent();
@@ -156,6 +157,12 @@ namespace JardinMisPrimerasLetras
         private void AdministradorUsuarios_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.matricula.Show();
         }
     }
 }
