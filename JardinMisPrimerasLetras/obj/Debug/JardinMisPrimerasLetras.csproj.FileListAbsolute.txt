@@ -148,3 +148,16 @@ C:\Users\felipe\Desktop\trabajos de u\jardinInfantil\proyectodavid\proyectodavid
 C:\Users\jason\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.asiganacionAcademica.resources
 C:\Users\jason\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.Modulo_Notas.resources
 C:\Users\jason\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.ModPagos.resources
+C:\Users\jfierro\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.csprojAssemblyReference.cache
+C:\Users\jfierro\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.AdministradorUsuarios.resources
+C:\Users\jfierro\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.asiganacionAcademica.resources
+C:\Users\jfierro\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.IngGestion.resources
+C:\Users\jfierro\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.Login.resources
+C:\Users\jfierro\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.Matriculas.resources
+C:\Users\jfierro\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.Modulo_Notas.resources
+C:\Users\jfierro\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.ModPagos.resources
+C:\Users\jfierro\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.Properties.Resources.resources
+C:\Users\jfierro\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.csproj.GenerateResource.cache
+C:\Users\jfierro\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.csproj.CoreCompileInputs.cache
+C:\Users\jfierro\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.exe
+C:\Users\jfierro\Documents\GitHub\proyectodavid\JardinMisPrimerasLetras\obj\Debug\JardinMisPrimerasLetras.pdb

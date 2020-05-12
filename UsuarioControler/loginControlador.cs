@@ -21,8 +21,8 @@ namespace UsuarioControler
         {
 
             Collection<RespuestaLogin> retornar = this.cliente.ObtenerCredeciales(usuario, contrasena);
-                return retornar;
-               
+            return retornar;
+
         }
 
         public List<Gestion> ObtenerGestion()
@@ -107,12 +107,22 @@ namespace UsuarioControler
             return resultado;
         }
 
-        public List<Grupos> ListarGrupos()
+        public List<Seleccionar_Grupo> ListarGrupos()
         {
             var resultado = this.cliente.ListarGrupos();
             return resultado;
         }
 
+        public List<SeleccionarMateria> ListarMaterias()
+        {
+            var resultado = this.cliente.ListarMaterias();
+            return resultado;
+        }
 
+        public Respuesta<object> insertarAsignacion(AsignacionAcademica asignacion)
+        {
+            var resultado = this.cliente.insertarAsignacion(asignacion);
+            return resultado;
+        }
     }
 }

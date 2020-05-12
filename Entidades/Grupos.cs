@@ -42,38 +42,4 @@ namespace Entidades
         }
     }
 
-    public class Grupo
-    {
-        int _IdGrupo;
-        int _idGrado;
-        string _Grupo;
-
-
-        public int IdGrupo
-        {
-            get { return _IdGrupo; }
-            set { _IdGrupo = value; }
-        }
-
-        public int idGrado
-        {
-            get { return _idGrado; }
-            set { _idGrado = value; }
-        }
-
-        public string Grupos
-        {
-            get { return _Grupo; }
-            set { _Grupo = value; }
-        }
-
-        public Grupo(int IdGrupo, string Grupo)
-        {
-            _IdGrupo = IdGrupo;
-            _Grupo = Grupo;
-        }
-        public Grupo() : this(0, "")
-        {
-        }
-    }
 }

@@ -415,11 +415,11 @@ namespace logicaBD
             return listaAlumnos;
         }
 
-        public List<Grupos> ListarGrupos()
+        public List<Seleccionar_Grupo> ListarGrupos()
         {
-            List<Grupo> listaGrupos = new List<Grupo>();
+            List<Seleccionar_Grupo> listaGrupos = new List<Seleccionar_Grupo>();
 
-            Grupo a = new Grupo(0, "Seleccionar");
+            Seleccionar_Grupo a = new Seleccionar_Grupo(0, "Seleccionar");
             listaGrupos.Add(a);
 
             //Metodo que carga en una lista el resultado de todos los registros de la tabla
@@ -435,13 +435,64 @@ namespace logicaBD
                 {
                     while (dr.Read())
                     {
-                        a = new Grupo((int)dr["idGrupoEscolar"],
+                        a = new Seleccionar_Grupo((int)dr["idGrupoEscolar"],
                             (string)dr["descripcion"]);
                         listaGrupos.Add(a);
                     }
                 }
             }
-            return null;
+            return listaGrupos;
+        }
+
+        public List<SeleccionarMateria> ListarMaterias()
+        {
+            List<SeleccionarMateria> listaMaterias = new List<SeleccionarMateria>();
+
+            SeleccionarMateria a = new SeleccionarMateria(0, "Seleccionar");
+            listaMaterias.Add(a);
+
+            //Metodo que carga en una lista el resultado de todos los registros de la tabla
+
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand("TraerMateria", conexion);//Crear elprocedimiento almacenado
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@idMateria", 1);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr != null && dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        a = new SeleccionarMateria((int)dr["idMateria"],
+                            (string)dr["descripcion"]);
+                        listaMaterias.Add(a);
+                    }
+                }
+            }
+            return listaMaterias;
+        }
+
+        public Respuesta<Object> insertarAsignacion(AsignacionAcademica asignacionAcademica)
+        {
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                conexion.Open();//DAO Docente solo conexiones y esto para bajo
+                SqlCommand cmd = new SqlCommand("InsertarAsignacion", conexion);// Crear el procedimiento almacenado
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@pi_Grupo", asignacionAcademica.grupo);
+                cmd.Parameters.AddWithValue("@pi_Materia", asignacionAcademica.materia);
+                cmd.Parameters.AddWithValue("@pi_Salon", asignacionAcademica.salon);
+                cmd.Parameters.AddWithValue("@pi_Dia", asignacionAcademica.dia);
+                cmd.Parameters.AddWithValue("@pi_Hora", asignacionAcademica.hora);
+                cmd.Parameters.AddWithValue("@pi_Docente", asignacionAcademica.docente);
+                cmd.Parameters.AddWithValue("@pi_Observaciones", asignacionAcademica.observaciones);
+                cmd.ExecuteNonQuery();
+
+                //respuesta.ResultData = new ObservableCollection<object>(new List<object> { rowAffected });
+            }
+            return respuesta;
         }
 
     }

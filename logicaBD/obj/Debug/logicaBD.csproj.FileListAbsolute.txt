@@ -75,3 +75,17 @@ C:\Users\David\Documents\GitHub\proyectodavid\logicaBD\obj\Debug\logicaBD.csproj
 C:\Users\David\Documents\GitHub\proyectodavid\logicaBD\obj\Debug\logicaBD.csproj.CopyComplete
 C:\Users\David\Documents\GitHub\proyectodavid\logicaBD\obj\Debug\logicaBD.dll
 C:\Users\David\Documents\GitHub\proyectodavid\logicaBD\obj\Debug\logicaBD.pdb
+C:\Users\jfierro\Documents\GitHub\proyectodavid\logicaBD\obj\Debug\logicaBD.csprojAssemblyReference.cache
+C:\Users\jfierro\Documents\GitHub\proyectodavid\logicaBD\obj\Debug\logicaBD.csproj.CoreCompileInputs.cache
+C:\Users\jfierro\Documents\GitHub\proyectodavid\logicaBD\obj\Debug\logicaBD.dll
+C:\Users\jfierro\Documents\GitHub\proyectodavid\logicaBD\obj\Debug\logicaBD.pdb
+C:\Users\jfierro\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\logicaBD.dll.config
+C:\Users\jfierro\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\logicaBD.dll
+C:\Users\jfierro\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\logicaBD.pdb
+C:\Users\jfierro\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\Dapper.dll
+C:\Users\jfierro\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\Entidades.dll
+C:\Users\jfierro\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\UsuarioLogeadoController.dll
+C:\Users\jfierro\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\Entidades.pdb
+C:\Users\jfierro\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\UsuarioLogeadoController.pdb
+C:\Users\jfierro\Documents\GitHub\proyectodavid\logicaBD\bin\Debug\Dapper.xml
+C:\Users\jfierro\Documents\GitHub\proyectodavid\logicaBD\obj\Debug\logicaBD.csproj.CopyComplete
