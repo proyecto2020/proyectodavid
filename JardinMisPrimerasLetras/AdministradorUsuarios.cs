@@ -18,6 +18,8 @@ namespace JardinMisPrimerasLetras
         private UsuarioControler.loginControler controlador;
         IngGestion gestion = new IngGestion();
         Matriculas matricula = new Matriculas();
+        ModPagos pagos = new ModPagos();
+        asiganacionAcademica asiganacion = new asiganacionAcademica();
         public AdministradorUsuarios()
         {
             InitializeComponent();
@@ -32,9 +34,9 @@ namespace JardinMisPrimerasLetras
             lista = this.controlador.ConsultarUsuarios();
             if (lista.Count > 0)
             {
-                dataGridView1.AutoGenerateColumns = false;
-                dataGridView1.DataSource = lista;
-                this.dataGridView1.Refresh();
+                dataGridView2.AutoGenerateColumns = false;
+                dataGridView2.DataSource = lista;
+                this.dataGridView2.Refresh();
 
             }
         }
@@ -58,7 +60,7 @@ namespace JardinMisPrimerasLetras
             insertarUsuario.correo = correo;
             insertarUsuario.perfilUsuario  = Perfil;
             insertarUsuario.nombreApellido = nombreApellido;
-            insertarUsuario.usuarioCreacion = "dPrieto";
+            insertarUsuario.usuarioCreacion = "Admin";
 
 
             Respuesta<object> ingreso = this.controlador.insertarUsuario(insertarUsuario);
@@ -68,9 +70,9 @@ namespace JardinMisPrimerasLetras
                 lista = this.controlador.ConsultarUsuarios();
                 if (lista.Count > 0)
                 {
-                    dataGridView1.AutoGenerateColumns = false;
-                    dataGridView1.DataSource = lista;
-                    this.dataGridView1.Refresh();
+                    dataGridView2.AutoGenerateColumns = false;
+                    dataGridView2.DataSource = lista;
+                    this.dataGridView2.Refresh();
 
                 }
             
@@ -147,15 +149,17 @@ namespace JardinMisPrimerasLetras
             lista = this.controlador.ConsultarUsuarios();
             if (lista.Count > 0)
             {
-                dataGridView1.AutoGenerateColumns = false;
-                dataGridView1.DataSource = lista;
-                this.dataGridView1.Refresh();
+                dataGridView2.AutoGenerateColumns = false;
+                dataGridView2.DataSource = lista;
+                this.dataGridView2.Refresh();
 
             }
         }
 
         private void AdministradorUsuarios_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetUsu.Usuario' Puede moverla o quitarla según sea necesario.
+            this.usuarioTableAdapter.Fill(this.letrasDataSetUsu.Usuario);
 
         }
 
@@ -163,6 +167,18 @@ namespace JardinMisPrimerasLetras
         {
             this.Hide();
             this.matricula.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.pagos.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.asiganacion.Show();
         }
     }
 }

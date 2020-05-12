@@ -43,29 +43,34 @@
             this.textBoxSegundoApellido = new System.Windows.Forms.TextBox();
             this.buttonGuardar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.primerNombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.primerApellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.segundoApellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Perfil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.jardinDataSet1 = new JardinMisPrimerasLetras.jardinDataSet();
             this.labelCorreo = new System.Windows.Forms.Label();
             this.textBoxCorreo = new System.Windows.Forms.TextBox();
             this.TipoPerfil = new System.Windows.Forms.ComboBox();
             this.perfilesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.perfilesDataSet = new JardinMisPrimerasLetras.PerfilesDataSet();
-            this.usuarioTableAdapter = new JardinMisPrimerasLetras.jardinDataSetTableAdapters.UsuarioTableAdapter();
             this.perfilesTableAdapter = new JardinMisPrimerasLetras.PerfilesDataSetTableAdapters.PerfilesTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioCreacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perfilUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaCreacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.letrasDataSetUsu = new JardinMisPrimerasLetras.LetrasDataSetUsu();
+            this.usuarioTableAdapter = new JardinMisPrimerasLetras.LetrasDataSetUsuTableAdapters.UsuarioTableAdapter();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.perfilesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jardinDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.perfilesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.perfilesDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetUsu)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -192,69 +197,6 @@
             this.buttonEditar.UseVisualStyleBackColor = true;
             this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.primerNombreDataGridViewTextBoxColumn,
-            this.primerApellidoDataGridViewTextBoxColumn,
-            this.segundoApellidoDataGridViewTextBoxColumn,
-            this.correoDataGridViewTextBoxColumn,
-            this.Perfil});
-            this.dataGridView1.DataSource = this.usuarioBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(90, 280);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 123;
-            this.dataGridView1.Size = new System.Drawing.Size(443, 66);
-            this.dataGridView1.TabIndex = 22;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // primerNombreDataGridViewTextBoxColumn
-            // 
-            this.primerNombreDataGridViewTextBoxColumn.DataPropertyName = "primerNombre";
-            this.primerNombreDataGridViewTextBoxColumn.HeaderText = "primerNombre";
-            this.primerNombreDataGridViewTextBoxColumn.MinimumWidth = 15;
-            this.primerNombreDataGridViewTextBoxColumn.Name = "primerNombreDataGridViewTextBoxColumn";
-            this.primerNombreDataGridViewTextBoxColumn.Width = 300;
-            // 
-            // primerApellidoDataGridViewTextBoxColumn
-            // 
-            this.primerApellidoDataGridViewTextBoxColumn.DataPropertyName = "primerApellido";
-            this.primerApellidoDataGridViewTextBoxColumn.HeaderText = "primerApellido";
-            this.primerApellidoDataGridViewTextBoxColumn.MinimumWidth = 15;
-            this.primerApellidoDataGridViewTextBoxColumn.Name = "primerApellidoDataGridViewTextBoxColumn";
-            this.primerApellidoDataGridViewTextBoxColumn.Width = 300;
-            // 
-            // segundoApellidoDataGridViewTextBoxColumn
-            // 
-            this.segundoApellidoDataGridViewTextBoxColumn.DataPropertyName = "segundoApellido";
-            this.segundoApellidoDataGridViewTextBoxColumn.HeaderText = "segundoApellido";
-            this.segundoApellidoDataGridViewTextBoxColumn.MinimumWidth = 15;
-            this.segundoApellidoDataGridViewTextBoxColumn.Name = "segundoApellidoDataGridViewTextBoxColumn";
-            this.segundoApellidoDataGridViewTextBoxColumn.Width = 300;
-            // 
-            // correoDataGridViewTextBoxColumn
-            // 
-            this.correoDataGridViewTextBoxColumn.DataPropertyName = "correo";
-            this.correoDataGridViewTextBoxColumn.HeaderText = "correo";
-            this.correoDataGridViewTextBoxColumn.MinimumWidth = 15;
-            this.correoDataGridViewTextBoxColumn.Name = "correoDataGridViewTextBoxColumn";
-            this.correoDataGridViewTextBoxColumn.Width = 300;
-            // 
-            // Perfil
-            // 
-            this.Perfil.DataPropertyName = "identificacacion";
-            this.Perfil.HeaderText = "Perfil";
-            this.Perfil.MinimumWidth = 15;
-            this.Perfil.Name = "Perfil";
-            this.Perfil.Width = 300;
-            // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataMember = "Usuario";
-            this.usuarioBindingSource.DataSource = this.jardinDataSet1;
-            // 
             // jardinDataSet1
             // 
             this.jardinDataSet1.DataSetName = "jardinDataSet";
@@ -299,19 +241,15 @@
             this.perfilesDataSet.DataSetName = "PerfilesDataSet";
             this.perfilesDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // usuarioTableAdapter
-            // 
-            this.usuarioTableAdapter.ClearBeforeFill = true;
-            // 
             // perfilesTableAdapter
             // 
             this.perfilesTableAdapter.ClearBeforeFill = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(529, 388);
+            this.button1.Location = new System.Drawing.Point(173, 388);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(72, 50);
+            this.button1.Size = new System.Drawing.Size(98, 50);
             this.button1.TabIndex = 29;
             this.button1.Text = "GESTION";
             this.button1.UseVisualStyleBackColor = true;
@@ -319,7 +257,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(636, 388);
+            this.button2.Location = new System.Drawing.Point(38, 388);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(104, 50);
             this.button2.TabIndex = 30;
@@ -327,18 +265,115 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn6,
+            this.usuarioCreacionDataGridViewTextBoxColumn,
+            this.perfilUsuarioDataGridViewTextBoxColumn,
+            this.fechaCreacionDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.usuarioBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(64, 265);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(602, 86);
+            this.dataGridView2.TabIndex = 31;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "primerNombre";
+            this.dataGridViewTextBoxColumn2.HeaderText = "primerNombre";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "primerApellido";
+            this.dataGridViewTextBoxColumn4.HeaderText = "primerApellido";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "correo";
+            this.dataGridViewTextBoxColumn6.HeaderText = "correo";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // usuarioCreacionDataGridViewTextBoxColumn
+            // 
+            this.usuarioCreacionDataGridViewTextBoxColumn.DataPropertyName = "usuarioCreacion";
+            this.usuarioCreacionDataGridViewTextBoxColumn.HeaderText = "usuarioCreacion";
+            this.usuarioCreacionDataGridViewTextBoxColumn.Name = "usuarioCreacionDataGridViewTextBoxColumn";
+            this.usuarioCreacionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // perfilUsuarioDataGridViewTextBoxColumn
+            // 
+            this.perfilUsuarioDataGridViewTextBoxColumn.DataPropertyName = "perfilUsuario";
+            this.perfilUsuarioDataGridViewTextBoxColumn.HeaderText = "perfilUsuario";
+            this.perfilUsuarioDataGridViewTextBoxColumn.Name = "perfilUsuarioDataGridViewTextBoxColumn";
+            this.perfilUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechaCreacionDataGridViewTextBoxColumn
+            // 
+            this.fechaCreacionDataGridViewTextBoxColumn.DataPropertyName = "fechaCreacion";
+            this.fechaCreacionDataGridViewTextBoxColumn.HeaderText = "fechaCreacion";
+            this.fechaCreacionDataGridViewTextBoxColumn.Name = "fechaCreacionDataGridViewTextBoxColumn";
+            this.fechaCreacionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "Usuario";
+            this.usuarioBindingSource.DataSource = this.letrasDataSetUsu;
+            // 
+            // letrasDataSetUsu
+            // 
+            this.letrasDataSetUsu.DataSetName = "LetrasDataSetUsu";
+            this.letrasDataSetUsu.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usuarioTableAdapter
+            // 
+            this.usuarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(306, 388);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(98, 50);
+            this.button3.TabIndex = 32;
+            this.button3.Text = "PAGOS";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(433, 388);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(98, 50);
+            this.button4.TabIndex = 33;
+            this.button4.Text = "ASIGNACIÓN";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // AdministradorUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(772, 468);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TipoPerfil);
             this.Controls.Add(this.textBoxCorreo);
             this.Controls.Add(this.labelCorreo);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.buttonEditar);
             this.Controls.Add(this.buttonGuardar);
             this.Controls.Add(this.textBoxSegundoApellido);
@@ -356,11 +391,12 @@
             this.Text = "AdministradorUsuarios";
             this.Load += new System.EventHandler(this.AdministradorUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.perfilesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jardinDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.perfilesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.perfilesDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetUsu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -381,24 +417,34 @@
         private System.Windows.Forms.TextBox textBoxSegundoApellido;
         private System.Windows.Forms.Button buttonGuardar;
         private System.Windows.Forms.Button buttonEditar;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label labelCorreo;
         private System.Windows.Forms.TextBox textBoxCorreo;
         private jardinDataSet jardinDataSet;
         private System.Windows.Forms.BindingSource perfilesBindingSource;
         private jardinDataSet jardinDataSet1;
-        private System.Windows.Forms.BindingSource usuarioBindingSource;
-        private jardinDataSetTableAdapters.UsuarioTableAdapter usuarioTableAdapter;
         private System.Windows.Forms.ComboBox TipoPerfil;
         private PerfilesDataSet perfilesDataSet;
         private System.Windows.Forms.BindingSource perfilesBindingSource1;
         private PerfilesDataSetTableAdapters.PerfilesTableAdapter perfilesTableAdapter;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn identificacacionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn primerNombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn segundoNombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn primerApellidoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn segundoApellidoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn correoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Perfil;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private LetrasDataSetUsu letrasDataSetUsu;
+        private System.Windows.Forms.BindingSource usuarioBindingSource;
+        private LetrasDataSetUsuTableAdapters.UsuarioTableAdapter usuarioTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usuarioCreacionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn perfilUsuarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaCreacionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

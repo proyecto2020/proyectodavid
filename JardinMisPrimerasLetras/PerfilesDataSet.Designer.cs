@@ -714,7 +714,7 @@ namespace JardinMisPrimerasLetras.PerfilesDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::JardinMisPrimerasLetras.Properties.Settings.Default.conexionDB;
+            this._connection.ConnectionString = global::JardinMisPrimerasLetras.Properties.Settings.Default.conexionDB2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

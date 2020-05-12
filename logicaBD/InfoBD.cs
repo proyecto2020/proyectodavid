@@ -237,6 +237,7 @@ namespace logicaBD
                 cmd.Parameters.AddWithValue("@pi_Telefono", alumno.telefono);
                 cmd.Parameters.AddWithValue("@pi_Direccion", alumno.direccion);
                 cmd.Parameters.AddWithValue("@pi_FechaNacimiento", alumno.fechaNacimiento);
+                cmd.Parameters.AddWithValue("@pi_NombreApellido", alumno.nombreApellido);
                 cmd.ExecuteNonQuery();
                 
 
@@ -250,13 +251,14 @@ namespace logicaBD
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
                 conexion.Open();//DAO Docente solo conexiones y esto para bajo
-                SqlCommand cmd = new SqlCommand("InsertarGestion", conexion);
+                SqlCommand cmd = new SqlCommand("InsertarPagos", conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@pi_Area", pago.abono);
-                cmd.Parameters.AddWithValue("@pi_Area", pago.valorAbono);
-                cmd.Parameters.AddWithValue("@pi_Area", pago.saldoPendiente);
-                cmd.Parameters.AddWithValue("@pi_Area", pago.totalPagar);
+                cmd.Parameters.AddWithValue("@pi_Alumno", pago.nombreApellido);
+                cmd.Parameters.AddWithValue("@pi_Abono", pago.valorAbono);
+                cmd.Parameters.AddWithValue("@pi_Saldo", pago.saldoPendiente);
+                cmd.Parameters.AddWithValue("@pi_Total", pago.totalPagar);
+                cmd.Parameters.AddWithValue("@pi_Observaciones", pago.observaciones);
                 cmd.ExecuteNonQuery();
 
                 //respuesta.ResultData = new ObservableCollection<object>(new List<object> { rowAffected });
@@ -384,9 +386,63 @@ namespace logicaBD
             return listaMaterias;
         }
 
-      
+        public List<Alumnos> ListarAlumnos()
+        {
+            List<Alumnos> listaAlumnos = new List<Alumnos>();
 
-       
+            Alumnos a = new Alumnos(0, "Seleccionar");
+            listaAlumnos.Add(a);
+
+            //Metodo que carga en una lista el resultado de todos los registros de la tabla
+
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand("TraerAlumnos", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@idAlumno", 1);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr != null && dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        a = new Alumnos((int)dr["idAlumno"],
+                            (string)dr["nombreApellido"]);
+                        listaAlumnos.Add(a);
+                    }
+                }
+            }
+            return listaAlumnos;
+        }
+
+        public List<Grupos> ListarGrupos()
+        {
+            List<Grupo> listaGrupos = new List<Grupo>();
+
+            Grupo a = new Grupo(0, "Seleccionar");
+            listaGrupos.Add(a);
+
+            //Metodo que carga en una lista el resultado de todos los registros de la tabla
+
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand("TraerGrupo", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@idGrupo", 1);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr != null && dr.HasRows)
+                {
+                    while (dr.Read())
+                    {
+                        a = new Grupo((int)dr["idGrupoEscolar"],
+                            (string)dr["descripcion"]);
+                        listaGrupos.Add(a);
+                    }
+                }
+            }
+            return null;
+        }
 
     }
 }

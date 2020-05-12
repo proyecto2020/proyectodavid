@@ -101,5 +101,18 @@ namespace UsuarioControler
             return resultado;
         }
 
+        public List<Alumnos> ListarAlumnos()
+        {
+            var resultado = this.cliente.ListarAlumnos();
+            return resultado;
+        }
+
+        public List<Grupos> ListarGrupos()
+        {
+            var resultado = this.cliente.ListarGrupos();
+            return resultado;
+        }
+
+
     }
 }

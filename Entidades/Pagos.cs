@@ -8,21 +8,12 @@ namespace Entidades
 {
     public class Pagos
     {
-        public string grupo { get; set; }
-        public string grado { get; set; }
-        public string nombres { get; set; }
-        public string apellidos { get; set; }
-        public DateTime fechaNacimiento { get; set; }
-        public string acudiente { get; set; }
-        public string direccion { get; set; }
-        public int cedula { get; set; }
-        public string correo { get; set; }
-        public int telefono { get; set; }
         public DateTime fechaPago { get; set; }
-        public int abono { get; set; }
-        public int valorAbono { get; set; }
-        public int saldoPendiente { get; set; }
-        public int totalPagar { get; set; }
+        public string nombreApellido { get; set; }
+        public double abono { get; set; }
+        public double valorAbono { get; set; }
+        public double saldoPendiente { get; set; }
+        public double totalPagar { get; set; }
         public string observaciones { get; set; }
 
     }

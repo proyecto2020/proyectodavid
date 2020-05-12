@@ -69,10 +69,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>jardinDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="LetrasDataSetAlum.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LetrasDataSetAlum.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LetrasDataSetGestion1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LetrasDataSetGestion1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LetrasDataSetUsu1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LetrasDataSetUsu1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -86,17 +96,17 @@
     <Compile Include="Matriculas.Designer.cs">
       <DependentUpon>Matriculas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulo Notas.cs">
+    <Compile Include="Notas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulo Notas.Designer.cs">
-      <DependentUpon>Modulo Notas.cs</DependentUpon>
+    <Compile Include="Notas.Designer.cs">
+      <DependentUpon>Notas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pagos.cs">
+    <Compile Include="ModPagos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pagos.Designer.cs">
-      <DependentUpon>Pagos.cs</DependentUpon>
+    <Compile Include="ModPagos.Designer.cs">
+      <DependentUpon>ModPagos.cs</DependentUpon>
     </Compile>
     <Compile Include="PerfilesDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -120,11 +130,11 @@
     <EmbeddedResource Include="Matriculas.resx">
       <DependentUpon>Matriculas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulo Notas.resx">
-      <DependentUpon>Modulo Notas.cs</DependentUpon>
+    <EmbeddedResource Include="Notas.resx">
+      <DependentUpon>Notas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pagos.resx">
-      <DependentUpon>Pagos.cs</DependentUpon>
+    <EmbeddedResource Include="ModPagos.resx">
+      <DependentUpon>ModPagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -150,6 +160,17 @@
     <None Include="jardinDataSet.xss">
       <DependentUpon>jardinDataSet.xsd</DependentUpon>
     </None>
+    <None Include="LetrasDataSetAlum.xsc">
+      <DependentUpon>LetrasDataSetAlum.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetAlum.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LetrasDataSetAlum.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LetrasDataSetAlum.xss">
+      <DependentUpon>LetrasDataSetAlum.xsd</DependentUpon>
+    </None>
     <None Include="LetrasDataSetGestion1.xsc">
       <DependentUpon>LetrasDataSetGestion1.xsd</DependentUpon>
     </None>
@@ -160,6 +181,17 @@
     </None>
     <None Include="LetrasDataSetGestion1.xss">
       <DependentUpon>LetrasDataSetGestion1.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetUsu1.xsc">
+      <DependentUpon>LetrasDataSetUsu1.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetUsu1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LetrasDataSetUsu1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LetrasDataSetUsu1.xss">
+      <DependentUpon>LetrasDataSetUsu1.xsd</DependentUpon>
     </None>
     <None Include="PerfilesDataSet.xsc">
       <DependentUpon>PerfilesDataSet.xsd</DependentUpon>

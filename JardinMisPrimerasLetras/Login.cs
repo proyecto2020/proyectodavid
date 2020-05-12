@@ -27,7 +27,7 @@ namespace JardinMisPrimerasLetras
         {
             Usuario Usuario = new Usuario();
             AdministradorUsuarios admin = new AdministradorUsuarios();
-            Pagos pagos = new Pagos();
+            ModPagos pagos = new ModPagos();
             string usuario = textUsuario.Text;
             string contrasena = textContrasena.Text;
             int perfil = Usuario.perfilUsuario; 

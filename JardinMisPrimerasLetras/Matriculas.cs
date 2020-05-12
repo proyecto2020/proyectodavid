@@ -88,6 +88,7 @@ namespace JardinMisPrimerasLetras
             string observaciones = textBox1.Text;
             string ocupacionAcudiente = ocupacion.Text;
             string fechaNacimiento = Nacimiento.Text;
+            string nombreApellido = String.Concat(nombres + " " + apellidos);
 
             Alumnos insertarAlumno = new Alumnos();
             insertarAlumno.nombres = nombres;
@@ -100,6 +101,7 @@ namespace JardinMisPrimerasLetras
             insertarAlumno.observacion = observaciones;
             insertarAlumno.ocupacion = ocupacionAcudiente;
             insertarAlumno.fechaNacimiento = fechaNacimiento;
+            insertarAlumno.nombreApellido = nombreApellido;
 
             Respuesta<object> ingreso = this.controlador.insertarAlumno(insertarAlumno);
             MessageBox.Show("Datos guardados correctamente");

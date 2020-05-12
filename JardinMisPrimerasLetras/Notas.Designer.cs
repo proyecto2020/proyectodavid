@@ -37,13 +37,13 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.buttonGuardar = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.Estudiante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Periodo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Materia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonGuardar = new System.Windows.Forms.Button();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -51,9 +51,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 402);
+            this.label1.Location = new System.Drawing.Point(16, 141);
+            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(343, 37);
+            this.label1.Size = new System.Drawing.Size(116, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Seleccionar Estudiante";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -61,51 +62,58 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(58, 496);
+            this.comboBox1.Location = new System.Drawing.Point(18, 174);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(370, 45);
+            this.comboBox1.Size = new System.Drawing.Size(120, 21);
             this.comboBox1.TabIndex = 2;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(532, 496);
+            this.comboBox2.Location = new System.Drawing.Point(168, 174);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(370, 45);
+            this.comboBox2.Size = new System.Drawing.Size(120, 21);
             this.comboBox2.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(554, 402);
+            this.label2.Location = new System.Drawing.Point(175, 141);
+            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(293, 37);
+            this.label2.Size = new System.Drawing.Size(99, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "seleccionar Materia";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(713, 51);
+            this.pictureBox1.Location = new System.Drawing.Point(225, 18);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(403, 247);
+            this.pictureBox1.Size = new System.Drawing.Size(127, 87);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(1499, 496);
+            this.textBox1.Location = new System.Drawing.Point(473, 174);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(287, 44);
+            this.textBox1.Size = new System.Drawing.Size(93, 20);
             this.textBox1.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1493, 402);
+            this.label3.Location = new System.Drawing.Point(471, 141);
+            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(320, 37);
+            this.label3.Size = new System.Drawing.Size(107, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Calificacion Obtenida";
             // 
@@ -117,41 +125,11 @@
             this.Periodo,
             this.Nota,
             this.Materia});
-            this.dataGridView1.Location = new System.Drawing.Point(315, 803);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.dataGridView1.Location = new System.Drawing.Point(99, 282);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 123;
-            this.dataGridView1.Size = new System.Drawing.Size(1286, 275);
+            this.dataGridView1.Size = new System.Drawing.Size(406, 97);
             this.dataGridView1.TabIndex = 25;
-            // 
-            // buttonGuardar
-            // 
-            this.buttonGuardar.Location = new System.Drawing.Point(811, 720);
-            this.buttonGuardar.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.buttonGuardar.Name = "buttonGuardar";
-            this.buttonGuardar.Size = new System.Drawing.Size(238, 65);
-            this.buttonGuardar.TabIndex = 23;
-            this.buttonGuardar.Text = "Guardar";
-            this.buttonGuardar.UseVisualStyleBackColor = true;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(1018, 496);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(370, 45);
-            this.comboBox3.TabIndex = 27;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(992, 401);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(302, 37);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "Seleccionar Periodo";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // Estudiante
             // 
@@ -181,12 +159,42 @@
             this.Materia.Name = "Materia";
             this.Materia.Width = 300;
             // 
+            // buttonGuardar
+            // 
+            this.buttonGuardar.Location = new System.Drawing.Point(256, 253);
+            this.buttonGuardar.Name = "buttonGuardar";
+            this.buttonGuardar.Size = new System.Drawing.Size(75, 23);
+            this.buttonGuardar.TabIndex = 23;
+            this.buttonGuardar.Text = "Guardar";
+            this.buttonGuardar.UseVisualStyleBackColor = true;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(321, 174);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(120, 21);
+            this.comboBox3.TabIndex = 27;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(313, 141);
+            this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(102, 13);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "Seleccionar Periodo";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
             // Modulo_Notas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(1809, 1110);
+            this.ClientSize = new System.Drawing.Size(720, 400);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridView1);
@@ -198,6 +206,7 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "Modulo_Notas";
             this.Text = "Modulo_Notas";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

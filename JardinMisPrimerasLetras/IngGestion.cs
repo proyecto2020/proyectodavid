@@ -15,7 +15,7 @@ namespace JardinMisPrimerasLetras
     public partial class IngGestion : Form
     {
         private loginControler controlador;
-        Pagos pagos = new Pagos();
+        ModPagos pagos = new ModPagos();
         List<Grados> listarGrados = null;
         List<Grupos> listarGrupos = null;
         List<Areas> listaAreas = null;
@@ -156,8 +156,6 @@ namespace JardinMisPrimerasLetras
         {
             // TODO: esta línea de código carga datos en la tabla 'letrasDataSetGestion.Gestion' Puede moverla o quitarla según sea necesario.
             this.gestionTableAdapter.Fill(this.letrasDataSetGestion.Gestion);
-            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetListGestion.Gestion' Puede moverla o quitarla según sea necesario.
-            //this.gestionTableAdapter.Fill(this.letrasDataSetListGestion.Gestion);
 
         }
 
