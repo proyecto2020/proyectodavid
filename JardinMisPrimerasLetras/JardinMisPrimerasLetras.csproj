@@ -74,10 +74,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LetrasDataSetAlum.xsd</DependentUpon>
     </Compile>
+    <Compile Include="LetrasDataSetDia.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LetrasDataSetDia.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LetrasDataSetDoc.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LetrasDataSetDoc.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LetrasDataSetGestion1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LetrasDataSetGestion1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LetrasDataSetHora.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LetrasDataSetHora.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LetrasDataSetSalon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LetrasDataSetSalon.xsd</DependentUpon>
     </Compile>
     <Compile Include="LetrasDataSetUsu1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -171,6 +191,28 @@
     <None Include="LetrasDataSetAlum.xss">
       <DependentUpon>LetrasDataSetAlum.xsd</DependentUpon>
     </None>
+    <None Include="LetrasDataSetDia.xsc">
+      <DependentUpon>LetrasDataSetDia.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetDia.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LetrasDataSetDia.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LetrasDataSetDia.xss">
+      <DependentUpon>LetrasDataSetDia.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetDoc.xsc">
+      <DependentUpon>LetrasDataSetDoc.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetDoc.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LetrasDataSetDoc.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LetrasDataSetDoc.xss">
+      <DependentUpon>LetrasDataSetDoc.xsd</DependentUpon>
+    </None>
     <None Include="LetrasDataSetGestion1.xsc">
       <DependentUpon>LetrasDataSetGestion1.xsd</DependentUpon>
     </None>
@@ -181,6 +223,28 @@
     </None>
     <None Include="LetrasDataSetGestion1.xss">
       <DependentUpon>LetrasDataSetGestion1.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetHora.xsc">
+      <DependentUpon>LetrasDataSetHora.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetHora.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LetrasDataSetHora.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LetrasDataSetHora.xss">
+      <DependentUpon>LetrasDataSetHora.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetSalon.xsc">
+      <DependentUpon>LetrasDataSetSalon.xsd</DependentUpon>
+    </None>
+    <None Include="LetrasDataSetSalon.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LetrasDataSetSalon.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LetrasDataSetSalon.xss">
+      <DependentUpon>LetrasDataSetSalon.xsd</DependentUpon>
     </None>
     <None Include="LetrasDataSetUsu1.xsc">
       <DependentUpon>LetrasDataSetUsu1.xsd</DependentUpon>

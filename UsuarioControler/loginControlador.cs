@@ -119,10 +119,11 @@ namespace UsuarioControler
             return resultado;
         }
 
-        public Respuesta<object> insertarAsignacion(AsignacionAcademica asignacion)
+        public Respuesta<object> insertarAsignacion(AsignacionAcademica asignacionAcademica)
         {
-            var resultado = this.cliente.insertarAsignacion(asignacion);
+            var resultado = this.cliente.insertarAsignacion(asignacionAcademica);
             return resultado;
         }
+
     }
 }

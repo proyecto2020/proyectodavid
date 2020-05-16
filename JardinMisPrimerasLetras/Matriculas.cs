@@ -15,6 +15,7 @@ namespace JardinMisPrimerasLetras
     {
         private UsuarioControler.loginControler controlador;
         IngGestion gestion = new IngGestion();
+        
         public Matriculas()
         {
             InitializeComponent();
@@ -106,5 +107,6 @@ namespace JardinMisPrimerasLetras
             Respuesta<object> ingreso = this.controlador.insertarAlumno(insertarAlumno);
             MessageBox.Show("Datos guardados correctamente");
         }
+
     }
 }

@@ -11,7 +11,7 @@ namespace Entidades
         int _idGrupo;
         string _Grupo;
 
-        public int idAlumnos
+        public int idGrupo
         {
             get { return _idGrupo; }
             set { _idGrupo = value; }

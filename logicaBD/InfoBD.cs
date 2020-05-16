@@ -456,7 +456,7 @@ namespace logicaBD
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
                 conexion.Open();
-                SqlCommand cmd = new SqlCommand("TraerMateria", conexion);//Crear elprocedimiento almacenado
+                SqlCommand cmd = new SqlCommand("TraerMateria", conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@idMateria", 1);
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -477,8 +477,8 @@ namespace logicaBD
         {
             using (SqlConnection conexion = new SqlConnection(connectionString))
             {
-                conexion.Open();//DAO Docente solo conexiones y esto para bajo
-                SqlCommand cmd = new SqlCommand("InsertarAsignacion", conexion);// Crear el procedimiento almacenado
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand("PR_InsertarAsignacion", conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 cmd.Parameters.AddWithValue("@pi_Grupo", asignacionAcademica.grupo);

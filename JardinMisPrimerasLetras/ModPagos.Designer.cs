@@ -43,10 +43,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.alumnoTableAdapter = new JardinMisPrimerasLetras.LetrasDataSetAlumTableAdapters.AlumnoTableAdapter();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.Observaciones = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,9 +51,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetAlum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gruposBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gradosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // Estudiante
@@ -161,16 +155,7 @@
             this.label15.TabIndex = 41;
             this.label15.Text = "Pagos";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(26, 37);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(91, 80);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 42;
-            this.pictureBox1.TabStop = false;
+            
             // 
             // alumnoTableAdapter
             // 
@@ -178,25 +163,11 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(159, 232);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(1);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 20);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 43;
-            this.pictureBox2.TabStop = false;
+            
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(520, 232);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(1);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(24, 20);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 45;
-            this.pictureBox4.TabStop = false;
+           
             // 
             // button3
             // 
@@ -233,9 +204,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Observaciones);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -247,14 +215,10 @@
             this.Controls.Add(this.Estudiante);
             this.Name = "ModPagos";
             this.Text = "Pagos";
-            this.Load += new System.EventHandler(this.Pagos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetAlum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gruposBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gradosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,12 +240,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private LetrasDataSetAlum letrasDataSetAlum;
         private System.Windows.Forms.BindingSource alumnoBindingSource;
         private LetrasDataSetAlumTableAdapters.AlumnoTableAdapter alumnoTableAdapter;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox Observaciones;
         private System.Windows.Forms.Label label2;

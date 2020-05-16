@@ -8,6 +8,7 @@ namespace Entidades
 {
     public class AsignacionAcademica
     {
+        public string alumno { get; set; }
         public string grupo { get; set; }
         public string materia { get; set; }
         public string salon { get; set; }

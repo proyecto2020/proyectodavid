@@ -45,12 +45,7 @@ namespace JardinMisPrimerasLetras
             }
         }
 
-        private void Pagos_Load(object sender, EventArgs e)
-        {
-            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetAlum.Alumno' Puede moverla o quitarla según sea necesario.
-            this.alumnoTableAdapter.Fill(this.letrasDataSetAlum.Alumno);
-
-        }
+  
 
         private void label1_Click(object sender, EventArgs e)
         {

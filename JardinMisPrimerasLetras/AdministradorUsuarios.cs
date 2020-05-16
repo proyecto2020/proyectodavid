@@ -49,8 +49,8 @@ namespace JardinMisPrimerasLetras
             string segundoApellido = textBoxSegundoApellido.Text;
             string correo = textBoxCorreo.Text;
             int Perfil = int.Parse(TipoPerfil.SelectedValue.ToString());
-
             string nombreApellido = String.Concat(primerNombre +" " + primerApellido);
+
             Usuario insertarUsuario = new Usuario();
             insertarUsuario.primerNombre = primerNombre;
             insertarUsuario.segundoNombre = segundoNombre;

@@ -1,5 +1,4 @@
-﻿using Entidades;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
 using UsuarioControler;
 
 namespace JardinMisPrimerasLetras
@@ -60,7 +60,7 @@ namespace JardinMisPrimerasLetras
             }
             if (listarAlumnos.Count != 0)
             {
-                //Estudiante.Items.Clear();
+                //Grupo.Items.Clear();
                 Grupo.DataSource = listarGrupos;
                 Grupo.DisplayMember = "Grupo";
                 Grupo.ValueMember = "idGrupo";
@@ -81,21 +81,29 @@ namespace JardinMisPrimerasLetras
             }
             if (listarMaterias.Count != 0)
             {
-                //Estudiante.Items.Clear();
-                Estudiante.DataSource = listarMaterias;
-                Estudiante.DisplayMember = "Materia";
-                Estudiante.ValueMember = "idMateria";
+                //Materia.Items.Clear();
+                Materia.DataSource = listarMaterias;
+                Materia.DisplayMember = "Materia";
+                Materia.ValueMember = "idMateria";
 
             }
             else
             {
-                Estudiante.DataSource = null;
-                Estudiante.DataSource = null;
+                Materia.DataSource = null;
+                Materia.DataSource = null;
             }
         }
 
         private void asiganacionAcademica_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetDoc.Usuario' Puede moverla o quitarla según sea necesario.
+            this.usuarioTableAdapter.Fill(this.letrasDataSetDoc.Usuario);
+            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetHora.Hora' Puede moverla o quitarla según sea necesario.
+            this.horaTableAdapter.Fill(this.letrasDataSetHora.Hora);
+            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetDia.Dia' Puede moverla o quitarla según sea necesario.
+            this.diaTableAdapter.Fill(this.letrasDataSetDia.Dia);
+            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetSalon.Salon' Puede moverla o quitarla según sea necesario.
+            this.salonTableAdapter.Fill(this.letrasDataSetSalon.Salon);
 
         }
 
@@ -116,6 +124,7 @@ namespace JardinMisPrimerasLetras
 
         private void guardar_Click(object sender, EventArgs e)
         {
+            string alumno = Estudiante.Text;
             string grupo = Grupo.Text;
             string materia = Materia.Text;
             string salon = Salon.Text;
@@ -124,16 +133,17 @@ namespace JardinMisPrimerasLetras
             string docente = Docente.Text;
             string observaciones = Observaciones.Text;
 
-            AsignacionAcademica ingresarAsignacion = new AsignacionAcademica();
-            ingresarAsignacion.grupo = grupo;
-            ingresarAsignacion.materia = materia;
-            ingresarAsignacion.salon = salon;
-            ingresarAsignacion.dia = dia;
-            ingresarAsignacion.hora = hora;
-            ingresarAsignacion.docente = docente;
-            ingresarAsignacion.observaciones = observaciones;
+            AsignacionAcademica asignacionAcademica = new AsignacionAcademica();
+            asignacionAcademica.alumno = alumno;
+            asignacionAcademica.grupo = grupo;
+            asignacionAcademica.materia = materia;
+            asignacionAcademica.salon = salon;
+            asignacionAcademica.dia = dia;
+            asignacionAcademica.hora = hora;
+            asignacionAcademica.docente = docente;
+            asignacionAcademica.observaciones = observaciones;
 
-            Respuesta<object> ingreso = this.controlador.insertarAsignacion(ingresarAsignacion);
+            Respuesta<object> ingreso = this.controlador.insertarAsignacion(asignacionAcademica);
             MessageBox.Show("Datos guardados correctamente");
         }
     }
