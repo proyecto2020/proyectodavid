@@ -20,7 +20,7 @@ namespace UsuarioControler
         public Collection<RespuestaLogin> validarCredenciales(string usuario, string contrasena, int perfil)
         {
 
-            Collection<RespuestaLogin> retornar = this.cliente.ObtenerCredeciales(usuario, contrasena);
+            Collection<RespuestaLogin> retornar = this.cliente.ObtenerCredeciales(usuario, contrasena, perfil);
             return retornar;
 
         }
@@ -122,6 +122,12 @@ namespace UsuarioControler
         public Respuesta<object> insertarAsignacion(AsignacionAcademica asignacionAcademica)
         {
             var resultado = this.cliente.insertarAsignacion(asignacionAcademica);
+            return resultado;
+        }
+
+        public Respuesta<object> insertarNotas(Notas notas)
+        {
+            var resultado = this.cliente.insertarNotas(notas);
             return resultado;
         }
 

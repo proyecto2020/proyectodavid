@@ -32,15 +32,15 @@ namespace JardinMisPrimerasLetras
             if (listarAlumnos.Count != 0)
             {
                 //Estudiante.Items.Clear();
-                comboBox1.DataSource = listarAlumnos;
-                comboBox1.DisplayMember = "Alumno";
-                comboBox1.ValueMember = "idAlumno";
+                Estudiante.DataSource = listarAlumnos;
+                Estudiante.DisplayMember = "Alumno";
+                Estudiante.ValueMember = "idAlumno";
 
             }
             else
             {
-                comboBox1.DataSource = null;
-                comboBox1.DataSource = null;
+                Estudiante.DataSource = null;
+                Estudiante.DataSource = null;
             }
         }
 
@@ -62,6 +62,23 @@ namespace JardinMisPrimerasLetras
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Guardar_Click(object sender, EventArgs e)
+        {
+            string alumno = Estudiante.Text;
+            string materia = Materia.Text;
+            string periodo = Periodo.Text;
+            string calificacion = Calificacion.Text;
+
+            Notas notas = new Notas();
+            notas.alumno = alumno;
+            notas.materia = materia;
+            notas.periodo = periodo;
+            notas.calificacion = calificacion;
+
+            Respuesta<object> ingreso = this.controlador.insertarNotas(notas);
+            MessageBox.Show("Datos guardados correctamente");
         }
     }
 }

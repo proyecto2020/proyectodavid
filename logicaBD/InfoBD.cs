@@ -29,7 +29,7 @@ namespace logicaBD
             respuesta = new Respuesta<object>();
         }
        
-        public Collection<RespuestaLogin> ObtenerCredeciales(string usuario, string contraseña)
+        public Collection<RespuestaLogin> ObtenerCredeciales(string usuario, string contraseña, int pefil)
         {
 
              DynamicParameters  parameters = new DynamicParameters();
@@ -488,6 +488,25 @@ namespace logicaBD
                 cmd.Parameters.AddWithValue("@pi_Hora", asignacionAcademica.hora);
                 cmd.Parameters.AddWithValue("@pi_Docente", asignacionAcademica.docente);
                 cmd.Parameters.AddWithValue("@pi_Observaciones", asignacionAcademica.observaciones);
+                cmd.ExecuteNonQuery();
+
+                //respuesta.ResultData = new ObservableCollection<object>(new List<object> { rowAffected });
+            }
+            return respuesta;
+        }
+
+        public Respuesta<Object> insertarNotas(Notas notas)
+        {
+            using (SqlConnection conexion = new SqlConnection(connectionString))
+            {
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand("PR_InsertarNotas", conexion); // Crear procedimiento almacenado
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@pi_Alumno", notas.alumno);
+                cmd.Parameters.AddWithValue("@pi_Materia", notas.materia);
+                cmd.Parameters.AddWithValue("@pi_Periodo", notas.periodo);
+                cmd.Parameters.AddWithValue("@pi_Calificación", notas.calificacion);
                 cmd.ExecuteNonQuery();
 
                 //respuesta.ResultData = new ObservableCollection<object>(new List<object> { rowAffected });

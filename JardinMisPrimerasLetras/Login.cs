@@ -28,25 +28,33 @@ namespace JardinMisPrimerasLetras
             Usuario Usuario = new Usuario();
             AdministradorUsuarios admin = new AdministradorUsuarios();
             ModPagos pagos = new ModPagos();
+            asiganacionAcademica asiganacionacademica = new asiganacionAcademica();
             string usuario = textUsuario.Text;
             string contrasena = textContrasena.Text;
             int perfil = Usuario.perfilUsuario; 
             Collection<RespuestaLogin> ingreso = this.controlador.validarCredenciales(usuario, contrasena, perfil);
-            if (Usuario.perfilUsuario.Equals("Administrador"))
+            
+            if (Usuario.perfilUsuario.Equals(1))
             {
                 admin.Show();
                 this.Hide();
-            } else if (Usuario.perfilUsuario.Equals(1))
+            } else if (Usuario.perfilUsuario.Equals(2))
             {
                 pagos.Show();
                 this.Hide();
             }
+            else if (Usuario.perfilUsuario.Equals(3))
+            {
+                asiganacionacademica.Show();
+                this.Hide();
+            }
 
-                if (ingreso.Count > 0)
+            if (ingreso.Count > 0)
             {
 
                 AdministradorUsuarios usuarios = new AdministradorUsuarios();
                 usuarios.ShowDialog();
+                this.Hide();
             }
             else
             {
