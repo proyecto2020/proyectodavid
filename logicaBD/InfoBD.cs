@@ -100,6 +100,7 @@ namespace logicaBD
                cmd.Parameters.AddWithValue("@pi_UsuarioCreacion", usuario.usuarioCreacion);
                cmd.Parameters.AddWithValue("@pi_Perfil", usuario.perfilUsuario);
                cmd.Parameters.AddWithValue("@contraseña", usuario.contrasena);
+               cmd.Parameters.AddWithValue("@pi_nombreApellido", usuario.nombreApellido);
                cmd.ExecuteNonQuery();
                 }
                 catch (Exception e)
@@ -112,35 +113,54 @@ namespace logicaBD
             return respuesta;      
         }
 
+        List<Usuario> Usuario = new List<Usuario>();
+        public List<Usuario> ConsultarUsuario()
+        {
+            {
+                string consulta = "SELECT identificacacion,primerNombre,primerApellido," +
+                    "correo, fechaCreacion, perfilUsuario, nombreApellido FROM Usuario";
+
+                DataTable tblRol = new DataTable();
+                tblRol = this.mtdSelect(consulta);
+                for (int i = 0; i < tblRol.Rows.Count; i++)
+                {
+                    Usuario objUsuario = new Usuario();
+                    objUsuario.identificacacion = int.Parse(tblRol.Rows[i][0].ToString());
+                    objUsuario.primerNombre = tblRol.Rows[i][1].ToString();
+                    objUsuario.primerApellido = tblRol.Rows[i][2].ToString();
+                    objUsuario.correo = tblRol.Rows[i][3].ToString();
+                    objUsuario.fechaCreacion = Convert.ToDateTime(tblRol.Rows[i][4].ToString());
+                    objUsuario.perfilUsuario = int.Parse(tblRol.Rows[i][5].ToString());
+                    objUsuario.nombreApellido = tblRol.Rows[i][6].ToString();
+                    Usuario.Add(objUsuario);
+                }
+                return Usuario;
+            }
+        }
+
+        List<Usuario> Docente = new List<Usuario>();
         public List<Usuario> ConsultarUsuarios()
         {
-            List<Usuario> lista = new List<Usuario>();
-            string consulta = $"EXEC " + "PR_ConsultarUsuario ";
-            SqlCommand command = new SqlCommand(consulta, conexion);
-            conexion.Open();
-            SqlDataReader reader = command.ExecuteReader();
-            try
             {
-                while (reader.Read())
+                string consulta = "SELECT identificacacion,primerNombre,primerApellido,correo," +
+                    " fechaCreacion, perfilUsuario, nombreApellido FROM Usuario where perfilUsuario = 3";
+
+                DataTable tblRol = new DataTable();
+                tblRol = this.mtdSelect(consulta);
+                for (int i = 0; i < tblRol.Rows.Count; i++)
                 {
-                    Usuario usuario = new Usuario();
-                    usuario.perfilUsuario = Convert.ToInt32(reader["perfilUsuario"].ToString());
-                    usuario.primerNombre = reader["primerNombre"].ToString();
-                    usuario.primerApellido = reader["primerApellido"].ToString();
-                    usuario.segundoApellido = reader["segundoApellido"].ToString();
-                    usuario.correo = reader["correo"].ToString();
-
-                    lista.Add(usuario);
+                    Usuario objUsuario = new Usuario();
+                    objUsuario.identificacacion = int.Parse(tblRol.Rows[i][0].ToString());
+                    objUsuario.primerNombre = tblRol.Rows[i][1].ToString();
+                    objUsuario.primerApellido = tblRol.Rows[i][2].ToString();
+                    objUsuario.correo = tblRol.Rows[i][3].ToString();
+                    objUsuario.fechaCreacion = Convert.ToDateTime(tblRol.Rows[i][4].ToString());
+                    objUsuario.perfilUsuario = int.Parse(tblRol.Rows[i][5].ToString());
+                    objUsuario.nombreApellido = tblRol.Rows[i][6].ToString();
+                    Docente.Add(objUsuario);
                 }
+                return Docente;
             }
-            finally
-            {
-                reader.Close();
-            }
-
-            conexion.Close();
-
-            return lista;
         }
 
         public string insertarGestion(string Docente, string Grupo, string Grado, string Area, string Materia)
@@ -259,6 +279,7 @@ namespace logicaBD
                 cmd.Parameters.AddWithValue("@pi_Saldo", pago.saldoPendiente);
                 cmd.Parameters.AddWithValue("@pi_Total", pago.totalPagar);
                 cmd.Parameters.AddWithValue("@pi_Observaciones", pago.observaciones);
+                cmd.Parameters.AddWithValue("@pi_idAlumno", pago.idAlumno);
                 cmd.ExecuteNonQuery();
 
                 //respuesta.ResultData = new ObservableCollection<object>(new List<object> { rowAffected });
@@ -386,91 +407,106 @@ namespace logicaBD
             return listaMaterias;
         }
 
+        List<Alumnos> Alumnos = new  List<Alumnos>();
         public List<Alumnos> ListarAlumnos()
         {
-            List<Alumnos> listaAlumnos = new List<Alumnos>();
+            string consulta = "select idAlumno,nombreApellido from Alumno";
 
-            Alumnos a = new Alumnos(0, "Seleccionar");
-            listaAlumnos.Add(a);
-
-            //Metodo que carga en una lista el resultado de todos los registros de la tabla
-
-            using (SqlConnection conexion = new SqlConnection(connectionString))
+            DataTable tblRol = new DataTable();
+            tblRol = this.mtdSelect(consulta);
+            for (int i = 0; i < tblRol.Rows.Count; i++)
             {
-                conexion.Open();
-                SqlCommand cmd = new SqlCommand("TraerAlumnos", conexion);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idAlumno", 1);
-                SqlDataReader dr = cmd.ExecuteReader();
-                if (dr != null && dr.HasRows)
-                {
-                    while (dr.Read())
-                    {
-                        a = new Alumnos((int)dr["idAlumno"],
-                            (string)dr["nombreApellido"]);
-                        listaAlumnos.Add(a);
-                    }
-                }
+                Alumnos objPerfil = new Alumnos();
+                objPerfil.idAlumno = int.Parse(tblRol.Rows[i][0].ToString());
+                objPerfil.nombreApellido = tblRol.Rows[i][1].ToString();
+                Alumnos.Add(objPerfil);
             }
-            return listaAlumnos;
+            return Alumnos;
         }
 
+        List<Seleccionar_Grupo> listaGrupos = new List<Seleccionar_Grupo>();
         public List<Seleccionar_Grupo> ListarGrupos()
         {
-            List<Seleccionar_Grupo> listaGrupos = new List<Seleccionar_Grupo>();
+            string consulta = "select idGrupoEscolar, descripcion from GrupoEscolar";
 
-            Seleccionar_Grupo a = new Seleccionar_Grupo(0, "Seleccionar");
-            listaGrupos.Add(a);
-
-            //Metodo que carga en una lista el resultado de todos los registros de la tabla
-
-            using (SqlConnection conexion = new SqlConnection(connectionString))
+            DataTable tblRol = new DataTable();
+            tblRol = this.mtdSelect(consulta);
+            for (int i = 0; i < tblRol.Rows.Count; i++)
             {
-                conexion.Open();
-                SqlCommand cmd = new SqlCommand("TraerGrupo", conexion);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idGrupo", 1);
-                SqlDataReader dr = cmd.ExecuteReader();
-                if (dr != null && dr.HasRows)
-                {
-                    while (dr.Read())
-                    {
-                        a = new Seleccionar_Grupo((int)dr["idGrupoEscolar"],
-                            (string)dr["descripcion"]);
-                        listaGrupos.Add(a);
-                    }
-                }
+                Seleccionar_Grupo objgrupo = new Seleccionar_Grupo();
+                objgrupo.idGrupo = int.Parse(tblRol.Rows[i][0].ToString());
+                objgrupo.Grupo = tblRol.Rows[i][1].ToString();
+                listaGrupos.Add(objgrupo);
             }
             return listaGrupos;
         }
 
+        List<SeleccionarMateria> listaMateria = new List<SeleccionarMateria>();
         public List<SeleccionarMateria> ListarMaterias()
         {
-            List<SeleccionarMateria> listaMaterias = new List<SeleccionarMateria>();
+            string consulta = "select idMateria, descripcion from Materias";
 
-            SeleccionarMateria a = new SeleccionarMateria(0, "Seleccionar");
-            listaMaterias.Add(a);
-
-            //Metodo que carga en una lista el resultado de todos los registros de la tabla
-
-            using (SqlConnection conexion = new SqlConnection(connectionString))
+            DataTable tblRol = new DataTable();
+            tblRol = this.mtdSelect(consulta);
+            for (int i = 0; i < tblRol.Rows.Count; i++)
             {
-                conexion.Open();
-                SqlCommand cmd = new SqlCommand("TraerMateria", conexion);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@idMateria", 1);
-                SqlDataReader dr = cmd.ExecuteReader();
-                if (dr != null && dr.HasRows)
-                {
-                    while (dr.Read())
-                    {
-                        a = new SeleccionarMateria((int)dr["idMateria"],
-                            (string)dr["descripcion"]);
-                        listaMaterias.Add(a);
-                    }
-                }
+                SeleccionarMateria objMateria = new SeleccionarMateria();
+                objMateria.idMateria = int.Parse(tblRol.Rows[i][0].ToString());
+                objMateria.Materia = tblRol.Rows[i][1].ToString();
+                listaMateria.Add(objMateria);
             }
-            return listaMaterias;
+            return listaMateria;
+        }
+
+        List<SeleccionarSalon> listaSalon = new List<SeleccionarSalon>();
+        public List<SeleccionarSalon> ListarSalon()
+        {
+            string consulta = "select idSalon, descripcion from Salon";
+
+            DataTable tblRol = new DataTable();
+            tblRol = this.mtdSelect(consulta);
+            for (int i = 0; i < tblRol.Rows.Count; i++)
+            {
+                SeleccionarSalon objSalon = new SeleccionarSalon();
+                objSalon.idSalon = int.Parse(tblRol.Rows[i][0].ToString());
+                objSalon.Salon = tblRol.Rows[i][1].ToString();
+                listaSalon.Add(objSalon);
+            }
+            return listaSalon;
+        }
+
+        List<SeleccionarHora> listaHora = new List<SeleccionarHora>();
+        public List<SeleccionarHora> ListarHora()
+        {
+            string consulta = "select idHora, descripcion from Hora";
+
+            DataTable tblRol = new DataTable();
+            tblRol = this.mtdSelect(consulta);
+            for (int i = 0; i < tblRol.Rows.Count; i++)
+            {
+                SeleccionarHora objHora = new SeleccionarHora();
+                objHora.idHora = int.Parse(tblRol.Rows[i][0].ToString());
+                objHora.Hora = tblRol.Rows[i][1].ToString();
+                listaHora.Add(objHora);
+            }
+            return listaHora;
+        }
+
+        List<SeleccionarDia> listaDia = new List<SeleccionarDia>();
+        public List<SeleccionarDia> ListarDia()
+        {
+            string consulta = "select idDia, descripcion from Dia";
+
+            DataTable tblRol = new DataTable();
+            tblRol = this.mtdSelect(consulta);
+            for (int i = 0; i < tblRol.Rows.Count; i++)
+            {
+                SeleccionarDia objDia = new SeleccionarDia();
+                objDia.idDia = int.Parse(tblRol.Rows[i][0].ToString());
+                objDia.Dia = tblRol.Rows[i][1].ToString();
+                listaDia.Add(objDia);
+            }
+            return listaDia;
         }
 
         public Respuesta<Object> insertarAsignacion(AsignacionAcademica asignacionAcademica)
@@ -481,6 +517,7 @@ namespace logicaBD
                 SqlCommand cmd = new SqlCommand("PR_InsertarAsignacion", conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
 
+                cmd.Parameters.AddWithValue("@pi_Alumno", asignacionAcademica.alumno);
                 cmd.Parameters.AddWithValue("@pi_Grupo", asignacionAcademica.grupo);
                 cmd.Parameters.AddWithValue("@pi_Materia", asignacionAcademica.materia);
                 cmd.Parameters.AddWithValue("@pi_Salon", asignacionAcademica.salon);
@@ -488,6 +525,8 @@ namespace logicaBD
                 cmd.Parameters.AddWithValue("@pi_Hora", asignacionAcademica.hora);
                 cmd.Parameters.AddWithValue("@pi_Docente", asignacionAcademica.docente);
                 cmd.Parameters.AddWithValue("@pi_Observaciones", asignacionAcademica.observaciones);
+                cmd.Parameters.AddWithValue("@pi_idAlumno", asignacionAcademica.idAlumno);
+                cmd.Parameters.AddWithValue("@pi_idDocente", asignacionAcademica.idDocente);
                 cmd.ExecuteNonQuery();
 
                 //respuesta.ResultData = new ObservableCollection<object>(new List<object> { rowAffected });
@@ -506,7 +545,8 @@ namespace logicaBD
                 cmd.Parameters.AddWithValue("@pi_Alumno", notas.alumno);
                 cmd.Parameters.AddWithValue("@pi_Materia", notas.materia);
                 cmd.Parameters.AddWithValue("@pi_Periodo", notas.periodo);
-                cmd.Parameters.AddWithValue("@pi_Calificación", notas.calificacion);
+                cmd.Parameters.AddWithValue("@pi_Calificacion", notas.calificacion);
+                cmd.Parameters.AddWithValue("@pi_idAlumno", notas.idAlumno);
                 cmd.ExecuteNonQuery();
 
                 //respuesta.ResultData = new ObservableCollection<object>(new List<object> { rowAffected });

@@ -45,10 +45,10 @@ namespace JardinMisPrimerasLetras
             this.letrasDataSetGestion = new JardinMisPrimerasLetras.LetrasDataSetGestion();
             this.gestionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gestionTableAdapter = new JardinMisPrimerasLetras.LetrasDataSetGestionTableAdapters.GestionTableAdapter();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.grupoEscolarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetGestion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionBindingSource)).BeginInit();
@@ -84,18 +84,20 @@ namespace JardinMisPrimerasLetras
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
-            this.grupoEscolarDataGridViewTextBoxColumn,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
             this.dataGridView1.DataSource = this.gestionBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(73, 244);
+            this.dataGridView1.Location = new System.Drawing.Point(72, 269);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(437, 62);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(437, 98);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -167,29 +169,33 @@ namespace JardinMisPrimerasLetras
             // 
             this.gestionTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Grados";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Grados";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Grados";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Grados";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
-            // grupoEscolarDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn6
             // 
-            this.grupoEscolarDataGridViewTextBoxColumn.DataPropertyName = "GrupoEscolar";
-            this.grupoEscolarDataGridViewTextBoxColumn.HeaderText = "GrupoEscolar";
-            this.grupoEscolarDataGridViewTextBoxColumn.Name = "grupoEscolarDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "GrupoEscolar";
+            this.dataGridViewTextBoxColumn6.HeaderText = "GrupoEscolar";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn3
+            // dataGridViewTextBoxColumn7
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Area";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Area";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Area";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Area";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn4
+            // dataGridViewTextBoxColumn8
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Materia";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Materia";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Materia";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Materia";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
             // 
             // IngGestion
             // 
@@ -241,13 +247,17 @@ namespace JardinMisPrimerasLetras
         private System.Windows.Forms.DataGridViewTextBoxColumn idGrupoEscolarDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idAreaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idMateriaDataGridViewTextBoxColumn;
-        private LetrasDataSetGestion letrasDataSetGestion;
-        private System.Windows.Forms.BindingSource gestionBindingSource;
-        private LetrasDataSetGestionTableAdapters.GestionTableAdapter gestionTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn grupoEscolarDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private LetrasDataSetGestion letrasDataSetGestion;
+        private System.Windows.Forms.BindingSource gestionBindingSource;
+        private LetrasDataSetGestionTableAdapters.GestionTableAdapter gestionTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         //private LetrasDataSetGrupoTableAdapters.GrupoEscolarTableAdapter grupoEscolarTableAdapter;
     }
 }

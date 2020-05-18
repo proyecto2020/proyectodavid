@@ -20,6 +20,8 @@ namespace JardinMisPrimerasLetras
         Matriculas matricula = new Matriculas();
         ModPagos pagos = new ModPagos();
         asiganacionAcademica asiganacion = new asiganacionAcademica();
+        Modulo_Notas modulo_Notas = new Modulo_Notas();
+
         public AdministradorUsuarios()
         {
             InitializeComponent();
@@ -56,7 +58,7 @@ namespace JardinMisPrimerasLetras
             insertarUsuario.segundoNombre = segundoNombre;
             insertarUsuario.primerApellido = primerApellido;
             insertarUsuario.segundoApellido = segundoApellido;
-            insertarUsuario.identificacacion = identificacacion;
+            insertarUsuario.identificacacion = int.Parse(identificacacion);
             insertarUsuario.correo = correo;
             insertarUsuario.perfilUsuario  = Perfil;
             insertarUsuario.nombreApellido = nombreApellido;
@@ -67,7 +69,7 @@ namespace JardinMisPrimerasLetras
             MessageBox.Show("Datos guardados correctamente");
 
                 List<Usuario> lista = new List<Usuario>();
-                lista = this.controlador.ConsultarUsuarios();
+                lista = this.controlador.ConsultarUsuario();
                 if (lista.Count > 0)
                 {
                     dataGridView2.AutoGenerateColumns = false;
@@ -77,60 +79,6 @@ namespace JardinMisPrimerasLetras
                 }
             
         }
-        private void buttonEditar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void buttonEliminar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void buttonSalir_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxCedula_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxUsuario_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxSegundoApellido_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxCorreo_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxContraseña_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -138,19 +86,26 @@ namespace JardinMisPrimerasLetras
             this.gestion.Show();
         }
 
-        private void TipoPerfil_SelectedIndexChanged(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-        
+            this.Hide();
+            this.asiganacion.Show();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-            List<Usuario> lista = new List<Usuario>();
-            lista = this.controlador.ConsultarUsuarios();
-            if (lista.Count > 0)
+            this.Hide();
+            this.modulo_Notas.Show();
+        }
+        
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            List<Usuario> listamostrar = new List<Usuario>();
+            listamostrar = this.controlador.ConsultarUsuario();
+            if (listamostrar.Count > 0)
             {
-                dataGridView2.AutoGenerateColumns = false;
-                dataGridView2.DataSource = lista;
+                dataGridView2.AutoGenerateColumns = true;
+                dataGridView2.DataSource = listamostrar;
                 this.dataGridView2.Refresh();
 
             }
@@ -158,27 +113,9 @@ namespace JardinMisPrimerasLetras
 
         private void AdministradorUsuarios_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetUsu.Usuario' Puede moverla o quitarla según sea necesario.
-            this.usuarioTableAdapter.Fill(this.letrasDataSetUsu.Usuario);
+            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetUsuario.Usuario' Puede moverla o quitarla según sea necesario.
+            this.usuarioTableAdapter.Fill(this.letrasDataSetUsuario.Usuario);
 
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            this.matricula.Show();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            this.pagos.Show();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            this.asiganacion.Show();
         }
     }
 }

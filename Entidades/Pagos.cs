@@ -15,6 +15,7 @@ namespace Entidades
         public double saldoPendiente { get; set; }
         public double totalPagar { get; set; }
         public string observaciones { get; set; }
+        public string idAlumno { get; set; }
 
     }
 }

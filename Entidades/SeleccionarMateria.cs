@@ -8,28 +8,31 @@ namespace Entidades
 {
     public class SeleccionarMateria
     {
-        int _idMateria;
-        string _Materia;
+        public int idMateria { get; set; }
+        public string Materia { get; set; }
 
-        public int idMateria
-        {
-            get { return _idMateria; }
-            set { _idMateria = value; }
-        }
+        //int _idMateria;
+        //string _Materia;
 
-        public string Materia
-        {
-            get { return _Materia; }
-            set { _Materia = value; }
-        }
+        //public int idMateria
+        //{
+        //    get { return _idMateria; }
+        //    set { _idMateria = value; }
+        //}
 
-        public SeleccionarMateria(int idMateria, string Materia)
-        {
-            _idMateria = idMateria;
-            _Materia = Materia;
-        }
-        public SeleccionarMateria() : this(0, "")
-        {
-        }
+        //public string Materia
+        //{
+        //    get { return _Materia; }
+        //    set { _Materia = value; }
+        //}
+
+        //public SeleccionarMateria(int idMateria, string Materia)
+        //{
+        //    _idMateria = idMateria;
+        //    _Materia = Materia;
+        //}
+        //public SeleccionarMateria() : this(0, "")
+        //{
+        //}
     }
 }

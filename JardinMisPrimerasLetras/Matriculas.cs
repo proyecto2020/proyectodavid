@@ -15,11 +15,17 @@ namespace JardinMisPrimerasLetras
     {
         private UsuarioControler.loginControler controlador;
         IngGestion gestion = new IngGestion();
+        ModPagos pagos = new ModPagos();
         
         public Matriculas()
         {
             InitializeComponent();
             this.controlador = new UsuarioControler.loginControler();
+            List<Seleccionar_Grupo> listarGrupo = this.controlador.ListarGrupos();
+            listarGrupo.Insert(0, new Seleccionar_Grupo() { idGrupo = 0, Grupo = "Seleccione" });
+            Grupo.DataSource = listarGrupo;
+            Grupo.DisplayMember = "Grupo";
+            Grupo.ValueMember = "idGrupo";
         }
 
         private void Matriculas_Load(object sender, EventArgs e)
@@ -108,5 +114,15 @@ namespace JardinMisPrimerasLetras
             MessageBox.Show("Datos guardados correctamente");
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.pagos.Show();
+        }
+
+        private void Grupo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

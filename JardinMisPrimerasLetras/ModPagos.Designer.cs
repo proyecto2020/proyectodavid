@@ -28,13 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModPagos));
             this.Estudiante = new System.Windows.Forms.ComboBox();
-            this.alumnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.letrasDataSetAlum = new JardinMisPrimerasLetras.LetrasDataSetAlum();
-            this.gruposBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gradosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ValorAbono = new System.Windows.Forms.TextBox();
             this.Total = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,20 +37,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
-            this.alumnoTableAdapter = new JardinMisPrimerasLetras.LetrasDataSetAlumTableAdapters.AlumnoTableAdapter();
             this.button3 = new System.Windows.Forms.Button();
             this.Observaciones = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetAlum)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gruposBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gradosBindingSource)).BeginInit();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Estudiante
             // 
-            this.Estudiante.DataSource = this.alumnoBindingSource;
-            this.Estudiante.DisplayMember = "primerNombre";
             this.Estudiante.FormattingEnabled = true;
             this.Estudiante.Location = new System.Drawing.Point(176, 97);
             this.Estudiante.Name = "Estudiante";
@@ -64,24 +52,6 @@
             this.Estudiante.TabIndex = 0;
             this.Estudiante.ValueMember = "primerApellido";
             this.Estudiante.SelectedIndexChanged += new System.EventHandler(this.Estudiante_SelectedIndexChanged);
-            // 
-            // alumnoBindingSource
-            // 
-            this.alumnoBindingSource.DataMember = "Alumno";
-            this.alumnoBindingSource.DataSource = this.letrasDataSetAlum;
-            // 
-            // letrasDataSetAlum
-            // 
-            this.letrasDataSetAlum.DataSetName = "LetrasDataSetAlum";
-            this.letrasDataSetAlum.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gruposBindingSource
-            // 
-            this.gruposBindingSource.DataMember = "Grupos";
-            // 
-            // gradosBindingSource
-            // 
-            this.gradosBindingSource.DataMember = "Grados";
             // 
             // ValorAbono
             // 
@@ -155,20 +125,6 @@
             this.label15.TabIndex = 41;
             this.label15.Text = "Pagos";
             // 
-            
-            // 
-            // alumnoTableAdapter
-            // 
-            this.alumnoTableAdapter.ClearBeforeFill = true;
-            // 
-            // pictureBox2
-            // 
-            
-            // 
-            // pictureBox4
-            // 
-           
-            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(378, 413);
@@ -195,12 +151,23 @@
             this.label2.TabIndex = 48;
             this.label2.Text = "Observaciones";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(36, 452);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(104, 50);
+            this.button4.TabIndex = 49;
+            this.button4.Text = "MATRICULAS";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // ModPagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(781, 482);
+            this.ClientSize = new System.Drawing.Size(783, 527);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Observaciones);
             this.Controls.Add(this.button3);
@@ -215,10 +182,7 @@
             this.Controls.Add(this.Estudiante);
             this.Name = "ModPagos";
             this.Text = "Pagos";
-            ((System.ComponentModel.ISupportInitialize)(this.alumnoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetAlum)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gruposBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gradosBindingSource)).EndInit();
+            this.Load += new System.EventHandler(this.ModPagos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,19 +196,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
-        //private LetrasDataSetGrupo letrasDataSetGrupo;
-        private System.Windows.Forms.BindingSource gruposBindingSource;
-        //private LetrasDataSetGrupoTableAdapters.GruposTableAdapter gruposTableAdapter;
-        //private LetrasDataSetGrado letrasDataSetGrado;
-        private System.Windows.Forms.BindingSource gradosBindingSource;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label15;
-        private LetrasDataSetAlum letrasDataSetAlum;
-        private System.Windows.Forms.BindingSource alumnoBindingSource;
-        private LetrasDataSetAlumTableAdapters.AlumnoTableAdapter alumnoTableAdapter;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox Observaciones;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button4;
     }
 }

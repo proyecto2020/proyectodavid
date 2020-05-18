@@ -161,6 +161,7 @@
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "Modulo_Notas";
             this.Text = "Modulo_Notas";
+            this.Load += new System.EventHandler(this.Modulo_Notas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -14,97 +14,60 @@ namespace JardinMisPrimerasLetras
 {
     public partial class asiganacionAcademica : Form
     {
-        private UsuarioControler.loginControler controlador;
-        List<Alumnos> listarAlumnos = null;
-        //List<Grupos> listarGrupos = null;
-        List<Seleccionar_Grupo> listarGrupos = null;
-        List<SeleccionarMateria> listarMaterias = null;
-
-        loginControler controladorAlumnos = new loginControler();
-        loginControler seleccionargrupo = new loginControler();
-        loginControler seleccionarmateria = new loginControler();
+        loginControler logincontroller = new loginControler();
+        
+        //loginUsuarioControler usuarioControler = new UsuarioControler();
         public asiganacionAcademica()
         {
             InitializeComponent();
-            CargarAlumnos();
-            CargarGrupo();
-            CargarMateria();
+
+            //List<Alumnos> response = this.logincontroller.ListarAlumnos();
+            //response.Insert(0, new Alumnos() { idAlumno = 0, nombreApellido = "Seleccione" });
+            //Estudiante.DataSource = response;
+            //Estudiante.DisplayMember = "nombreApellido";
+            //Estudiante.ValueMember = "idAlumno";
+
+            List<Usuario> usuario = this.logincontroller.ConsultarUsuarios();
+            usuario.Insert(0, new Usuario() { identificacacion = 0, nombreApellido = "Seleccione" });
+            Docente.DataSource = usuario;
+            Docente.DisplayMember = "nombreApellido";
+            Docente.ValueMember = "identificacacion";
+            this.Docente.Refresh();
+
+            List<Seleccionar_Grupo> listarGrupo = this.logincontroller.ListarGrupos();
+            listarGrupo.Insert(0, new Seleccionar_Grupo() { idGrupo = 0, Grupo = "Seleccione" });
+            Grupo.DataSource = listarGrupo;
+            Grupo.DisplayMember = "Grupo";
+            Grupo.ValueMember = "idGrupo";
+
+            List<SeleccionarMateria> listarMaterias = this.logincontroller.ListarMaterias();
+            listarMaterias.Insert(0, new SeleccionarMateria() { idMateria = 0, Materia = "Seleccione" });
+            Materia.DataSource = listarMaterias;
+            Materia.DisplayMember = "Materia";
+            Materia.ValueMember = "idMateria";
+
+            List<SeleccionarSalon> listarSalon = this.logincontroller.ListarSalon();
+            listarSalon.Insert(0, new SeleccionarSalon() { idSalon = 0, Salon = "Seleccione" });
+            Salon.DataSource = listarSalon;
+            Salon.DisplayMember = "Salon";
+            Salon.ValueMember = "idSalon";
+
+            List<SeleccionarDia> listarDia = this.logincontroller.ListarDia();
+            listarDia.Insert(0, new SeleccionarDia() { idDia = 0, Dia = "Seleccione" });
+            Dia.DataSource = listarDia;
+            Dia.DisplayMember = "Dia";
+            Dia.ValueMember = "idDia";
+
+            List<SeleccionarHora> listarHora = this.logincontroller.ListarHora();
+            listarHora.Insert(0, new SeleccionarHora() { idHora = 0, Hora = "Seleccione" });
+            Hora.DataSource = listarHora;
+            Hora.DisplayMember = "Hora";
+            Hora.ValueMember = "idHora";
         }
-
-        private void CargarAlumnos()
-        {
-            if (listarAlumnos == null)
-            {
-                listarAlumnos = controladorAlumnos.ListarAlumnos();
-            }
-            if (listarAlumnos.Count != 0)
-            {
-                //Estudiante.Items.Clear();
-                Estudiante.DataSource = listarAlumnos;
-                Estudiante.DisplayMember = "Alumno";
-                Estudiante.ValueMember = "idAlumno";
-
-            }
-            else
-            {
-                Estudiante.DataSource = null;
-                Estudiante.DataSource = null;
-            }
-        }
-
-        private void CargarGrupo()
-        {
-            if (listarGrupos == null)
-            {
-                listarGrupos = seleccionargrupo.ListarGrupos();
-            }
-            if (listarAlumnos.Count != 0)
-            {
-                //Grupo.Items.Clear();
-                Grupo.DataSource = listarGrupos;
-                Grupo.DisplayMember = "Grupo";
-                Grupo.ValueMember = "idGrupo";
-
-            }
-            else
-            {
-                Grupo.DataSource = null;
-                Grupo.DataSource = null;
-            }
-        }
-
-        private void CargarMateria()
-        {
-            if (listarMaterias == null)
-            {
-                listarMaterias = seleccionarmateria.ListarMaterias();
-            }
-            if (listarMaterias.Count != 0)
-            {
-                //Materia.Items.Clear();
-                Materia.DataSource = listarMaterias;
-                Materia.DisplayMember = "Materia";
-                Materia.ValueMember = "idMateria";
-
-            }
-            else
-            {
-                Materia.DataSource = null;
-                Materia.DataSource = null;
-            }
-        }
-
+        
         private void asiganacionAcademica_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetDoc.Usuario' Puede moverla o quitarla según sea necesario.
-            this.usuarioTableAdapter.Fill(this.letrasDataSetDoc.Usuario);
-            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetHora.Hora' Puede moverla o quitarla según sea necesario.
-            this.horaTableAdapter.Fill(this.letrasDataSetHora.Hora);
-            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetDia.Dia' Puede moverla o quitarla según sea necesario.
-            this.diaTableAdapter.Fill(this.letrasDataSetDia.Dia);
-            // TODO: esta línea de código carga datos en la tabla 'letrasDataSetSalon.Salon' Puede moverla o quitarla según sea necesario.
-            this.salonTableAdapter.Fill(this.letrasDataSetSalon.Salon);
-
+            
         }
 
         private void Estudiante_SelectedIndexChanged(object sender, EventArgs e)
@@ -114,17 +77,17 @@ namespace JardinMisPrimerasLetras
 
         private void Grupo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CargarGrupo();
+            
         }
 
         private void Materia_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CargarMateria();
+           
         }
 
         private void guardar_Click(object sender, EventArgs e)
         {
-            string alumno = Estudiante.Text;
+            //string alumno = Estudiante.Text;
             string grupo = Grupo.Text;
             string materia = Materia.Text;
             string salon = Salon.Text;
@@ -134,7 +97,7 @@ namespace JardinMisPrimerasLetras
             string observaciones = Observaciones.Text;
 
             AsignacionAcademica asignacionAcademica = new AsignacionAcademica();
-            asignacionAcademica.alumno = alumno;
+            //asignacionAcademica.alumno = alumno;
             asignacionAcademica.grupo = grupo;
             asignacionAcademica.materia = materia;
             asignacionAcademica.salon = salon;
@@ -143,8 +106,20 @@ namespace JardinMisPrimerasLetras
             asignacionAcademica.docente = docente;
             asignacionAcademica.observaciones = observaciones;
 
-            Respuesta<object> ingreso = this.controlador.insertarAsignacion(asignacionAcademica);
+            Respuesta<object> ingreso = this.logincontroller.insertarAsignacion(asignacionAcademica);
             MessageBox.Show("Datos guardados correctamente");
+            
+            
+        }
+
+        private void Docente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.Docente.Refresh();
+        }
+
+        private void Salon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

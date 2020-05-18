@@ -14,28 +14,26 @@ namespace JardinMisPrimerasLetras
 {
     public partial class IngGestion : Form
     {
-        private loginControler controlador;
-        ModPagos pagos = new ModPagos();
+        //private loginControler controlador;
         List<Grados> listarGrados = null;
         List<Grupos> listarGrupos = null;
         List<Areas> listaAreas = null;
         List<Materias> listaMaterias = null;
-        loginControler controladorAreasMateria = new loginControler();
-        loginControler controladorGradosGrupos = new loginControler();
-
+        loginControler loginControler = new loginControler();
+        
         public IngGestion()
         {
             InitializeComponent();
             CargarAreas();
             CargarGrados();
-            this.controlador = new UsuarioControler.loginControler();
+            this.loginControler = new UsuarioControler.loginControler();
         }
 
         private void CargarGrados()
         {
             if (listarGrados == null)
             {
-                listarGrados = controladorGradosGrupos.ListarGrados();
+                listarGrados = loginControler.ListarGrados();
             }
             if (listarGrados.Count != 0)
             {
@@ -56,7 +54,7 @@ namespace JardinMisPrimerasLetras
         {
             if (listaAreas == null)
             {
-                listaAreas = controladorAreasMateria.ListarAreas();
+                listaAreas = loginControler.ListarAreas();
             }
             if (listaAreas.Count != 0)
             {
@@ -82,7 +80,7 @@ namespace JardinMisPrimerasLetras
                 {
                     int num = int.Parse(comboBoxGrado.SelectedValue.ToString());
 
-                    listarGrupos = controladorGradosGrupos.TraerGruposporGrados(num);
+                    listarGrupos = loginControler.TraerGruposporGrados(num);
 
                     if (listarGrupos.Count != 0)
                     {
@@ -110,7 +108,7 @@ namespace JardinMisPrimerasLetras
                 {
                     int num = int.Parse(comboArea.SelectedValue.ToString());
 
-                    listaMaterias = controladorAreasMateria.TraerMateriasporArea(num);
+                    listaMaterias = loginControler.TraerMateriasporArea(num);
 
                     if (listaMaterias.Count != 0)
                     {
@@ -142,7 +140,7 @@ namespace JardinMisPrimerasLetras
             insertarGestion.area = areas;
             insertarGestion.materia = materias;
             
-            Respuesta<object> ingreso = this.controlador.insertarGestion(insertarGestion);
+            Respuesta<object> ingreso = this.loginControler.insertarGestion(insertarGestion);
             MessageBox.Show("Datos guardados correctamente");
 
         }
@@ -156,6 +154,7 @@ namespace JardinMisPrimerasLetras
         {
             // TODO: esta línea de código carga datos en la tabla 'letrasDataSetGestion.Gestion' Puede moverla o quitarla según sea necesario.
             this.gestionTableAdapter.Fill(this.letrasDataSetGestion.Gestion);
+            this.dataGridView1.Refresh();
 
         }
 
@@ -201,12 +200,6 @@ namespace JardinMisPrimerasLetras
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            this.pagos.Show();
-        }
-
         private void comboArea_SelectedIndexChanged(object sender, EventArgs e)
         {
             CargarMaterias();
@@ -226,6 +219,11 @@ namespace JardinMisPrimerasLetras
         private void comboBoxGrado_SelectedIndexChanged(object sender, EventArgs e)
         {
             CargarGrupo();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

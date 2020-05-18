@@ -20,9 +20,9 @@ namespace JardinMisPrimerasLetras {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("jardinDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("LetrasDataSetUsuario")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class jardinDataSet : global::System.Data.DataSet {
+    public partial class LetrasDataSetUsuario : global::System.Data.DataSet {
         
         private UsuarioDataTable tableUsuario;
         
@@ -30,7 +30,7 @@ namespace JardinMisPrimerasLetras {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public jardinDataSet() {
+        public LetrasDataSetUsuario() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace JardinMisPrimerasLetras {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected jardinDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected LetrasDataSetUsuario(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace JardinMisPrimerasLetras {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            jardinDataSet cln = ((jardinDataSet)(base.Clone()));
+            LetrasDataSetUsuario cln = ((LetrasDataSetUsuario)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace JardinMisPrimerasLetras {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "jardinDataSet";
+            this.DataSetName = "LetrasDataSetUsuario";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/jardinDataSet.xsd";
+            this.Namespace = "http://tempuri.org/LetrasDataSetUsuario1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableUsuario = new UsuarioDataTable();
@@ -225,7 +225,7 @@ namespace JardinMisPrimerasLetras {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            jardinDataSet ds = new jardinDataSet();
+            LetrasDataSetUsuario ds = new LetrasDataSetUsuario();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -295,13 +295,15 @@ namespace JardinMisPrimerasLetras {
             
             private global::System.Data.DataColumn columnusuarioCreacion;
             
-            private global::System.Data.DataColumn columnfechaModificacion;
-            
             private global::System.Data.DataColumn columnusuarioModificacion;
             
-            private global::System.Data.DataColumn columnidPerfil;
+            private global::System.Data.DataColumn columnfechaModificacion;
+            
+            private global::System.Data.DataColumn columnperfilUsuario;
             
             private global::System.Data.DataColumn columncontraseña;
+            
+            private global::System.Data.DataColumn columnnombreApellido;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -402,14 +404,6 @@ namespace JardinMisPrimerasLetras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fechaModificacionColumn {
-                get {
-                    return this.columnfechaModificacion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn usuarioModificacionColumn {
                 get {
                     return this.columnusuarioModificacion;
@@ -418,9 +412,17 @@ namespace JardinMisPrimerasLetras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn idPerfilColumn {
+            public global::System.Data.DataColumn fechaModificacionColumn {
                 get {
-                    return this.columnidPerfil;
+                    return this.columnfechaModificacion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn perfilUsuarioColumn {
+                get {
+                    return this.columnperfilUsuario;
                 }
             }
             
@@ -429,6 +431,14 @@ namespace JardinMisPrimerasLetras {
             public global::System.Data.DataColumn contraseñaColumn {
                 get {
                     return this.columncontraseña;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn nombreApellidoColumn {
+                get {
+                    return this.columnnombreApellido;
                 }
             }
             
@@ -469,7 +479,7 @@ namespace JardinMisPrimerasLetras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public UsuarioRow AddUsuarioRow(string identificacacion, string primerNombre, string segundoNombre, string primerApellido, string segundoApellido, string correo, System.DateTime fechaCreacion, string usuarioCreacion, System.DateTime fechaModificacion, string usuarioModificacion, int idPerfil, string contraseña) {
+            public UsuarioRow AddUsuarioRow(string identificacacion, string primerNombre, string segundoNombre, string primerApellido, string segundoApellido, string correo, System.DateTime fechaCreacion, string usuarioCreacion, string usuarioModificacion, System.DateTime fechaModificacion, int perfilUsuario, string contraseña, string nombreApellido) {
                 UsuarioRow rowUsuarioRow = ((UsuarioRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         identificacacion,
@@ -480,10 +490,11 @@ namespace JardinMisPrimerasLetras {
                         correo,
                         fechaCreacion,
                         usuarioCreacion,
-                        fechaModificacion,
                         usuarioModificacion,
-                        idPerfil,
-                        contraseña};
+                        fechaModificacion,
+                        perfilUsuario,
+                        contraseña,
+                        nombreApellido};
                 rowUsuarioRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowUsuarioRow);
                 return rowUsuarioRow;
@@ -521,10 +532,11 @@ namespace JardinMisPrimerasLetras {
                 this.columncorreo = base.Columns["correo"];
                 this.columnfechaCreacion = base.Columns["fechaCreacion"];
                 this.columnusuarioCreacion = base.Columns["usuarioCreacion"];
-                this.columnfechaModificacion = base.Columns["fechaModificacion"];
                 this.columnusuarioModificacion = base.Columns["usuarioModificacion"];
-                this.columnidPerfil = base.Columns["idPerfil"];
+                this.columnfechaModificacion = base.Columns["fechaModificacion"];
+                this.columnperfilUsuario = base.Columns["perfilUsuario"];
                 this.columncontraseña = base.Columns["contraseña"];
+                this.columnnombreApellido = base.Columns["nombreApellido"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -546,14 +558,16 @@ namespace JardinMisPrimerasLetras {
                 base.Columns.Add(this.columnfechaCreacion);
                 this.columnusuarioCreacion = new global::System.Data.DataColumn("usuarioCreacion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnusuarioCreacion);
-                this.columnfechaModificacion = new global::System.Data.DataColumn("fechaModificacion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfechaModificacion);
                 this.columnusuarioModificacion = new global::System.Data.DataColumn("usuarioModificacion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnusuarioModificacion);
-                this.columnidPerfil = new global::System.Data.DataColumn("idPerfil", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidPerfil);
+                this.columnfechaModificacion = new global::System.Data.DataColumn("fechaModificacion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfechaModificacion);
+                this.columnperfilUsuario = new global::System.Data.DataColumn("perfilUsuario", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnperfilUsuario);
                 this.columncontraseña = new global::System.Data.DataColumn("contraseña", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncontraseña);
+                this.columnnombreApellido = new global::System.Data.DataColumn("nombreApellido", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnnombreApellido);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidentificacacion}, true));
                 this.columnidentificacacion.AllowDBNull = false;
@@ -572,6 +586,7 @@ namespace JardinMisPrimerasLetras {
                 this.columnusuarioCreacion.MaxLength = 50;
                 this.columnusuarioModificacion.MaxLength = 50;
                 this.columncontraseña.MaxLength = 100;
+                this.columnnombreApellido.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -639,7 +654,7 @@ namespace JardinMisPrimerasLetras {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                jardinDataSet ds = new jardinDataSet();
+                LetrasDataSetUsuario ds = new LetrasDataSetUsuario();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -812,22 +827,6 @@ namespace JardinMisPrimerasLetras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fechaModificacion {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableUsuario.fechaModificacionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fechaModificacion\' de la tabla \'Usuario\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableUsuario.fechaModificacionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string usuarioModificacion {
                 get {
                     try {
@@ -844,17 +843,33 @@ namespace JardinMisPrimerasLetras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int idPerfil {
+            public System.DateTime fechaModificacion {
                 get {
                     try {
-                        return ((int)(this[this.tableUsuario.idPerfilColumn]));
+                        return ((global::System.DateTime)(this[this.tableUsuario.fechaModificacionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'idPerfil\' de la tabla \'Usuario\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'fechaModificacion\' de la tabla \'Usuario\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableUsuario.idPerfilColumn] = value;
+                    this[this.tableUsuario.fechaModificacionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int perfilUsuario {
+                get {
+                    try {
+                        return ((int)(this[this.tableUsuario.perfilUsuarioColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'perfilUsuario\' de la tabla \'Usuario\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUsuario.perfilUsuarioColumn] = value;
                 }
             }
             
@@ -871,6 +886,22 @@ namespace JardinMisPrimerasLetras {
                 }
                 set {
                     this[this.tableUsuario.contraseñaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string nombreApellido {
+                get {
+                    try {
+                        return ((string)(this[this.tableUsuario.nombreApellidoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombreApellido\' de la tabla \'Usuario\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUsuario.nombreApellidoColumn] = value;
                 }
             }
             
@@ -900,18 +931,6 @@ namespace JardinMisPrimerasLetras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsfechaModificacionNull() {
-                return this.IsNull(this.tableUsuario.fechaModificacionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetfechaModificacionNull() {
-                this[this.tableUsuario.fechaModificacionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsusuarioModificacionNull() {
                 return this.IsNull(this.tableUsuario.usuarioModificacionColumn);
             }
@@ -924,14 +943,26 @@ namespace JardinMisPrimerasLetras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsidPerfilNull() {
-                return this.IsNull(this.tableUsuario.idPerfilColumn);
+            public bool IsfechaModificacionNull() {
+                return this.IsNull(this.tableUsuario.fechaModificacionColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetidPerfilNull() {
-                this[this.tableUsuario.idPerfilColumn] = global::System.Convert.DBNull;
+            public void SetfechaModificacionNull() {
+                this[this.tableUsuario.fechaModificacionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsperfilUsuarioNull() {
+                return this.IsNull(this.tableUsuario.perfilUsuarioColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetperfilUsuarioNull() {
+                this[this.tableUsuario.perfilUsuarioColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -944,6 +975,18 @@ namespace JardinMisPrimerasLetras {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetcontraseñaNull() {
                 this[this.tableUsuario.contraseñaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsnombreApellidoNull() {
+                return this.IsNull(this.tableUsuario.nombreApellidoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetnombreApellidoNull() {
+                this[this.tableUsuario.nombreApellidoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -982,7 +1025,7 @@ namespace JardinMisPrimerasLetras {
         }
     }
 }
-namespace JardinMisPrimerasLetras.jardinDataSetTableAdapters {
+namespace JardinMisPrimerasLetras.LetrasDataSetUsuarioTableAdapters {
     
     
     /// <summary>
@@ -1114,14 +1157,15 @@ namespace JardinMisPrimerasLetras.jardinDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("correo", "correo");
             tableMapping.ColumnMappings.Add("fechaCreacion", "fechaCreacion");
             tableMapping.ColumnMappings.Add("usuarioCreacion", "usuarioCreacion");
-            tableMapping.ColumnMappings.Add("fechaModificacion", "fechaModificacion");
             tableMapping.ColumnMappings.Add("usuarioModificacion", "usuarioModificacion");
-            tableMapping.ColumnMappings.Add("idPerfil", "idPerfil");
+            tableMapping.ColumnMappings.Add("fechaModificacion", "fechaModificacion");
+            tableMapping.ColumnMappings.Add("perfilUsuario", "perfilUsuario");
             tableMapping.ColumnMappings.Add("contraseña", "contraseña");
+            tableMapping.ColumnMappings.Add("nombreApellido", "nombreApellido");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Usuario] WHERE (([identificacacion] = @Original_identificacacion) AND ([primerNombre] = @Original_primerNombre) AND ((@IsNull_segundoNombre = 1 AND [segundoNombre] IS NULL) OR ([segundoNombre] = @Original_segundoNombre)) AND ([primerApellido] = @Original_primerApellido) AND ((@IsNull_segundoApellido = 1 AND [segundoApellido] IS NULL) OR ([segundoApellido] = @Original_segundoApellido)) AND ([correo] = @Original_correo) AND ([fechaCreacion] = @Original_fechaCreacion) AND ([usuarioCreacion] = @Original_usuarioCreacion) AND ((@IsNull_fechaModificacion = 1 AND [fechaModificacion] IS NULL) OR ([fechaModificacion] = @Original_fechaModificacion)) AND ((@IsNull_usuarioModificacion = 1 AND [usuarioModificacion] IS NULL) OR ([usuarioModificacion] = @Original_usuarioModificacion)) AND ((@IsNull_idPerfil = 1 AND [idPerfil] IS NULL) OR ([idPerfil] = @Original_idPerfil)) AND ((@IsNull_contraseña = 1 AND [contraseña] IS NULL) OR ([contraseña] = @Original_contraseña)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Usuario] WHERE (([identificacacion] = @Original_identificacacion) AND ([primerNombre] = @Original_primerNombre) AND ((@IsNull_segundoNombre = 1 AND [segundoNombre] IS NULL) OR ([segundoNombre] = @Original_segundoNombre)) AND ([primerApellido] = @Original_primerApellido) AND ((@IsNull_segundoApellido = 1 AND [segundoApellido] IS NULL) OR ([segundoApellido] = @Original_segundoApellido)) AND ([correo] = @Original_correo) AND ([fechaCreacion] = @Original_fechaCreacion) AND ([usuarioCreacion] = @Original_usuarioCreacion) AND ((@IsNull_usuarioModificacion = 1 AND [usuarioModificacion] IS NULL) OR ([usuarioModificacion] = @Original_usuarioModificacion)) AND ((@IsNull_fechaModificacion = 1 AND [fechaModificacion] IS NULL) OR ([fechaModificacion] = @Original_fechaModificacion)) AND ((@IsNull_perfilUsuario = 1 AND [perfilUsuario] IS NULL) OR ([perfilUsuario] = @Original_perfilUsuario)) AND ((@IsNull_contraseña = 1 AND [contraseña] IS NULL) OR ([contraseña] = @Original_contraseña)) AND ((@IsNull_nombreApellido = 1 AND [nombreApellido] IS NULL) OR ([nombreApellido] = @Original_nombreApellido)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_identificacacion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "identificacacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_primerNombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "primerNombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -1133,18 +1177,20 @@ namespace JardinMisPrimerasLetras.jardinDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_correo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "correo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fechaCreacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaCreacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_usuarioCreacion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuarioCreacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fechaModificacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaModificacion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fechaModificacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaModificacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_usuarioModificacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuarioModificacion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_usuarioModificacion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuarioModificacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_idPerfil", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idPerfil", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idPerfil", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idPerfil", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fechaModificacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaModificacion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fechaModificacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaModificacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_perfilUsuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "perfilUsuario", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_perfilUsuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "perfilUsuario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_contraseña", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "contraseña", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_contraseña", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "contraseña", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_nombreApellido", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombreApellido", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nombreApellido", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombreApellido", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Usuario] ([identificacacion], [primerNombre], [segundoNombre], [primerApellido], [segundoApellido], [correo], [fechaCreacion], [usuarioCreacion], [fechaModificacion], [usuarioModificacion], [idPerfil], [contraseña]) VALUES (@identificacacion, @primerNombre, @segundoNombre, @primerApellido, @segundoApellido, @correo, @fechaCreacion, @usuarioCreacion, @fechaModificacion, @usuarioModificacion, @idPerfil, @contraseña);
-SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApellido, correo, fechaCreacion, usuarioCreacion, fechaModificacion, usuarioModificacion, idPerfil, contraseña FROM Usuario WHERE (identificacacion = @identificacacion)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Usuario] ([identificacacion], [primerNombre], [segundoNombre], [primerApellido], [segundoApellido], [correo], [fechaCreacion], [usuarioCreacion], [usuarioModificacion], [fechaModificacion], [perfilUsuario], [contraseña], [nombreApellido]) VALUES (@identificacacion, @primerNombre, @segundoNombre, @primerApellido, @segundoApellido, @correo, @fechaCreacion, @usuarioCreacion, @usuarioModificacion, @fechaModificacion, @perfilUsuario, @contraseña, @nombreApellido);
+SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApellido, correo, fechaCreacion, usuarioCreacion, usuarioModificacion, fechaModificacion, perfilUsuario, contraseña, nombreApellido FROM Usuario WHERE (identificacacion = @identificacacion)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@identificacacion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "identificacacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@primerNombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "primerNombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1154,33 +1200,37 @@ SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApe
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@correo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "correo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaCreacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaCreacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuarioCreacion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuarioCreacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaModificacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaModificacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuarioModificacion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuarioModificacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idPerfil", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idPerfil", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaModificacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaModificacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@perfilUsuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "perfilUsuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@contraseña", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "contraseña", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombreApellido", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombreApellido", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Usuario] SET [identificacacion] = @identificacacion, [primerNombre]" +
                 " = @primerNombre, [segundoNombre] = @segundoNombre, [primerApellido] = @primerAp" +
                 "ellido, [segundoApellido] = @segundoApellido, [correo] = @correo, [fechaCreacion" +
-                "] = @fechaCreacion, [usuarioCreacion] = @usuarioCreacion, [fechaModificacion] = " +
-                "@fechaModificacion, [usuarioModificacion] = @usuarioModificacion, [idPerfil] = @" +
-                "idPerfil, [contraseña] = @contraseña WHERE (([identificacacion] = @Original_iden" +
-                "tificacacion) AND ([primerNombre] = @Original_primerNombre) AND ((@IsNull_segund" +
-                "oNombre = 1 AND [segundoNombre] IS NULL) OR ([segundoNombre] = @Original_segundo" +
-                "Nombre)) AND ([primerApellido] = @Original_primerApellido) AND ((@IsNull_segundo" +
-                "Apellido = 1 AND [segundoApellido] IS NULL) OR ([segundoApellido] = @Original_se" +
-                "gundoApellido)) AND ([correo] = @Original_correo) AND ([fechaCreacion] = @Origin" +
-                "al_fechaCreacion) AND ([usuarioCreacion] = @Original_usuarioCreacion) AND ((@IsN" +
-                "ull_fechaModificacion = 1 AND [fechaModificacion] IS NULL) OR ([fechaModificacio" +
-                "n] = @Original_fechaModificacion)) AND ((@IsNull_usuarioModificacion = 1 AND [us" +
-                "uarioModificacion] IS NULL) OR ([usuarioModificacion] = @Original_usuarioModific" +
-                "acion)) AND ((@IsNull_idPerfil = 1 AND [idPerfil] IS NULL) OR ([idPerfil] = @Ori" +
-                "ginal_idPerfil)) AND ((@IsNull_contraseña = 1 AND [contraseña] IS NULL) OR ([con" +
-                "traseña] = @Original_contraseña)));\r\nSELECT identificacacion, primerNombre, segu" +
-                "ndoNombre, primerApellido, segundoApellido, correo, fechaCreacion, usuarioCreaci" +
-                "on, fechaModificacion, usuarioModificacion, idPerfil, contraseña FROM Usuario WH" +
-                "ERE (identificacacion = @identificacacion)";
+                "] = @fechaCreacion, [usuarioCreacion] = @usuarioCreacion, [usuarioModificacion] " +
+                "= @usuarioModificacion, [fechaModificacion] = @fechaModificacion, [perfilUsuario" +
+                "] = @perfilUsuario, [contraseña] = @contraseña, [nombreApellido] = @nombreApelli" +
+                "do WHERE (([identificacacion] = @Original_identificacacion) AND ([primerNombre] " +
+                "= @Original_primerNombre) AND ((@IsNull_segundoNombre = 1 AND [segundoNombre] IS" +
+                " NULL) OR ([segundoNombre] = @Original_segundoNombre)) AND ([primerApellido] = @" +
+                "Original_primerApellido) AND ((@IsNull_segundoApellido = 1 AND [segundoApellido]" +
+                " IS NULL) OR ([segundoApellido] = @Original_segundoApellido)) AND ([correo] = @O" +
+                "riginal_correo) AND ([fechaCreacion] = @Original_fechaCreacion) AND ([usuarioCre" +
+                "acion] = @Original_usuarioCreacion) AND ((@IsNull_usuarioModificacion = 1 AND [u" +
+                "suarioModificacion] IS NULL) OR ([usuarioModificacion] = @Original_usuarioModifi" +
+                "cacion)) AND ((@IsNull_fechaModificacion = 1 AND [fechaModificacion] IS NULL) OR" +
+                " ([fechaModificacion] = @Original_fechaModificacion)) AND ((@IsNull_perfilUsuari" +
+                "o = 1 AND [perfilUsuario] IS NULL) OR ([perfilUsuario] = @Original_perfilUsuario" +
+                ")) AND ((@IsNull_contraseña = 1 AND [contraseña] IS NULL) OR ([contraseña] = @Or" +
+                "iginal_contraseña)) AND ((@IsNull_nombreApellido = 1 AND [nombreApellido] IS NUL" +
+                "L) OR ([nombreApellido] = @Original_nombreApellido)));\r\nSELECT identificacacion," +
+                " primerNombre, segundoNombre, primerApellido, segundoApellido, correo, fechaCrea" +
+                "cion, usuarioCreacion, usuarioModificacion, fechaModificacion, perfilUsuario, co" +
+                "ntraseña, nombreApellido FROM Usuario WHERE (identificacacion = @identificacacio" +
+                "n)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@identificacacion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "identificacacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@primerNombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "primerNombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1190,10 +1240,11 @@ SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApe
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@correo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "correo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaCreacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaCreacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuarioCreacion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuarioCreacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaModificacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaModificacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@usuarioModificacion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuarioModificacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idPerfil", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idPerfil", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaModificacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaModificacion", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@perfilUsuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "perfilUsuario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@contraseña", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "contraseña", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nombreApellido", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombreApellido", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_identificacacion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "identificacacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_primerNombre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "primerNombre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_segundoNombre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "segundoNombre", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1204,21 +1255,23 @@ SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApe
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_correo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "correo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fechaCreacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaCreacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_usuarioCreacion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuarioCreacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fechaModificacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaModificacion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fechaModificacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaModificacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_usuarioModificacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuarioModificacion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_usuarioModificacion", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "usuarioModificacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_idPerfil", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idPerfil", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idPerfil", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idPerfil", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fechaModificacion", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaModificacion", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fechaModificacion", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaModificacion", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_perfilUsuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "perfilUsuario", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_perfilUsuario", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "perfilUsuario", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_contraseña", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "contraseña", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_contraseña", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "contraseña", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_nombreApellido", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombreApellido", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nombreApellido", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nombreApellido", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::JardinMisPrimerasLetras.Properties.Settings.Default.conexionDB2;
+            this._connection.ConnectionString = global::JardinMisPrimerasLetras.Properties.Settings.Default.conexionDB;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1228,8 +1281,8 @@ SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApe
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApel" +
-                "lido, correo, fechaCreacion, usuarioCreacion, fechaModificacion, usuarioModifica" +
-                "cion, idPerfil, contraseña FROM dbo.Usuario";
+                "lido, correo, fechaCreacion, usuarioCreacion, usuarioModificacion, fechaModifica" +
+                "cion, perfilUsuario, contraseña, nombreApellido FROM dbo.Usuario";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1237,7 +1290,7 @@ SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApe
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(jardinDataSet.UsuarioDataTable dataTable) {
+        public virtual int Fill(LetrasDataSetUsuario.UsuarioDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1250,9 +1303,9 @@ SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApe
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual jardinDataSet.UsuarioDataTable GetData() {
+        public virtual LetrasDataSetUsuario.UsuarioDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            jardinDataSet.UsuarioDataTable dataTable = new jardinDataSet.UsuarioDataTable();
+            LetrasDataSetUsuario.UsuarioDataTable dataTable = new LetrasDataSetUsuario.UsuarioDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1260,14 +1313,14 @@ SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApe
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(jardinDataSet.UsuarioDataTable dataTable) {
+        public virtual int Update(LetrasDataSetUsuario.UsuarioDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(jardinDataSet dataSet) {
+        public virtual int Update(LetrasDataSetUsuario dataSet) {
             return this.Adapter.Update(dataSet, "Usuario");
         }
         
@@ -1290,7 +1343,7 @@ SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApe
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_identificacacion, string Original_primerNombre, string Original_segundoNombre, string Original_primerApellido, string Original_segundoApellido, string Original_correo, System.DateTime Original_fechaCreacion, string Original_usuarioCreacion, global::System.Nullable<global::System.DateTime> Original_fechaModificacion, string Original_usuarioModificacion, global::System.Nullable<int> Original_idPerfil, string Original_contraseña) {
+        public virtual int Delete(string Original_identificacacion, string Original_primerNombre, string Original_segundoNombre, string Original_primerApellido, string Original_segundoApellido, string Original_correo, System.DateTime Original_fechaCreacion, string Original_usuarioCreacion, string Original_usuarioModificacion, global::System.Nullable<global::System.DateTime> Original_fechaModificacion, global::System.Nullable<int> Original_perfilUsuario, string Original_contraseña, string Original_nombreApellido) {
             if ((Original_identificacacion == null)) {
                 throw new global::System.ArgumentNullException("Original_identificacacion");
             }
@@ -1338,25 +1391,25 @@ SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApe
             else {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_usuarioCreacion));
             }
-            if ((Original_fechaModificacion.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((System.DateTime)(Original_fechaModificacion.Value));
-            }
-            else {
+            if ((Original_usuarioModificacion == null)) {
                 this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Original_usuarioModificacion == null)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_usuarioModificacion));
+            }
+            if ((Original_fechaModificacion.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((System.DateTime)(Original_fechaModificacion.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            else {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((string)(Original_usuarioModificacion));
-            }
-            if ((Original_idPerfil.HasValue == true)) {
+            if ((Original_perfilUsuario.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((int)(Original_idPerfil.Value));
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((int)(Original_perfilUsuario.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(1));
@@ -1369,6 +1422,14 @@ SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApe
             else {
                 this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((string)(Original_contraseña));
+            }
+            if ((Original_nombreApellido == null)) {
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((string)(Original_nombreApellido));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1390,7 +1451,7 @@ SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApe
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string identificacacion, string primerNombre, string segundoNombre, string primerApellido, string segundoApellido, string correo, System.DateTime fechaCreacion, string usuarioCreacion, global::System.Nullable<global::System.DateTime> fechaModificacion, string usuarioModificacion, global::System.Nullable<int> idPerfil, string contraseña) {
+        public virtual int Insert(string identificacacion, string primerNombre, string segundoNombre, string primerApellido, string segundoApellido, string correo, System.DateTime fechaCreacion, string usuarioCreacion, string usuarioModificacion, global::System.Nullable<global::System.DateTime> fechaModificacion, global::System.Nullable<int> perfilUsuario, string contraseña, string nombreApellido) {
             if ((identificacacion == null)) {
                 throw new global::System.ArgumentNullException("identificacacion");
             }
@@ -1434,20 +1495,20 @@ SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApe
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = ((string)(usuarioCreacion));
             }
-            if ((fechaModificacion.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((System.DateTime)(fechaModificacion.Value));
-            }
-            else {
+            if ((usuarioModificacion == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((usuarioModificacion == null)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(usuarioModificacion));
+            }
+            if ((fechaModificacion.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((System.DateTime)(fechaModificacion.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(usuarioModificacion));
+                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((idPerfil.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((int)(idPerfil.Value));
+            if ((perfilUsuario.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((int)(perfilUsuario.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
@@ -1457,6 +1518,12 @@ SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApe
             }
             else {
                 this.Adapter.InsertCommand.Parameters[11].Value = ((string)(contraseña));
+            }
+            if ((nombreApellido == null)) {
+                this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(nombreApellido));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1487,10 +1554,11 @@ SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApe
                     string correo, 
                     System.DateTime fechaCreacion, 
                     string usuarioCreacion, 
-                    global::System.Nullable<global::System.DateTime> fechaModificacion, 
                     string usuarioModificacion, 
-                    global::System.Nullable<int> idPerfil, 
+                    global::System.Nullable<global::System.DateTime> fechaModificacion, 
+                    global::System.Nullable<int> perfilUsuario, 
                     string contraseña, 
+                    string nombreApellido, 
                     string Original_identificacacion, 
                     string Original_primerNombre, 
                     string Original_segundoNombre, 
@@ -1499,10 +1567,11 @@ SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApe
                     string Original_correo, 
                     System.DateTime Original_fechaCreacion, 
                     string Original_usuarioCreacion, 
-                    global::System.Nullable<global::System.DateTime> Original_fechaModificacion, 
                     string Original_usuarioModificacion, 
-                    global::System.Nullable<int> Original_idPerfil, 
-                    string Original_contraseña) {
+                    global::System.Nullable<global::System.DateTime> Original_fechaModificacion, 
+                    global::System.Nullable<int> Original_perfilUsuario, 
+                    string Original_contraseña, 
+                    string Original_nombreApellido) {
             if ((identificacacion == null)) {
                 throw new global::System.ArgumentNullException("identificacacion");
             }
@@ -1546,20 +1615,20 @@ SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApe
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(usuarioCreacion));
             }
-            if ((fechaModificacion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(fechaModificacion.Value));
-            }
-            else {
+            if ((usuarioModificacion == null)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((usuarioModificacion == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(usuarioModificacion));
+            }
+            if ((fechaModificacion.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(fechaModificacion.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(usuarioModificacion));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((idPerfil.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(idPerfil.Value));
+            if ((perfilUsuario.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(perfilUsuario.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
@@ -1570,84 +1639,98 @@ SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApe
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(contraseña));
             }
+            if ((nombreApellido == null)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(nombreApellido));
+            }
             if ((Original_identificacacion == null)) {
                 throw new global::System.ArgumentNullException("Original_identificacacion");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_identificacacion));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_identificacacion));
             }
             if ((Original_primerNombre == null)) {
                 throw new global::System.ArgumentNullException("Original_primerNombre");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_primerNombre));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_primerNombre));
             }
             if ((Original_segundoNombre == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_segundoNombre));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_segundoNombre));
             }
             if ((Original_primerApellido == null)) {
                 throw new global::System.ArgumentNullException("Original_primerApellido");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_primerApellido));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_primerApellido));
             }
             if ((Original_segundoApellido == null)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_segundoApellido));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_segundoApellido));
             }
             if ((Original_correo == null)) {
                 throw new global::System.ArgumentNullException("Original_correo");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_correo));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_correo));
             }
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((System.DateTime)(Original_fechaCreacion));
+            this.Adapter.UpdateCommand.Parameters[21].Value = ((System.DateTime)(Original_fechaCreacion));
             if ((Original_usuarioCreacion == null)) {
                 throw new global::System.ArgumentNullException("Original_usuarioCreacion");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_usuarioCreacion));
-            }
-            if ((Original_fechaModificacion.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((System.DateTime)(Original_fechaModificacion.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_usuarioCreacion));
             }
             if ((Original_usuarioModificacion == null)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_usuarioModificacion));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_usuarioModificacion));
             }
-            if ((Original_idPerfil.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(Original_idPerfil.Value));
+            if ((Original_fechaModificacion.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((System.DateTime)(Original_fechaModificacion.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+            }
+            if ((Original_perfilUsuario.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Original_perfilUsuario.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
             }
             if ((Original_contraseña == null)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_contraseña));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_contraseña));
+            }
+            if ((Original_nombreApellido == null)) {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_nombreApellido));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1677,10 +1760,11 @@ SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApe
                     string correo, 
                     System.DateTime fechaCreacion, 
                     string usuarioCreacion, 
-                    global::System.Nullable<global::System.DateTime> fechaModificacion, 
                     string usuarioModificacion, 
-                    global::System.Nullable<int> idPerfil, 
+                    global::System.Nullable<global::System.DateTime> fechaModificacion, 
+                    global::System.Nullable<int> perfilUsuario, 
                     string contraseña, 
+                    string nombreApellido, 
                     string Original_identificacacion, 
                     string Original_primerNombre, 
                     string Original_segundoNombre, 
@@ -1689,11 +1773,12 @@ SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApe
                     string Original_correo, 
                     System.DateTime Original_fechaCreacion, 
                     string Original_usuarioCreacion, 
-                    global::System.Nullable<global::System.DateTime> Original_fechaModificacion, 
                     string Original_usuarioModificacion, 
-                    global::System.Nullable<int> Original_idPerfil, 
-                    string Original_contraseña) {
-            return this.Update(Original_identificacacion, primerNombre, segundoNombre, primerApellido, segundoApellido, correo, fechaCreacion, usuarioCreacion, fechaModificacion, usuarioModificacion, idPerfil, contraseña, Original_identificacacion, Original_primerNombre, Original_segundoNombre, Original_primerApellido, Original_segundoApellido, Original_correo, Original_fechaCreacion, Original_usuarioCreacion, Original_fechaModificacion, Original_usuarioModificacion, Original_idPerfil, Original_contraseña);
+                    global::System.Nullable<global::System.DateTime> Original_fechaModificacion, 
+                    global::System.Nullable<int> Original_perfilUsuario, 
+                    string Original_contraseña, 
+                    string Original_nombreApellido) {
+            return this.Update(Original_identificacacion, primerNombre, segundoNombre, primerApellido, segundoApellido, correo, fechaCreacion, usuarioCreacion, usuarioModificacion, fechaModificacion, perfilUsuario, contraseña, nombreApellido, Original_identificacacion, Original_primerNombre, Original_segundoNombre, Original_primerApellido, Original_segundoApellido, Original_correo, Original_fechaCreacion, Original_usuarioCreacion, Original_usuarioModificacion, Original_fechaModificacion, Original_perfilUsuario, Original_contraseña, Original_nombreApellido);
         }
     }
     
@@ -1788,7 +1873,7 @@ SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApe
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(jardinDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(LetrasDataSetUsuario dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._usuarioTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Usuario.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1807,7 +1892,7 @@ SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApe
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(jardinDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(LetrasDataSetUsuario dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._usuarioTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Usuario.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1825,7 +1910,7 @@ SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApe
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(jardinDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(LetrasDataSetUsuario dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._usuarioTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Usuario.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1867,7 +1952,7 @@ SELECT identificacacion, primerNombre, segundoNombre, primerApellido, segundoApe
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(jardinDataSet dataSet) {
+        public virtual int UpdateAll(LetrasDataSetUsuario dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

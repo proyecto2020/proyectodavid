@@ -14,38 +14,19 @@ namespace JardinMisPrimerasLetras
 {
     public partial class ModPagos : Form
     {
-        private UsuarioControler.loginControler controlador;
-        List<Alumnos> listarAlumnos = null;
-        loginControler controladorAlumnos = new loginControler();
+        //private UsuarioControler.loginControler controlador;
+        loginControler logincontroler = new loginControler();
+        //Matriculas matriculas = new Matriculas();
         public ModPagos()
         {
             InitializeComponent();
-            CargarAlumnos();
-            this.controlador = new UsuarioControler.loginControler();
+            //this.logincontroler = new UsuarioControler.loginControler();
+            List<Alumnos> response =  this.logincontroler.ListarAlumnos();
+            response.Insert(0, new Alumnos() { idAlumno = 0, nombreApellido = "Seleccione" });
+            Estudiante.DataSource = response;
+            Estudiante.DisplayMember = "nombreApellido";
+            Estudiante.ValueMember = "idAlumno";
         }
-
-        private void CargarAlumnos()
-        {
-            if (listarAlumnos == null)
-            {
-                listarAlumnos = controladorAlumnos.ListarAlumnos();
-            }
-            if (listarAlumnos.Count != 0)
-            {
-                //Estudiante.Items.Clear();
-                Estudiante.DataSource = listarAlumnos;
-                Estudiante.DisplayMember = "Alumno";
-                Estudiante.ValueMember = "idAlumno";
-
-            }
-            else
-            {
-                Estudiante.DataSource = null;
-                Estudiante.DataSource = null;
-            }
-        }
-
-  
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -63,6 +44,7 @@ namespace JardinMisPrimerasLetras
             //string pendiente = Saldo.Text;
             string total = Total.Text;
             string observaciones = Observaciones.Text;
+       
 
             Pagos ingresoPagos = new Pagos();
             ingresoPagos.nombreApellido = nombreApellido;
@@ -70,8 +52,9 @@ namespace JardinMisPrimerasLetras
             ingresoPagos.totalPagar = Convert.ToDouble(total);
             ingresoPagos.saldoPendiente = (Convert.ToDouble(abono) - Convert.ToDouble(total));
             ingresoPagos.observaciones = observaciones;
+            ingresoPagos.idAlumno = string.Format(Estudiante.SelectedValue.ToString());// Este es el campo para unir la llave foranea, se tiene que modificar el procedimiento almacenado
 
-            Respuesta<object> ingreso = this.controlador.insertarPagos(ingresoPagos);
+            Respuesta<object> ingreso = this.logincontroler.insertarPagos(ingresoPagos);
             MessageBox.Show("Datos guardados correctamente, su saldo es: " + ingresoPagos.saldoPendiente + ".");
 
         }
@@ -88,7 +71,18 @@ namespace JardinMisPrimerasLetras
 
         private void Estudiante_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CargarAlumnos();
+           
+        }
+
+        private void ModPagos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+            //this.matriculas.Show();
         }
     }
 }

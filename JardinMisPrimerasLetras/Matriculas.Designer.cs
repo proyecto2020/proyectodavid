@@ -53,6 +53,9 @@ namespace JardinMisPrimerasLetras
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.guardar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Grupo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -211,7 +214,7 @@ namespace JardinMisPrimerasLetras
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(239, 303);
+            this.label9.Location = new System.Drawing.Point(205, 368);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(78, 13);
             this.label9.TabIndex = 58;
@@ -219,7 +222,7 @@ namespace JardinMisPrimerasLetras
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(242, 332);
+            this.textBox1.Location = new System.Drawing.Point(208, 395);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(411, 20);
             this.textBox1.TabIndex = 59;
@@ -227,7 +230,7 @@ namespace JardinMisPrimerasLetras
             // 
             // guardar
             // 
-            this.guardar.Location = new System.Drawing.Point(354, 388);
+            this.guardar.Location = new System.Drawing.Point(354, 421);
             this.guardar.Name = "guardar";
             this.guardar.Size = new System.Drawing.Size(75, 23);
             this.guardar.TabIndex = 60;
@@ -246,12 +249,42 @@ namespace JardinMisPrimerasLetras
             this.pictureBox1.TabIndex = 61;
             this.pictureBox1.TabStop = false;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(685, 438);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(98, 50);
+            this.button3.TabIndex = 62;
+            this.button3.Text = "PAGOS";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(321, 295);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 13);
+            this.label1.TabIndex = 63;
+            this.label1.Text = "Grupo Asignado";
+            // 
+            // Grupo
+            // 
+            this.Grupo.FormattingEnabled = true;
+            this.Grupo.Location = new System.Drawing.Point(321, 325);
+            this.Grupo.Name = "Grupo";
+            this.Grupo.Size = new System.Drawing.Size(121, 21);
+            this.Grupo.TabIndex = 64;
+            // 
             // Matriculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(839, 420);
+            this.ClientSize = new System.Drawing.Size(839, 521);
+            this.Controls.Add(this.Grupo);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.guardar);
             this.Controls.Add(this.textBox1);
@@ -307,5 +340,8 @@ namespace JardinMisPrimerasLetras
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button guardar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Button button3;
+        private Label label1;
+        private ComboBox Grupo;
     }
 }

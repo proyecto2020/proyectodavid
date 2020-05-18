@@ -16,5 +16,8 @@ namespace Entidades
         public string hora { get; set; }
         public string docente { get; set; }
         public string observaciones { get; set; }
+        public string asignacionAcademica { get; set; }
+        public string idAlumno { get; set; }
+        public string idDocente { get; set; }
     }
 }

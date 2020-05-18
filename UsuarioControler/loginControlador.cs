@@ -53,6 +53,12 @@ namespace UsuarioControler
             return resultado;
         }
 
+        public List<Usuario> ConsultarUsuario()
+        {
+            var resultado = this.cliente.ConsultarUsuario();
+            return resultado;
+        }
+
         public List<Perfiles> ConsultarPerfiles()
         {
             var resultado = this.cliente.mtdListarPerfiles();
@@ -116,6 +122,24 @@ namespace UsuarioControler
         public List<SeleccionarMateria> ListarMaterias()
         {
             var resultado = this.cliente.ListarMaterias();
+            return resultado;
+        }
+
+        public List<SeleccionarSalon> ListarSalon()
+        {
+            var resultado = this.cliente.ListarSalon();
+            return resultado;
+        }
+
+        public List<SeleccionarHora> ListarHora()
+        {
+            var resultado = this.cliente.ListarHora();
+            return resultado;
+        }
+
+        public List<SeleccionarDia> ListarDia()
+        {
+            var resultado = this.cliente.ListarDia();
             return resultado;
         }
 

@@ -22,28 +22,5 @@ namespace Entidades
         public string insertarAlumno { get; set; }
         public string nombreApellido { get; set; }
 
-        int _idAlumno;
-        string _Alumno;
-
-        public int idAlumnos
-        {
-            get { return _idAlumno; }
-            set { _idAlumno = value; }
-        }
-
-        public string Alumno
-        {
-            get { return _Alumno; }
-            set { _Alumno = value; }
-        }
-
-        public Alumnos(int idAlumno, string Alumno)
-        {
-            _idAlumno = idAlumno;
-            _Alumno = Alumno;
-        }
-        public Alumnos() : this(0, "")
-        {
-        }
     }
 }
