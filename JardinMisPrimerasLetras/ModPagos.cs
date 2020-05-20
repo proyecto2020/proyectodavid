@@ -81,8 +81,10 @@ namespace JardinMisPrimerasLetras
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //this.Hide();
-            //this.matriculas.Show();
+            Matriculas matriculas = new Matriculas();
+            ModPagos pagos = new ModPagos();
+            matriculas.Show();
+            this.Hide();
         }
     }
 }

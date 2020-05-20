@@ -105,6 +105,7 @@ namespace JardinMisPrimerasLetras
             asignacionAcademica.hora = hora;
             asignacionAcademica.docente = docente;
             asignacionAcademica.observaciones = observaciones;
+            asignacionAcademica.idDocente = string.Format(Docente.SelectedValue.ToString());
 
             Respuesta<object> ingreso = this.logincontroller.insertarAsignacion(asignacionAcademica);
             MessageBox.Show("Datos guardados correctamente");
@@ -120,6 +121,14 @@ namespace JardinMisPrimerasLetras
         private void Salon_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AdministradorUsuarios administradorUsuarios = new AdministradorUsuarios();
+            asiganacionAcademica asiganacionAcademica= new asiganacionAcademica();
+            administradorUsuarios.Show();
+            this.Hide();
         }
     }
 }

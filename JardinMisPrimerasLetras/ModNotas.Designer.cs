@@ -37,15 +37,15 @@
             this.Calificacion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Guardar = new System.Windows.Forms.Button();
-            this.Periodo = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.Periodo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 141);
+            this.label1.Location = new System.Drawing.Point(24, 201);
             this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 13);
@@ -56,7 +56,7 @@
             // Estudiante
             // 
             this.Estudiante.FormattingEnabled = true;
-            this.Estudiante.Location = new System.Drawing.Point(18, 174);
+            this.Estudiante.Location = new System.Drawing.Point(26, 234);
             this.Estudiante.Margin = new System.Windows.Forms.Padding(1);
             this.Estudiante.Name = "Estudiante";
             this.Estudiante.Size = new System.Drawing.Size(120, 21);
@@ -66,7 +66,7 @@
             // Materia
             // 
             this.Materia.FormattingEnabled = true;
-            this.Materia.Location = new System.Drawing.Point(168, 174);
+            this.Materia.Location = new System.Drawing.Point(176, 234);
             this.Materia.Margin = new System.Windows.Forms.Padding(1);
             this.Materia.Name = "Materia";
             this.Materia.Size = new System.Drawing.Size(120, 21);
@@ -75,7 +75,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(175, 141);
+            this.label2.Location = new System.Drawing.Point(183, 201);
             this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 13);
@@ -95,16 +95,16 @@
             // 
             // Calificacion
             // 
-            this.Calificacion.Location = new System.Drawing.Point(473, 174);
+            this.Calificacion.Location = new System.Drawing.Point(481, 234);
             this.Calificacion.Margin = new System.Windows.Forms.Padding(1);
             this.Calificacion.Name = "Calificacion";
-            this.Calificacion.Size = new System.Drawing.Size(93, 20);
+            this.Calificacion.Size = new System.Drawing.Size(105, 20);
             this.Calificacion.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(471, 141);
+            this.label3.Location = new System.Drawing.Point(479, 201);
             this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 13);
@@ -113,7 +113,7 @@
             // 
             // Guardar
             // 
-            this.Guardar.Location = new System.Drawing.Point(277, 242);
+            this.Guardar.Location = new System.Drawing.Point(285, 302);
             this.Guardar.Name = "Guardar";
             this.Guardar.Size = new System.Drawing.Size(75, 23);
             this.Guardar.TabIndex = 23;
@@ -121,26 +121,24 @@
             this.Guardar.UseVisualStyleBackColor = true;
             this.Guardar.Click += new System.EventHandler(this.Guardar_Click);
             // 
-            // Periodo
-            // 
-            this.Periodo.FormattingEnabled = true;
-            this.Periodo.Location = new System.Drawing.Point(321, 174);
-            this.Periodo.Margin = new System.Windows.Forms.Padding(1);
-            this.Periodo.Name = "Periodo";
-            this.Periodo.Size = new System.Drawing.Size(120, 21);
-            this.Periodo.TabIndex = 27;
-            this.Periodo.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(313, 141);
+            this.label4.Location = new System.Drawing.Point(321, 201);
             this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(102, 13);
             this.label4.TabIndex = 26;
             this.label4.Text = "Seleccionar Periodo";
             this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // Periodo
+            // 
+            this.Periodo.Location = new System.Drawing.Point(324, 234);
+            this.Periodo.Margin = new System.Windows.Forms.Padding(1);
+            this.Periodo.Name = "Periodo";
+            this.Periodo.Size = new System.Drawing.Size(117, 20);
+            this.Periodo.TabIndex = 27;
             // 
             // Modulo_Notas
             // 
@@ -178,7 +176,7 @@
         private System.Windows.Forms.TextBox Calificacion;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Guardar;
-        private System.Windows.Forms.ComboBox Periodo;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox Periodo;
     }
 }

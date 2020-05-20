@@ -47,19 +47,19 @@
             this.TipoPerfil = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button4 = new System.Windows.Forms.Button();
-            this.letrasDataSetUsuario = new JardinMisPrimerasLetras.LetrasDataSetUsuario();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usuarioTableAdapter = new JardinMisPrimerasLetras.LetrasDataSetUsuarioTableAdapters.UsuarioTableAdapter();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.letrasDataSetUsuario = new JardinMisPrimerasLetras.LetrasDataSetUsuario();
+            this.button4 = new System.Windows.Forms.Button();
+            this.usuarioTableAdapter = new JardinMisPrimerasLetras.LetrasDataSetUsuarioTableAdapters.UsuarioTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetUsuario)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -203,7 +203,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(38, 388);
+            this.button1.Location = new System.Drawing.Point(38, 403);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(98, 50);
             this.button1.TabIndex = 29;
@@ -230,30 +230,6 @@
             this.dataGridView2.Size = new System.Drawing.Size(602, 117);
             this.dataGridView2.TabIndex = 31;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(603, 388);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(98, 50);
-            this.button4.TabIndex = 33;
-            this.button4.Text = "ASIGNACIÓN";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // letrasDataSetUsuario
-            // 
-            this.letrasDataSetUsuario.DataSetName = "LetrasDataSetUsuario";
-            this.letrasDataSetUsuario.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataMember = "Usuario";
-            this.usuarioBindingSource.DataSource = this.letrasDataSetUsuario;
-            // 
-            // usuarioTableAdapter
-            // 
-            this.usuarioTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -297,6 +273,30 @@
             this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
             this.dataGridViewTextBoxColumn17.ReadOnly = true;
             // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "Usuario";
+            this.usuarioBindingSource.DataSource = this.letrasDataSetUsuario;
+            // 
+            // letrasDataSetUsuario
+            // 
+            this.letrasDataSetUsuario.DataSetName = "LetrasDataSetUsuario";
+            this.letrasDataSetUsuario.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(603, 400);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(98, 50);
+            this.button4.TabIndex = 33;
+            this.button4.Text = "ASIGNACIÓN";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // usuarioTableAdapter
+            // 
+            this.usuarioTableAdapter.ClearBeforeFill = true;
+            // 
             // AdministradorUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,8 +326,8 @@
             this.Text = "AdministradorUsuarios";
             this.Load += new System.EventHandler(this.AdministradorUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetUsuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

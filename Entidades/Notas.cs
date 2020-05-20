@@ -12,7 +12,7 @@ namespace Entidades
         public string alumno { get; set; }
         public string materia { get; set; }
         public string periodo { get; set; }
-        public int calificacion { get; set; }
+        public string calificacion { get; set; }
         public string notas { get; set; }
         public string idAlumno { get; set; }
     }

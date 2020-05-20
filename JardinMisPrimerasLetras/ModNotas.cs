@@ -25,6 +25,12 @@ namespace JardinMisPrimerasLetras
             Estudiante.DataSource = response;
             Estudiante.DisplayMember = "nombreApellido";
             Estudiante.ValueMember = "idAlumno";
+
+            List<SeleccionarMateria> listarMaterias = this.logincontroller.ListarMaterias();
+            listarMaterias.Insert(0, new SeleccionarMateria() { idMateria = 0, Materia = "Seleccione" });
+            Materia.DataSource = listarMaterias;
+            Materia.DisplayMember = "Materia";
+            Materia.ValueMember = "idMateria";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -52,22 +58,26 @@ namespace JardinMisPrimerasLetras
             string alumno = Estudiante.Text;
             string materia = Materia.Text;
             string periodo = Periodo.Text;
-            int calificacion = int.Parse(Calificacion.Text);
-            if (calificacion < 6)
+            string calificacion = Calificacion.Text;
+            if (int.Parse(Calificacion.Text) < 6)
             {
-                calificacion = Convert.ToInt32("Insuficiente");
-            } 
-            else if (calificacion > 5 && calificacion < 8 )
-            {
-                calificacion = Convert.ToInt32("Aceptable");
+                calificacion = "Insuficiente";
             }
-            else if (calificacion > 7 && calificacion < 9)
+            else if (int.Parse(Calificacion.Text) > 5 && int.Parse(Calificacion.Text) < 8)
             {
-                calificacion = Convert.ToInt32("Sobresaliente");
+                calificacion = "Aceptable";
             }
-            else if (calificacion > 8 && calificacion <= 10)
+            else if (int.Parse(Calificacion.Text) > 7 && int.Parse(Calificacion.Text) < 9)
             {
-                calificacion = Convert.ToInt32("Excelente");
+                calificacion = "Sobresaliente";
+            }
+            else if (int.Parse(Calificacion.Text) > 8 && int.Parse(Calificacion.Text) <= 10)
+            {
+                calificacion = "Excelente";
+            }
+            else if((int.Parse(Calificacion.Text) > 10))
+            {
+                MessageBox.Show("No se puede ingresar una nota mayor de 10.");
             }
 
             Notas notas = new Notas();

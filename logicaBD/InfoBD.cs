@@ -517,7 +517,6 @@ namespace logicaBD
                 SqlCommand cmd = new SqlCommand("PR_InsertarAsignacion", conexion);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@pi_Alumno", asignacionAcademica.alumno);
                 cmd.Parameters.AddWithValue("@pi_Grupo", asignacionAcademica.grupo);
                 cmd.Parameters.AddWithValue("@pi_Materia", asignacionAcademica.materia);
                 cmd.Parameters.AddWithValue("@pi_Salon", asignacionAcademica.salon);
@@ -525,7 +524,6 @@ namespace logicaBD
                 cmd.Parameters.AddWithValue("@pi_Hora", asignacionAcademica.hora);
                 cmd.Parameters.AddWithValue("@pi_Docente", asignacionAcademica.docente);
                 cmd.Parameters.AddWithValue("@pi_Observaciones", asignacionAcademica.observaciones);
-                cmd.Parameters.AddWithValue("@pi_idAlumno", asignacionAcademica.idAlumno);
                 cmd.Parameters.AddWithValue("@pi_idDocente", asignacionAcademica.idDocente);
                 cmd.ExecuteNonQuery();
 

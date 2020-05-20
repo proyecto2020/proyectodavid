@@ -36,22 +36,23 @@ namespace JardinMisPrimerasLetras
             this.label3 = new System.Windows.Forms.Label();
             this.buttonGuardar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gestionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.letrasDataSetGestion = new JardinMisPrimerasLetras.LetrasDataSetGestion();
             this.Grupos = new System.Windows.Forms.ComboBox();
             this.area = new System.Windows.Forms.Label();
             this.Materia = new System.Windows.Forms.Label();
             this.comboArea = new System.Windows.Forms.ComboBox();
             this.comboMateria = new System.Windows.Forms.ComboBox();
             this.comboBoxGrado = new System.Windows.Forms.ComboBox();
-            this.letrasDataSetGestion = new JardinMisPrimerasLetras.LetrasDataSetGestion();
-            this.gestionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gestionTableAdapter = new JardinMisPrimerasLetras.LetrasDataSetGestionTableAdapters.GestionTableAdapter();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetGestion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetGestion)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -100,6 +101,44 @@ namespace JardinMisPrimerasLetras
             this.dataGridView1.Size = new System.Drawing.Size(437, 98);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Grados";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Grados";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "GrupoEscolar";
+            this.dataGridViewTextBoxColumn6.HeaderText = "GrupoEscolar";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Area";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Area";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Materia";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Materia";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // gestionBindingSource
+            // 
+            this.gestionBindingSource.DataMember = "Gestion";
+            this.gestionBindingSource.DataSource = this.letrasDataSetGestion;
+            // 
+            // letrasDataSetGestion
+            // 
+            this.letrasDataSetGestion.DataSetName = "LetrasDataSetGestion";
+            this.letrasDataSetGestion.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Grupos
             // 
@@ -155,47 +194,19 @@ namespace JardinMisPrimerasLetras
             this.comboBoxGrado.TabIndex = 27;
             this.comboBoxGrado.SelectedIndexChanged += new System.EventHandler(this.comboBoxGrado_SelectedIndexChanged);
             // 
-            // letrasDataSetGestion
-            // 
-            this.letrasDataSetGestion.DataSetName = "LetrasDataSetGestion";
-            this.letrasDataSetGestion.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // gestionBindingSource
-            // 
-            this.gestionBindingSource.DataMember = "Gestion";
-            this.gestionBindingSource.DataSource = this.letrasDataSetGestion;
-            // 
             // gestionTableAdapter
             // 
             this.gestionTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn5
+            // button1
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Grados";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Grados";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "GrupoEscolar";
-            this.dataGridViewTextBoxColumn6.HeaderText = "GrupoEscolar";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Area";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Area";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Materia";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Materia";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.button1.Location = new System.Drawing.Point(28, 395);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 43);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "Administrar Usuario";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // IngGestion
             // 
@@ -203,6 +214,7 @@ namespace JardinMisPrimerasLetras
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aqua;
             this.ClientSize = new System.Drawing.Size(576, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBoxGrado);
             this.Controls.Add(this.comboMateria);
             this.Controls.Add(this.comboArea);
@@ -217,8 +229,8 @@ namespace JardinMisPrimerasLetras
             this.Text = "Gestion";
             this.Load += new System.EventHandler(this.Gestion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetGestion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gestionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetGestion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,6 +270,7 @@ namespace JardinMisPrimerasLetras
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.Button button1;
         //private LetrasDataSetGrupoTableAdapters.GrupoEscolarTableAdapter grupoEscolarTableAdapter;
     }
 }

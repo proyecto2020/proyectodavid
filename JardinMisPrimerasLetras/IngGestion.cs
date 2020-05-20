@@ -225,6 +225,14 @@ namespace JardinMisPrimerasLetras
         {
            
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            AdministradorUsuarios administradorUsuarios = new AdministradorUsuarios();
+            IngGestion ingGestion = new IngGestion();
+            administradorUsuarios.Show();
+            this.Hide();
+        }
     }
 }
 
