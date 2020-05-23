@@ -57,6 +57,7 @@
             this.letrasDataSetUsuario = new JardinMisPrimerasLetras.LetrasDataSetUsuario();
             this.button4 = new System.Windows.Forms.Button();
             this.usuarioTableAdapter = new JardinMisPrimerasLetras.LetrasDataSetUsuarioTableAdapters.UsuarioTableAdapter();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.letrasDataSetUsuario)).BeginInit();
@@ -297,12 +298,23 @@
             // 
             this.usuarioTableAdapter.ClearBeforeFill = true;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(318, 403);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(98, 50);
+            this.button2.TabIndex = 34;
+            this.button2.Text = "REPORTES";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // AdministradorUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(747, 510);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.button1);
@@ -381,5 +393,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.Button button2;
     }
 }

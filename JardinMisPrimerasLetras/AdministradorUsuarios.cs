@@ -21,6 +21,8 @@ namespace JardinMisPrimerasLetras
         ModPagos pagos = new ModPagos();
         asiganacionAcademica asiganacion = new asiganacionAcademica();
         Modulo_Notas modulo_Notas = new Modulo_Notas();
+        Reportes reportes = new Reportes();
+        
 
         public AdministradorUsuarios()
         {
@@ -116,6 +118,12 @@ namespace JardinMisPrimerasLetras
             // TODO: esta línea de código carga datos en la tabla 'letrasDataSetUsuario.Usuario' Puede moverla o quitarla según sea necesario.
             this.usuarioTableAdapter.Fill(this.letrasDataSetUsuario.Usuario);
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.reportes.Show();
         }
     }
 }

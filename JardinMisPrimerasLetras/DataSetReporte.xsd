@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetReporte" targetNamespace="http://tempuri.org/DataSetReporte.xsd" xmlns:mstns="http://tempuri.org/DataSetReporte.xsd" xmlns="http://tempuri.org/DataSetReporte.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="conexionDB" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="conexionDB (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.JardinMisPrimerasLetras.Properties.Settings.GlobalReference.Default.conexionDB" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Usu_AsigTableAdapter" GeneratorDataComponentClassName="Usu_AsigTableAdapter" Name="Usu_Asig" UserDataComponentName="Usu_AsigTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="conexionDB (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Usu_Asig" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Usu_Asig" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Usu_Asig">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Us.primerNombre, Us.primerApellido, Us.correo, Asi.materia, Asi.hora
+FROM            Usuario AS Us INNER JOIN
+                         AsignacionAcademica AS Asi ON Us.identificacacion = Asi.idDocente</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="primerNombre" DataSetColumn="primerNombre" />
+              <Mapping SourceColumn="primerApellido" DataSetColumn="primerApellido" />
+              <Mapping SourceColumn="correo" DataSetColumn="correo" />
+              <Mapping SourceColumn="materia" DataSetColumn="materia" />
+              <Mapping SourceColumn="hora" DataSetColumn="hora" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Alum_NotaTableAdapter" GeneratorDataComponentClassName="Alum_NotaTableAdapter" Name="Alum_Nota" UserDataComponentName="Alum_NotaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="conexionDB (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Alum_Nota" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Alum_Nota" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Alum_Nota">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Alumno.*, Notas.*
+FROM            Alumno INNER JOIN
+                         Notas ON Alumno.idAlumno = Notas.idAlumno</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idAlumno" DataSetColumn="idAlumno" />
+              <Mapping SourceColumn="identificacacion" DataSetColumn="identificacacion" />
+              <Mapping SourceColumn="primerNombre" DataSetColumn="primerNombre" />
+              <Mapping SourceColumn="primerApellido" DataSetColumn="primerApellido" />
+              <Mapping SourceColumn="fechaNacimiento" DataSetColumn="fechaNacimiento" />
+              <Mapping SourceColumn="Acudiente" DataSetColumn="Acudiente" />
+              <Mapping SourceColumn="telefono" DataSetColumn="telefono" />
+              <Mapping SourceColumn="observaciones" DataSetColumn="observaciones" />
+              <Mapping SourceColumn="correoAcudiente" DataSetColumn="correoAcudiente" />
+              <Mapping SourceColumn="direccionAcudiente" DataSetColumn="direccionAcudiente" />
+              <Mapping SourceColumn="ocupacion" DataSetColumn="ocupacion" />
+              <Mapping SourceColumn="fechaCreacion" DataSetColumn="fechaCreacion" />
+              <Mapping SourceColumn="usuarioCreacion" DataSetColumn="usuarioCreacion" />
+              <Mapping SourceColumn="usuarioModificacion" DataSetColumn="usuarioModificacion" />
+              <Mapping SourceColumn="fechaModificacion" DataSetColumn="fechaModificacion" />
+              <Mapping SourceColumn="nombreApellido" DataSetColumn="nombreApellido" />
+              <Mapping SourceColumn="idNota" DataSetColumn="idNota" />
+              <Mapping SourceColumn="alumno" DataSetColumn="alumno" />
+              <Mapping SourceColumn="materia" DataSetColumn="materia" />
+              <Mapping SourceColumn="periodo" DataSetColumn="periodo" />
+              <Mapping SourceColumn="calificacion" DataSetColumn="calificacion" />
+              <Mapping SourceColumn="idAlumno1" DataSetColumn="idAlumno1" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="NotasTableAdapter" GeneratorDataComponentClassName="NotasTableAdapter" Name="Notas" UserDataComponentName="NotasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="conexionDB (Settings)" DbObjectName="Letras.dbo.Notas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Nota" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Nota" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Nota">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Notas] WHERE (([idNota] = @Original_idNota) AND ([alumno] = @Original_alumno) AND ([materia] = @Original_materia) AND ([periodo] = @Original_periodo) AND ((@IsNull_calificacion = 1 AND [calificacion] IS NULL) OR ([calificacion] = @Original_calificacion)) AND ((@IsNull_idAlumno = 1 AND [idAlumno] IS NULL) OR ([idAlumno] = @Original_idAlumno)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_idNota" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idNota" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_alumno" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="alumno" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_materia" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="materia" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_periodo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="periodo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_calificacion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="calificacion" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_calificacion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="calificacion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_idAlumno" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idAlumno" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_idAlumno" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idAlumno" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Notas] ([alumno], [materia], [periodo], [calificacion], [idAlumno]) VALUES (@alumno, @materia, @periodo, @calificacion, @idAlumno);
+SELECT idNota, alumno, materia, periodo, calificacion, idAlumno FROM Notas WHERE (idNota = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@alumno" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="alumno" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@materia" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="materia" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@periodo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="periodo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@calificacion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="calificacion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idAlumno" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idAlumno" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Notas.*
+FROM            Notas</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Notas] SET [alumno] = @alumno, [materia] = @materia, [periodo] = @periodo, [calificacion] = @calificacion, [idAlumno] = @idAlumno WHERE (([idNota] = @Original_idNota) AND ([alumno] = @Original_alumno) AND ([materia] = @Original_materia) AND ([periodo] = @Original_periodo) AND ((@IsNull_calificacion = 1 AND [calificacion] IS NULL) OR ([calificacion] = @Original_calificacion)) AND ((@IsNull_idAlumno = 1 AND [idAlumno] IS NULL) OR ([idAlumno] = @Original_idAlumno)));
+SELECT idNota, alumno, materia, periodo, calificacion, idAlumno FROM Notas WHERE (idNota = @idNota)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@alumno" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="alumno" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@materia" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="materia" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@periodo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="periodo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@calificacion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="calificacion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idAlumno" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idAlumno" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_idNota" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idNota" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_alumno" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="alumno" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_materia" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="materia" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_periodo" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="periodo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_calificacion" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="calificacion" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_calificacion" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="calificacion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_idAlumno" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idAlumno" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_idAlumno" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idAlumno" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="idNota" ColumnName="idNota" DataSourceName="Letras.dbo.Notas" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idNota" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="idNota" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idNota" DataSetColumn="idNota" />
+              <Mapping SourceColumn="alumno" DataSetColumn="alumno" />
+              <Mapping SourceColumn="materia" DataSetColumn="materia" />
+              <Mapping SourceColumn="periodo" DataSetColumn="periodo" />
+              <Mapping SourceColumn="calificacion" DataSetColumn="calificacion" />
+              <Mapping SourceColumn="idAlumno" DataSetColumn="idAlumno" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PagosTableAdapter" GeneratorDataComponentClassName="PagosTableAdapter" Name="Pagos" UserDataComponentName="PagosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="conexionDB (Settings)" DbObjectName="Letras.dbo.Pagos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Pagos" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Pagos" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Pagos">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [Pagos] WHERE (([idPago] = @Original_idPago) AND ((@IsNull_total = 1 AND [total] IS NULL) OR ([total] = @Original_total)) AND ((@IsNull_abono = 1 AND [abono] IS NULL) OR ([abono] = @Original_abono)) AND ((@IsNull_saldo = 1 AND [saldo] IS NULL) OR ([saldo] = @Original_saldo)) AND ((@IsNull_fechaUltimoPago = 1 AND [fechaUltimoPago] IS NULL) OR ([fechaUltimoPago] = @Original_fechaUltimoPago)) AND ([alumno] = @Original_alumno) AND ((@IsNull_observaciones = 1 AND [observaciones] IS NULL) OR ([observaciones] = @Original_observaciones)) AND ((@IsNull_idAlumno = 1 AND [idAlumno] IS NULL) OR ([idAlumno] = @Original_idAlumno)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_idPago" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idPago" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_total" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="total" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_total" Precision="18" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="total" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_abono" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="abono" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_abono" Precision="18" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="abono" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_saldo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="saldo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_saldo" Precision="18" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="saldo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_fechaUltimoPago" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="fechaUltimoPago" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_fechaUltimoPago" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="fechaUltimoPago" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_alumno" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="alumno" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_observaciones" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="observaciones" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_observaciones" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="observaciones" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_idAlumno" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idAlumno" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_idAlumno" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idAlumno" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [Pagos] ([total], [abono], [saldo], [fechaUltimoPago], [alumno], [observaciones], [idAlumno]) VALUES (@total, @abono, @saldo, @fechaUltimoPago, @alumno, @observaciones, @idAlumno);
+SELECT idPago, total, abono, saldo, fechaUltimoPago, alumno, observaciones, idAlumno FROM Pagos WHERE (idPago = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@total" Precision="18" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="total" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@abono" Precision="18" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="abono" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@saldo" Precision="18" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="saldo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@fechaUltimoPago" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="fechaUltimoPago" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@alumno" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="alumno" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@observaciones" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="observaciones" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idAlumno" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idAlumno" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Pagos.*
+FROM            Pagos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [Pagos] SET [total] = @total, [abono] = @abono, [saldo] = @saldo, [fechaUltimoPago] = @fechaUltimoPago, [alumno] = @alumno, [observaciones] = @observaciones, [idAlumno] = @idAlumno WHERE (([idPago] = @Original_idPago) AND ((@IsNull_total = 1 AND [total] IS NULL) OR ([total] = @Original_total)) AND ((@IsNull_abono = 1 AND [abono] IS NULL) OR ([abono] = @Original_abono)) AND ((@IsNull_saldo = 1 AND [saldo] IS NULL) OR ([saldo] = @Original_saldo)) AND ((@IsNull_fechaUltimoPago = 1 AND [fechaUltimoPago] IS NULL) OR ([fechaUltimoPago] = @Original_fechaUltimoPago)) AND ([alumno] = @Original_alumno) AND ((@IsNull_observaciones = 1 AND [observaciones] IS NULL) OR ([observaciones] = @Original_observaciones)) AND ((@IsNull_idAlumno = 1 AND [idAlumno] IS NULL) OR ([idAlumno] = @Original_idAlumno)));
+SELECT idPago, total, abono, saldo, fechaUltimoPago, alumno, observaciones, idAlumno FROM Pagos WHERE (idPago = @idPago)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@total" Precision="18" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="total" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@abono" Precision="18" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="abono" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@saldo" Precision="18" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="saldo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@fechaUltimoPago" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="fechaUltimoPago" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@alumno" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="alumno" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@observaciones" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="observaciones" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@idAlumno" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idAlumno" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_idPago" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idPago" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_total" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="total" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_total" Precision="18" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="total" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_abono" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="abono" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_abono" Precision="18" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="abono" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_saldo" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="saldo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_saldo" Precision="18" ProviderType="Decimal" Scale="3" Size="0" SourceColumn="saldo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_fechaUltimoPago" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="fechaUltimoPago" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_fechaUltimoPago" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="fechaUltimoPago" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_alumno" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="alumno" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_observaciones" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="observaciones" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_observaciones" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="observaciones" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_idAlumno" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idAlumno" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_idAlumno" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="idAlumno" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="idPago" ColumnName="idPago" DataSourceName="Letras.dbo.Pagos" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idPago" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="idPago" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idPago" DataSetColumn="idPago" />
+              <Mapping SourceColumn="total" DataSetColumn="total" />
+              <Mapping SourceColumn="abono" DataSetColumn="abono" />
+              <Mapping SourceColumn="saldo" DataSetColumn="saldo" />
+              <Mapping SourceColumn="fechaUltimoPago" DataSetColumn="fechaUltimoPago" />
+              <Mapping SourceColumn="alumno" DataSetColumn="alumno" />
+              <Mapping SourceColumn="observaciones" DataSetColumn="observaciones" />
+              <Mapping SourceColumn="idAlumno" DataSetColumn="idAlumno" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetReporte" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetReporte" msprop:Generator_UserDSName="DataSetReporte">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Usu_Asig" msprop:Generator_TableClassName="Usu_AsigDataTable" msprop:Generator_TableVarName="tableUsu_Asig" msprop:Generator_TablePropName="Usu_Asig" msprop:Generator_RowDeletingName="Usu_AsigRowDeleting" msprop:Generator_RowChangingName="Usu_AsigRowChanging" msprop:Generator_RowEvHandlerName="Usu_AsigRowChangeEventHandler" msprop:Generator_RowDeletedName="Usu_AsigRowDeleted" msprop:Generator_UserTableName="Usu_Asig" msprop:Generator_RowChangedName="Usu_AsigRowChanged" msprop:Generator_RowEvArgName="Usu_AsigRowChangeEvent" msprop:Generator_RowClassName="Usu_AsigRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="primerNombre" msprop:Generator_ColumnVarNameInTable="columnprimerNombre" msprop:Generator_ColumnPropNameInRow="primerNombre" msprop:Generator_ColumnPropNameInTable="primerNombreColumn" msprop:Generator_UserColumnName="primerNombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="primerApellido" msprop:Generator_ColumnVarNameInTable="columnprimerApellido" msprop:Generator_ColumnPropNameInRow="primerApellido" msprop:Generator_ColumnPropNameInTable="primerApellidoColumn" msprop:Generator_UserColumnName="primerApellido">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="correo" msprop:Generator_ColumnVarNameInTable="columncorreo" msprop:Generator_ColumnPropNameInRow="correo" msprop:Generator_ColumnPropNameInTable="correoColumn" msprop:Generator_UserColumnName="correo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="materia" msprop:Generator_ColumnVarNameInTable="columnmateria" msprop:Generator_ColumnPropNameInRow="materia" msprop:Generator_ColumnPropNameInTable="materiaColumn" msprop:Generator_UserColumnName="materia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hora" msprop:Generator_ColumnVarNameInTable="columnhora" msprop:Generator_ColumnPropNameInRow="hora" msprop:Generator_ColumnPropNameInTable="horaColumn" msprop:Generator_UserColumnName="hora">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Alum_Nota" msprop:Generator_TableClassName="Alum_NotaDataTable" msprop:Generator_TableVarName="tableAlum_Nota" msprop:Generator_TablePropName="Alum_Nota" msprop:Generator_RowDeletingName="Alum_NotaRowDeleting" msprop:Generator_RowChangingName="Alum_NotaRowChanging" msprop:Generator_RowEvHandlerName="Alum_NotaRowChangeEventHandler" msprop:Generator_RowDeletedName="Alum_NotaRowDeleted" msprop:Generator_UserTableName="Alum_Nota" msprop:Generator_RowChangedName="Alum_NotaRowChanged" msprop:Generator_RowEvArgName="Alum_NotaRowChangeEvent" msprop:Generator_RowClassName="Alum_NotaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idAlumno" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidAlumno" msprop:Generator_ColumnPropNameInRow="idAlumno" msprop:Generator_ColumnPropNameInTable="idAlumnoColumn" msprop:Generator_UserColumnName="idAlumno" type="xs:int" />
+              <xs:element name="identificacacion" msprop:Generator_ColumnVarNameInTable="columnidentificacacion" msprop:Generator_ColumnPropNameInRow="identificacacion" msprop:Generator_ColumnPropNameInTable="identificacacionColumn" msprop:Generator_UserColumnName="identificacacion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="primerNombre" msprop:Generator_ColumnVarNameInTable="columnprimerNombre" msprop:Generator_ColumnPropNameInRow="primerNombre" msprop:Generator_ColumnPropNameInTable="primerNombreColumn" msprop:Generator_UserColumnName="primerNombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="primerApellido" msprop:Generator_ColumnVarNameInTable="columnprimerApellido" msprop:Generator_ColumnPropNameInRow="primerApellido" msprop:Generator_ColumnPropNameInTable="primerApellidoColumn" msprop:Generator_UserColumnName="primerApellido">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fechaNacimiento" msprop:Generator_ColumnVarNameInTable="columnfechaNacimiento" msprop:Generator_ColumnPropNameInRow="fechaNacimiento" msprop:Generator_ColumnPropNameInTable="fechaNacimientoColumn" msprop:Generator_UserColumnName="fechaNacimiento" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Acudiente" msprop:Generator_ColumnVarNameInTable="columnAcudiente" msprop:Generator_ColumnPropNameInRow="Acudiente" msprop:Generator_ColumnPropNameInTable="AcudienteColumn" msprop:Generator_UserColumnName="Acudiente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="telefono" msprop:Generator_ColumnVarNameInTable="columntelefono" msprop:Generator_ColumnPropNameInRow="telefono" msprop:Generator_ColumnPropNameInTable="telefonoColumn" msprop:Generator_UserColumnName="telefono">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="observaciones" msprop:Generator_ColumnVarNameInTable="columnobservaciones" msprop:Generator_ColumnPropNameInRow="observaciones" msprop:Generator_ColumnPropNameInTable="observacionesColumn" msprop:Generator_UserColumnName="observaciones">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="correoAcudiente" msprop:Generator_ColumnVarNameInTable="columncorreoAcudiente" msprop:Generator_ColumnPropNameInRow="correoAcudiente" msprop:Generator_ColumnPropNameInTable="correoAcudienteColumn" msprop:Generator_UserColumnName="correoAcudiente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="direccionAcudiente" msprop:Generator_ColumnVarNameInTable="columndireccionAcudiente" msprop:Generator_ColumnPropNameInRow="direccionAcudiente" msprop:Generator_ColumnPropNameInTable="direccionAcudienteColumn" msprop:Generator_UserColumnName="direccionAcudiente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ocupacion" msprop:Generator_ColumnVarNameInTable="columnocupacion" msprop:Generator_ColumnPropNameInRow="ocupacion" msprop:Generator_ColumnPropNameInTable="ocupacionColumn" msprop:Generator_UserColumnName="ocupacion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fechaCreacion" msprop:Generator_ColumnVarNameInTable="columnfechaCreacion" msprop:Generator_ColumnPropNameInRow="fechaCreacion" msprop:Generator_ColumnPropNameInTable="fechaCreacionColumn" msprop:Generator_UserColumnName="fechaCreacion" type="xs:dateTime" />
+              <xs:element name="usuarioCreacion" msprop:Generator_ColumnVarNameInTable="columnusuarioCreacion" msprop:Generator_ColumnPropNameInRow="usuarioCreacion" msprop:Generator_ColumnPropNameInTable="usuarioCreacionColumn" msprop:Generator_UserColumnName="usuarioCreacion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usuarioModificacion" msprop:Generator_ColumnVarNameInTable="columnusuarioModificacion" msprop:Generator_ColumnPropNameInRow="usuarioModificacion" msprop:Generator_ColumnPropNameInTable="usuarioModificacionColumn" msprop:Generator_UserColumnName="usuarioModificacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fechaModificacion" msprop:Generator_ColumnVarNameInTable="columnfechaModificacion" msprop:Generator_ColumnPropNameInRow="fechaModificacion" msprop:Generator_ColumnPropNameInTable="fechaModificacionColumn" msprop:Generator_UserColumnName="fechaModificacion" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="nombreApellido" msprop:Generator_ColumnVarNameInTable="columnnombreApellido" msprop:Generator_ColumnPropNameInRow="nombreApellido" msprop:Generator_ColumnPropNameInTable="nombreApellidoColumn" msprop:Generator_UserColumnName="nombreApellido" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idNota" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidNota" msprop:Generator_ColumnPropNameInRow="idNota" msprop:Generator_ColumnPropNameInTable="idNotaColumn" msprop:Generator_UserColumnName="idNota" type="xs:int" />
+              <xs:element name="alumno" msprop:Generator_ColumnVarNameInTable="columnalumno" msprop:Generator_ColumnPropNameInRow="alumno" msprop:Generator_ColumnPropNameInTable="alumnoColumn" msprop:Generator_UserColumnName="alumno">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="materia" msprop:Generator_ColumnVarNameInTable="columnmateria" msprop:Generator_ColumnPropNameInRow="materia" msprop:Generator_ColumnPropNameInTable="materiaColumn" msprop:Generator_UserColumnName="materia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="periodo" msprop:Generator_ColumnVarNameInTable="columnperiodo" msprop:Generator_ColumnPropNameInRow="periodo" msprop:Generator_ColumnPropNameInTable="periodoColumn" msprop:Generator_UserColumnName="periodo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calificacion" msprop:Generator_ColumnVarNameInTable="columncalificacion" msprop:Generator_ColumnPropNameInRow="calificacion" msprop:Generator_ColumnPropNameInTable="calificacionColumn" msprop:Generator_UserColumnName="calificacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idAlumno1" msprop:Generator_ColumnVarNameInTable="columnidAlumno1" msprop:Generator_ColumnPropNameInRow="idAlumno1" msprop:Generator_ColumnPropNameInTable="idAlumno1Column" msprop:Generator_UserColumnName="idAlumno1" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Notas" msprop:Generator_TableClassName="NotasDataTable" msprop:Generator_TableVarName="tableNotas" msprop:Generator_TablePropName="Notas" msprop:Generator_RowDeletingName="NotasRowDeleting" msprop:Generator_RowChangingName="NotasRowChanging" msprop:Generator_RowEvHandlerName="NotasRowChangeEventHandler" msprop:Generator_RowDeletedName="NotasRowDeleted" msprop:Generator_UserTableName="Notas" msprop:Generator_RowChangedName="NotasRowChanged" msprop:Generator_RowEvArgName="NotasRowChangeEvent" msprop:Generator_RowClassName="NotasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idNota" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidNota" msprop:Generator_ColumnPropNameInRow="idNota" msprop:Generator_ColumnPropNameInTable="idNotaColumn" msprop:Generator_UserColumnName="idNota" type="xs:int" />
+              <xs:element name="alumno" msprop:Generator_ColumnVarNameInTable="columnalumno" msprop:Generator_ColumnPropNameInRow="alumno" msprop:Generator_ColumnPropNameInTable="alumnoColumn" msprop:Generator_UserColumnName="alumno">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="materia" msprop:Generator_ColumnVarNameInTable="columnmateria" msprop:Generator_ColumnPropNameInRow="materia" msprop:Generator_ColumnPropNameInTable="materiaColumn" msprop:Generator_UserColumnName="materia">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="periodo" msprop:Generator_ColumnVarNameInTable="columnperiodo" msprop:Generator_ColumnPropNameInRow="periodo" msprop:Generator_ColumnPropNameInTable="periodoColumn" msprop:Generator_UserColumnName="periodo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="calificacion" msprop:Generator_ColumnVarNameInTable="columncalificacion" msprop:Generator_ColumnPropNameInRow="calificacion" msprop:Generator_ColumnPropNameInTable="calificacionColumn" msprop:Generator_UserColumnName="calificacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idAlumno" msprop:Generator_ColumnVarNameInTable="columnidAlumno" msprop:Generator_ColumnPropNameInRow="idAlumno" msprop:Generator_ColumnPropNameInTable="idAlumnoColumn" msprop:Generator_UserColumnName="idAlumno" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Pagos" msprop:Generator_TableClassName="PagosDataTable" msprop:Generator_TableVarName="tablePagos" msprop:Generator_TablePropName="Pagos" msprop:Generator_RowDeletingName="PagosRowDeleting" msprop:Generator_RowChangingName="PagosRowChanging" msprop:Generator_RowEvHandlerName="PagosRowChangeEventHandler" msprop:Generator_RowDeletedName="PagosRowDeleted" msprop:Generator_UserTableName="Pagos" msprop:Generator_RowChangedName="PagosRowChanged" msprop:Generator_RowEvArgName="PagosRowChangeEvent" msprop:Generator_RowClassName="PagosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idPago" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidPago" msprop:Generator_ColumnPropNameInRow="idPago" msprop:Generator_ColumnPropNameInTable="idPagoColumn" msprop:Generator_UserColumnName="idPago" type="xs:int" />
+              <xs:element name="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:decimal" minOccurs="0" />
+              <xs:element name="abono" msprop:Generator_ColumnVarNameInTable="columnabono" msprop:Generator_ColumnPropNameInRow="abono" msprop:Generator_ColumnPropNameInTable="abonoColumn" msprop:Generator_UserColumnName="abono" type="xs:decimal" minOccurs="0" />
+              <xs:element name="saldo" msprop:Generator_ColumnVarNameInTable="columnsaldo" msprop:Generator_ColumnPropNameInRow="saldo" msprop:Generator_ColumnPropNameInTable="saldoColumn" msprop:Generator_UserColumnName="saldo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="fechaUltimoPago" msprop:Generator_ColumnVarNameInTable="columnfechaUltimoPago" msprop:Generator_ColumnPropNameInRow="fechaUltimoPago" msprop:Generator_ColumnPropNameInTable="fechaUltimoPagoColumn" msprop:Generator_UserColumnName="fechaUltimoPago" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="alumno" msprop:Generator_ColumnVarNameInTable="columnalumno" msprop:Generator_ColumnPropNameInRow="alumno" msprop:Generator_ColumnPropNameInTable="alumnoColumn" msprop:Generator_UserColumnName="alumno">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="observaciones" msprop:Generator_ColumnVarNameInTable="columnobservaciones" msprop:Generator_ColumnPropNameInRow="observaciones" msprop:Generator_ColumnPropNameInTable="observacionesColumn" msprop:Generator_UserColumnName="observaciones" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idAlumno" msprop:Generator_ColumnVarNameInTable="columnidAlumno" msprop:Generator_ColumnPropNameInRow="idAlumno" msprop:Generator_ColumnPropNameInTable="idAlumnoColumn" msprop:Generator_UserColumnName="idAlumno" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Alum_Nota" />
+      <xs:field xpath="mstns:idAlumno" />
+      <xs:field xpath="mstns:idNota" />
+    </xs:unique>
+    <xs:unique name="Notas_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Notas" />
+      <xs:field xpath="mstns:idNota" />
+    </xs:unique>
+    <xs:unique name="Pagos_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Pagos" />
+      <xs:field xpath="mstns:idPago" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
